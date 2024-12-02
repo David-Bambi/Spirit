@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ptr_dyna_stat.dir/main.cpp.o -o ptr_dyna_stat 

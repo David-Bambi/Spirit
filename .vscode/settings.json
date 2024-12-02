@@ -70,9 +70,14 @@
         "variant": "cpp"
     },
 
+
+    "java.project.sourcePaths": ["src/java_src"],
+    "java.project.referencedLibraries": ["src/java_src/libs/junit-platform-console-standalone-1.10.5.jar"],
+    
     "cmake.configureOnOpen": true,
     "cmake.buildDirectory": "${workspaceFolder}/build",
     "cmake.generator": "Unix Makefiles",
+
     "C_Cpp.default.includePath": ["${workspaceFolder}/**/**"],
-    "C_Cpp.default.configurationProvider": "vector-of-bool.cmaketools"
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmaketools",
 }

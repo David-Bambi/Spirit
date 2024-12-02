@@ -6,7 +6,6 @@ set(MAJOR_VERSION 1)
 set(MINOR_VERSION 0)
 set(CMAKE_BUILD_TYPE Debug)
 
-
 project(${Spirit} VERSION ${MAJOR_VERSION}.${MINOR_VERSION})
 
 include(CTest)
@@ -17,16 +16,16 @@ enable_testing()
 
 include(FetchContent)
 FetchContent_Declare(
-    googletest
+    googletest 
     GIT_REPOSITORY https://github.com/google/googletest.git
     GIT_TAG        v1.15.2
 )
 FetchContent_MakeAvailable(googletest)
 
-add_subdirectory(src/tests)
-add_subdirectory(src/ptr_dyna_stat)
-add_subdirectory(src/raster_f)
+set(CMAKE_LIBS_DIR ${CMAKE_BINARY_DIR}/lib)
 
-
-add_executable(${Spirit} src/main.cpp)
-target_link_libraries(${Spirit} PRIVATE raster_f)
+# add_subdirectory(src/tests)
+# add_subdirectory(src/ptr_dyna_stat)
+# add_subdirectory(src/raster_f)
+# add_subdirectory(src/java_src)
+add_subdirectory(src/utility) 

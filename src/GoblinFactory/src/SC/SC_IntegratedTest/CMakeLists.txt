@@ -1,0 +1,2 @@
+add_executable(SC_IntegratedTest SC_IntegratedTest.cpp)
+target_link_libraries(SC_IntegratedTest sc)

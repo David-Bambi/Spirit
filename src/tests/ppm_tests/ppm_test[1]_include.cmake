@@ -1,0 +1,5 @@
+if(EXISTS "/home/david/Développements/spirit/src/tests/ppm_tests/ppm_test[1]_tests.cmake")
+  include("/home/david/Développements/spirit/src/tests/ppm_tests/ppm_test[1]_tests.cmake")
+else()
+  add_test(ppm_test_NOT_BUILT ppm_test_NOT_BUILT)
+endif()
