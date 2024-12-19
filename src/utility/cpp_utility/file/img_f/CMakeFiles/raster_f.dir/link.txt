@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libraster_f.so -o libraster_f.so CMakeFiles/raster_f.dir/ppm/ppm_f.cpp.o CMakeFiles/raster_f.dir/ppm/ppm_obj.cpp.o  ../../lib/libgtest_main.a ../../lib/libgtest.a 

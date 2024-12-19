@@ -1,3 +1,0 @@
-// the configured options and settings for Tutorial
-#define GF_VERSION_MAJOR @GF_VERSION_MAJOR@
-#define GF_VERSION_MINOR @GF_VERSION_MINOR@
