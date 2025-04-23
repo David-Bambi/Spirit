@@ -1,0 +1,3 @@
+add_subdirectory(basic)
+add_subdirectory(multiple_texture)
+add_subdirectory(texture_and_color)

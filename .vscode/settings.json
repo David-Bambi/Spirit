@@ -67,17 +67,31 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "codecvt": "cpp",
+        "cinttypes": "cpp",
+        "*.tpp": "cpp",
+        "*.fs": "glsl",
+        "*.vs": "glsl",
+        "bitset": "cpp",
+        "typeindex": "cpp",
+        "regex": "cpp",
+        "future": "cpp",
+        "complex": "cpp",
+        "expected": "cpp",
+        "source_location": "cpp"
     },
 
 
-    "java.project.sourcePaths": ["src/java_src"],
-    "java.project.referencedLibraries": ["src/java_src/libs/junit-platform-console-standalone-1.10.5.jar"],
-    
     "cmake.configureOnOpen": true,
     "cmake.buildDirectory": "${workspaceFolder}/build",
     "cmake.generator": "Unix Makefiles",
 
     "C_Cpp.default.includePath": ["${workspaceFolder}/**/**"],
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmaketools",
+
+    "editor.rulers": [
+        100
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/g++-13"
 }

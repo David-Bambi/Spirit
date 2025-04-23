@@ -1,99 +1,115 @@
-#include <GF/Stage/GFCamera.hpp>
+#include <camera/Camera.hpp>
+#include <glad/glad.h>
+#include <iostream>
+#include <time/Time.hpp>
+#include <camera/ProjectionDef.hpp>
+#include <uglfw/uglfw.hpp>
+#include <appsetting/AppSetting.hpp>
 
-GFCamera::GFCamera(unsigned int winWidth, unsigned int winHeight)
+Camera::Camera() :
+_pos(glm::vec3(0.0f, 0.0f, 0.0f)),
+_front(glm::vec3(0.0f, 0.0f, -1.0f)),
+_worldup(glm::vec3(0.0f, 1.0f, 0.0f)),
+_projection(glm::mat4(1.0f)),
+_speed(2.5f),
+_sensitivity(0.1f),
+_yaw(-90.0f),
+_pitch(0.0f),
+_fov(45.0f),
+_near(0.1f),
+_far(100.0f)
+{}
+
+Camera::~Camera()
 {
-    this->_winWidth = winWidth;
-    this->_winHeight = winHeight;
-
-    this->_Pos = glm::vec3(0.0f, 0.0f, 3.0f);
-    this->_Front = glm::vec3(0.0f, 0.0f, -1.0f);
-    this->_Up = glm::vec3(0.0f, 1.0f, 0.0f);
-
-    float windowWidthFloat = static_cast<float>(winWidth);
-    float windowHeightFloat = static_cast<float>(winHeight);
-   
-    this->_lastX = windowWidthFloat/2.0f;
-    this->_lastY = windowHeightFloat/2.0f;
-    this->_isFirstMouse = true;
-
-    this->_yaw = -90.0f;
-    this->_pitch = 0;
-    this->_fov = 45.0f;
-    this->_speed = 24.0f;
 }
 
-void GFCamera::Turn(double xpos, double ypos)
+void Camera::Update()
 {
-    if (this->_isFirstMouse)
+    if (_update)
     {
-        this->_lastX = xpos;
-        this->_lastY = ypos;
-        this->_isFirstMouse = false;
+        _update(*this);
     }
+    _view = glm::lookAt(_pos, _pos + _front, _up);
 
-    float xoffset = xpos - this->_lastX;
-    float yoffset = this->_lastY - ypos;
-    this->_lastX = xpos;
-    this->_lastY = ypos;
+    if (_projectionType == Projection_t::PERSPECTIVE)
+        _projection = glm::perspective(glm::radians(_fov), AppSetting::SCREEN_WIDTH/AppSetting::SCREEN_HEIGHT, _near, _far);
 
-    const float sensitivity = 0.1f;
-    xoffset *= sensitivity;
-    yoffset *= sensitivity;
-
-    this->_yaw   += xoffset;
-    this->_pitch += yoffset;  
-
-    if(this->_pitch > 89.0f)
-        this->_pitch =  89.0f;
-    if(this->_pitch < -89.0f)
-        this->_pitch = -89.0f;
-
-    this->ModifyFront();
+    glUniformMatrix4fv(glGetUniformLocation(_shaderId, "view"), 1, GL_FALSE, glm::value_ptr(_view));
+    glUniformMatrix4fv(glGetUniformLocation(_shaderId, "projection"), 1, GL_FALSE, glm::value_ptr(_projection));
 }
 
-void GFCamera::MoveForward()
+void Camera::MoveForward()
 {
-    this->_Pos += this->_Front * this->_speed;
-}
-void GFCamera::MoveBackward()
-{
-    this->_Pos -= this->_Front * this->_speed;
-}
-void GFCamera::MoveLeft()
-{
-    this->_Pos -= glm::normalize(glm::cross(this->_Front, this->_Up)) * this->_speed;
-}
-void GFCamera::MoveRight()
-{
-    this->_Pos += glm::normalize(glm::cross(this->_Front, this->_Up)) * this->_speed;
-}
-
-void GFCamera::ModifyFront()
-{
-    glm::vec3 direction;
-    direction.x = cos(glm::radians(this->_yaw)) * cos(glm::radians(this->_pitch));
-    direction.y = sin(glm::radians(this->_pitch));
-    direction.z = sin(glm::radians(this->_yaw)) * cos(glm::radians(this->_pitch));
-    this->_Front = glm::normalize(direction);
-}
-
-glm::mat4 GFCamera::ViewMatrix()
-{
-    return glm::lookAt(this->_Pos, 
-                       this->_Pos + this->_Front, 
-                       this->_Up); ;
-}
-
-glm::mat4 GFCamera::ProjectionMatrix()
-{
-    float winWidthFloat = static_cast<float>(this->_winWidth);
-    float winHeightFloat = static_cast<float>(this->_winHeight);
     
-    if (CameraType == Camera::Type::Othogonal)
-        return glm::ortho(0.0f, winWidthFloat, 0.0f, winHeightFloat, this->_near, this->_far);
-    else
-        return glm::perspective(glm::radians(this->_fov), 
-                                static_cast<float>(this->_winWidth) / static_cast<float>(this->_winHeight), 
-                                this->_near, 
-                                this->_far);
+    float velocity = Time::deltatime * _speed;
+    _pos += _front * velocity;
+}   
+
+void Camera::MoveBackward()
+{
+    float velocity = Time::deltatime * _speed;
+    _pos -= _front * velocity;
+}
+
+void Camera::MoveLeft()
+{
+    float speed = Time::deltatime * _speed;
+    _pos -= _right * speed;
+}
+
+void Camera::MoveRight()
+{
+    float speed = Time::deltatime * _speed;
+    _pos += _right * speed;
+}
+
+void Camera::MoveUp()
+{
+    float speed = Time::deltatime * _speed;
+    _pos += _up * speed;
+}
+
+void Camera::MoveDown()
+{
+    float speed = Time::deltatime * _speed;
+    _pos -= _up * speed;
+}
+
+void Camera::Zoom(float yoffset)
+{
+    _fov -= yoffset;
+    if (_fov < 1.0f)
+        _fov = 1.0f;
+    if (_fov > 45.0f)
+        _fov = 45.0f;
+}
+
+void Camera::MouseMovement(float xoffset, float yoffset)
+{
+    _yaw += xoffset * _sensitivity;
+    _pitch -= yoffset * _sensitivity;
+
+    if(_pitch > 89.0f)
+        _pitch =  89.0f;
+    if(_pitch < -89.0f)
+        _pitch = -89.0f;
+
+    glm::vec3 front;
+    front.x = cos(glm::radians(_yaw)) * cos(glm::radians(_pitch));
+    front.y = sin(glm::radians(_pitch));
+    front.z = sin(glm::radians(_yaw)) * cos(glm::radians(_pitch));
+    _front = glm::normalize(front);
+    _right = Right();
+    _up = Up();
+}
+
+glm::vec3 Camera::Right()
+{
+    return glm::normalize(glm::cross(_front, _worldup));
+}
+
+glm::vec3 Camera::Up()
+{
+    return glm::normalize(glm::cross(_right, _front));
 }

@@ -4,22 +4,22 @@
 class ppm_obj 
 {
 private : 
-    const char* _magic_byte = "P6";
+    const char* _magic_byte = "P3";
     unsigned short _width = 0;
     unsigned short _height = 0;
     const int _maxval_color = 255;
-    float* _imagepixel=nullptr;
+    int* _imagepixel=nullptr;
 
 public :
     ppm_obj(const unsigned short  width,
             const unsigned short  height, 
-                  float*          imagepixel);
+                  int*          imagepixel);
     ~ppm_obj();
 
-    float* GetImage();
+    int* GetImage();
     void SetImage(const unsigned short width,
                   const unsigned short height,
-                        float*         imagepixel);
+                        int*         imagepixel);
     void Save(const char* filepath);
     void Load(const char* filepath);
 };

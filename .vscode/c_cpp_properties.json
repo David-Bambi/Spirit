@@ -3,7 +3,7 @@
         {
             "name": "Linux",
             "intelliSenseMode": "linux-gcc-x86",
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/usr/bin/g++-13",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "configurationProvider": "ms-vscode.cmake-tools"
