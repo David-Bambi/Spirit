@@ -1,0 +1,34 @@
+{
+    // "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+    "name": "C++ Dev Container",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "--env=DISPLAY=${localEnv:DISPLAY}",
+        "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+        "--device=/dev/dri",
+        "--env=XDG_RUNTIME_DIR=${localEnv:XDG_RUNTIME_DIR}" ] ,
+    "remoteUser": "ubuntu",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+              "ms-vscode.cpptools",            // C++ IntelliSense + debug
+              "ms-vscode.cmake-tools",         // CMake integration
+              "twxs.cmake",                    // CMake syntax highlight
+              "esbenp.prettier-vscode",        // Beautifier (JSON, etc.)
+              "glsl-canvas.glsl-canvas",       // GLSL live preview
+              "slevesque.shader"              // GLSL syntax highlighting
+            ],
+            "settings": {
+              "editor.tabSize": 4,
+              "editor.formatOnSave": true,
+              "C_Cpp.default.compilerPath": "/usr/bin/g++",
+              "cmake.generator": "Ninja",
+              "terminal.integrated.shell.linux": "/bin/bash",
+              "extensions.ignoreRecommendations": true
+            }
+        }
+    },
+    "postCreateCommand": "git config --global user.name 'David Boivin' && git config --global user.email 'davidboivinbambi@gmail.com'"
+  }

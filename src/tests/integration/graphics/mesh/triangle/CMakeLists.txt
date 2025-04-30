@@ -6,13 +6,8 @@ file(COPY shader DESTINATION ".")
 
 add_executable(${TRIANGLE_I_TEST_EXE} TriangleITest.cpp)
 
-target_link_libraries(${TRIANGLE_I_TEST_EXE} 
-                      PRIVATE 
-                      ${GRAPHICI_TEST_LIB})
-                      
-target_include_directories(${TRIANGLE_I_TEST_EXE} 
-                           PRIVATE 
-                           ${GRAPHICI_TEST_INC})
+target_link_libraries(${TRIANGLE_I_TEST_EXE} PRIVATE ${GRAPHICI_TEST_LIB})
 
-add_test(NAME ${TRIANGLE_I_TEST_NAME} 
-         COMMAND ${TRIANGLE_I_TEST_EXE})
+target_include_directories(${TRIANGLE_I_TEST_EXE} PRIVATE ${GRAPHICI_TEST_INC})
+
+add_test(NAME ${TRIANGLE_I_TEST_NAME} COMMAND ${TRIANGLE_I_TEST_EXE})

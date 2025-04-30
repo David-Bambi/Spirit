@@ -1,7 +1,6 @@
 set(S_FILE_LIB s_file)
 
-set(S_FILE_SRC ppm/ppm_f.cpp 
-               ppm/ppm_obj.cpp)
+set(S_FILE_SRC ppm/ppm_f.cpp ppm/ppm_obj.cpp)
 
 set(S_FILE_INC ${CMAKE_CURRENT_SOURCE_DIR})
 

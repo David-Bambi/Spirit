@@ -1,13 +1,13 @@
 MAKEFLAGS += --no-print-directory
 
-all : cmk 
+all :  cmk 
 
 rebuild :
 	rm -rf build
 	mkdir build
 
 cmk : 
-	cmake -S . -B build -G Ninja
+	cmake -S . -B build -G Ninja && cmake --build build  --target run_cmake_format
 
 doc :
 	rm -rf docs/html

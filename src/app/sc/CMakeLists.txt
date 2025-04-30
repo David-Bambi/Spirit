@@ -1,15 +1,15 @@
-set(src_sc ${src_sc}
-  ./Recipe/Recipe.cpp
-  ./Recipe/RecipeMgr.cpp
-  ./Material/Material.cpp
-  ./Material/MaterialMgr.cpp
-  ./SatisfactoryCalculator.cpp)
+set(src_sc
+    ${src_sc}
+    ./Recipe/Recipe.cpp
+    ./Recipe/RecipeMgr.cpp
+    ./Material/Material.cpp
+    ./Material/MaterialMgr.cpp
+    ./SatisfactoryCalculator.cpp)
 
 add_executable(SC ${src_sc})
 target_include_directories(SC PUBLIC ".")
 
-set_target_properties(SC PROPERTIES
-                        CXX_STANDARD 23)
+set_target_properties(SC PROPERTIES CXX_STANDARD 23)
 
 target_compile_options(SC PRIVATE /W3)
 

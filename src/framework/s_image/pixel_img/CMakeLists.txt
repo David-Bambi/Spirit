@@ -7,5 +7,4 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(raster_f PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
-target_include_directories(pixel_img PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} )
-
+target_include_directories(pixel_img PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

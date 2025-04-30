@@ -1,4 +1,8 @@
-set(GRAPHICI_TEST_LIB s_graphics s_platform s_algorithm glfw)
+set(GRAPHICI_TEST_LIB
+    s_graphics
+    s_platform
+    s_algorithm
+    glfw)
 set(GRAPHICI_TEST_INC ${EXTERNAL_LIB_DIR} ${CMAKE_SOURCE_DIR} .)
 
 add_subdirectory(basic_window_opengl)
@@ -16,8 +20,3 @@ add_subdirectory(camera/camera_movement)
 add_subdirectory(component/transform_translate)
 add_subdirectory(component/transform_rotate)
 add_subdirectory(component/transform_scale)
-
-
-
-
-

@@ -6,13 +6,11 @@ file(COPY shader DESTINATION ".")
 
 add_executable(${TRANSFORM_TRANSLATE_I_TEST_EXE} TransformTranslateITests.cpp)
 
-target_link_libraries(${TRANSFORM_TRANSLATE_I_TEST_EXE} 
-                      PRIVATE 
-                      ${GRAPHICI_TEST_LIB})
-                      
-target_include_directories(${TRANSFORM_TRANSLATE_I_TEST_EXE} 
-                           PRIVATE 
-                           ${GRAPHICI_TEST_INC})
+target_link_libraries(${TRANSFORM_TRANSLATE_I_TEST_EXE}
+                      PRIVATE ${GRAPHICI_TEST_LIB})
 
-add_test(NAME ${TRANSFORM_TRANSLATE_I_TEST_NAME} 
+target_include_directories(${TRANSFORM_TRANSLATE_I_TEST_EXE}
+                           PRIVATE ${GRAPHICI_TEST_INC})
+
+add_test(NAME ${TRANSFORM_TRANSLATE_I_TEST_NAME}
          COMMAND ${TRANSFORM_TRANSLATE_I_TEST_EXE})

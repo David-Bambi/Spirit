@@ -8,16 +8,13 @@
 #include <GLFW/glfw3.h>
 
 namespace uglfw
-{ 
+{
   bool InitializeGlfw();
-  GLFWwindow* CreateWinContext(int height,
+  GLFWwindow *CreateWinContext(int height,
                                int width,
-                               const char* title);
-                               
-  void SetViewPortResizeable(GLFWwindow* WinCtx);
+                               const char *title);
 
-  static float SCREEN_WIDTH = 0;
-  static float SCREEN_HEIGHT = 0;
+  void SetViewPortResizeable(GLFWwindow *WinCtx);
 }
 
 #endif

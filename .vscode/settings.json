@@ -82,11 +82,6 @@
         "source_location": "cpp"
     },
 
-
-    "cmake.configureOnOpen": true,
-    "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.generator": "Unix Makefiles",
-
     "C_Cpp.default.includePath": ["${workspaceFolder}/**/**"],
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmaketools",
 
