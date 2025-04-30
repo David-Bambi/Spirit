@@ -1,6 +1,9 @@
 function(target_set_warnings TARGET ENABLED ENABLED_AS_ERRORS)
     if (NOT ${ENABLED})
         message(STATUS "Warnings Disabled for: ${TARGET}")
+        target_compile_options(${TARGET} PRIVATE
+            $<$<CXX_COMPILER_ID:GNU,Clang>:-w>
+            $<$<CXX_COMPILER_ID:MSVC>:/w>)
         return()
     endif()
 

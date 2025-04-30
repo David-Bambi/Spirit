@@ -3,18 +3,13 @@
 
 #include <exception>
 
-namespace uglad
-{ 
-    
-struct FailedInitGladException : public std::exception
-{
-    const char * what () const throw ()
-    {
-        return "Failed to initialize GLAD";
-    }
+namespace uglad {
+
+struct FailedInitGladException : public std::exception {
+  const char *what() const throw() { return "Failed to initialize GLAD"; }
 };
 
 void GladInit();
-}
+} // namespace uglad
 
 #endif

@@ -27,6 +27,9 @@ RUN apt update -y && apt install -y \
    cmake-format \
    mesa-utils \
    x11-apps \
+   graphviz \
+   openjdk-8-jdk \
+   doxygen \
    && apt clean
 
 CMD ["bash"]

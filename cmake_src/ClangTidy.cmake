@@ -1,4 +1,4 @@
-function(target_add_clang_tidy target)
+function(target_add_clang_tidy clang_target target)
     get_target_property(TARGET_SOURCES ${target} SOURCES)
     list(
         FILTER
@@ -25,7 +25,7 @@ function(target_add_clang_tidy target)
         else()
             message(STATUS "Added Clang Tidy for Target: ${target}")
             add_custom_target(
-                ${target}_clangtidy
+                ${clang_target}
                 COMMAND
                     ${Python3_EXECUTABLE}
                     ${CMAKE_SOURCE_DIR}/tools/run-clang-tidy.py
@@ -34,6 +34,7 @@ function(target_add_clang_tidy target)
                     -extra-arg-before=-std=${CMAKE_CXX_STANDARD}
                     -header-filter=${CMAKE_CURRENT_SOURCE_DIR}
                     -p=${CMAKE_BINARY_DIR}
+                    -quiet
                 WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
                 USES_TERMINAL)
         endif()

@@ -47,6 +47,7 @@ cpmaddpackage("gh:jarro2783/cxxopts@3.2.0")
 
 # Chemin d'accès importantes pour la compilation du projet
 set(EXTERNAL_LIB_DIR ${CMAKE_SOURCE_DIR}/external)
+set(DOC_DIR ${CMAKE_SOURCE_DIR}/docs)
 
 include(CTest)
 enable_testing()

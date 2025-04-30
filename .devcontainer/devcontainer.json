@@ -18,7 +18,8 @@
               "twxs.cmake",                    // CMake syntax highlight
               "esbenp.prettier-vscode",        // Beautifier (JSON, etc.)
               "glsl-canvas.glsl-canvas",       // GLSL live preview
-              "slevesque.shader"              // GLSL syntax highlighting
+              "slevesque.shader",              // GLSL syntax highlighting
+              "jebbs.plantuml"                 // PlantUML support             
             ],
             "settings": {
               "editor.tabSize": 4,

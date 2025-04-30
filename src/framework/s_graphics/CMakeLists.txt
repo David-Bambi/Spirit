@@ -1,4 +1,3 @@
-# Fichier source et include pour la librarie
 set(S_GRAPHICS_LIB s_graphics)
 
 set(S_GRAPHICS_SRC
@@ -14,23 +13,61 @@ set(S_GRAPHICS_SRC
     texture/Texture.cpp
     texture/TextureBuilder.cpp
     time/Time.cpp
-    scene/Renderer.cpp
     shader_program/ShaderProg.cpp
     scene/Scene.cpp
-    scene/SceneObject.cpp
     uglad/uglad.cpp
     uglfw/uglfw.cpp)
 
-set(S_GRAPHICS_EXTERNAL_SRC ${EXTERNAL_LIB_DIR}/glad/glad.c
-                            ${EXTERNAL_LIB_DIR}/stb_image/stb_image.cpp)
+set(S_GRAPHICS_EXTERNAL_LIB
+    glad
+    glfw
+    stb_image_lib
+    s_type
+    s_platform)
 
 set(S_GRAPHICS_INC ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(S_GRAPHICS_EXTERAL_LIB glfw s_type s_platform)
+# Create library target
+add_library(${S_GRAPHICS_LIB} SHARED ${S_GRAPHICS_SRC})
 
-# Compilation de la librarie
-add_library(${S_GRAPHICS_LIB} SHARED ${S_GRAPHICS_SRC}
-                                     ${S_GRAPHICS_EXTERNAL_SRC})
 target_include_directories(${S_GRAPHICS_LIB} PUBLIC ${S_GRAPHICS_INC}
                                                     ${EXTERNAL_LIB_DIR})
-target_link_libraries(${S_GRAPHICS_LIB} PRIVATE ${S_GRAPHICS_EXTERAL_LIB})
+
+target_link_libraries(${S_GRAPHICS_LIB} PRIVATE ${S_GRAPHICS_EXTERNAL_LIB})
+
+# Set target options
+target_enable_lto(${S_GRAPHICS_LIB} TRUE)
+target_set_warnings(${S_GRAPHICS_LIB} TRUE FALSE)
+
+# Documentation target
+set(S_GRAPHICS_DOC s_graphics_doc)
+set(S_GRAPHICS_DOC_PATH ${CMAKE_SOURCE_DIR}/docs/framework/s_graphics)
+target_generate_docs(${S_GRAPHICS_DOC} ${S_GRAPHICS_DOC_PATH})
+
+if(TARGET ${S_GRAPHICS_DOC})
+    add_dependencies(${S_GRAPHICS_LIB} ${S_GRAPHICS_DOC})
+endif()
+
+set(S_GRAPHICS_UML s_graphics_uml)
+set(S_GRAPHICS_UML_PATH ${CMAKE_SOURCE_DIR}/docs/framework/s_graphics/uml)
+target_generate_uml(${S_GRAPHICS_UML} ${S_GRAPHICS_UML_PATH})
+
+if(TARGET ${S_GRAPHICS_UML})
+    add_dependencies(${S_GRAPHICS_LIB} ${S_GRAPHICS_UML})
+endif()
+
+# Clang-tidy target
+set(S_GRAPHICS_CLANGTIDY s_graphics_clangtidy)
+target_add_clang_tidy(${S_GRAPHICS_CLANGTIDY} ${S_GRAPHICS_LIB})
+
+if (TARGET ${S_GRAPHICS_CLANGTIDY})
+add_dependencies(${S_GRAPHICS_LIB} ${S_GRAPHICS_CLANGTIDY})
+endif()
+
+# Clang-format target
+set(S_GRAPHICS_CLANGFORMAT s_graphics_clangformat)
+target_add_clang_format(${S_GRAPHICS_CLANGFORMAT})
+
+if (TARGET ${S_GRAPHICS_CLANGFORMAT})
+add_dependencies(${S_GRAPHICS_LIB} ${S_GRAPHICS_CLANGFORMAT})
+endif()

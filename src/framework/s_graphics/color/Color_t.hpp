@@ -4,14 +4,12 @@
 /**
  * @brief Type for color.
  */
-typedef struct Color_t 
-{
-float red;
-float green;
-float blue;
-float opacity;
+typedef struct Color_t {
+  float red;
+  float green;
+  float blue;
+  float opacity;
 
 } Color_t;
-
 
 #endif

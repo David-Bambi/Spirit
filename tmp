@@ -1,0 +1,1483 @@
+cmake --build build --config Debug --target s_graphics
+[0/8] cd /workspaces/spirit && /usr/bin/python3 /workspaces/spirit/tools/run-clang-format.py /workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp /workspaces/spirit/src/framework/s_graphics/camera/CameraBuilder.cpp /workspaces/spirit/src/framework/s_graphics/component/Transform.cpp /workspaces/spirit/src/framework/s_graphics/input/Input.cpp /workspaces/spirit/src/framework/s_graphics/model/GF2DCircle.cpp /workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp /workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp /workspaces/spirit/src/framework/s_graphics/model/Model.cpp /workspaces/spirit/src/framework/s_graphics/model/ModelBuilder.cpp /workspaces/spirit/src/framework/s_graphics/model/Sphere.cpp /workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp /workspaces/spirit/src/framework/s_graphics/scene/Scene.cpp /workspaces/spirit/src/framework/s_graphics/scene/SceneBuilder.cpp /workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp /workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp /workspaces/spirit/src/framework/s_graphics/texture/TextureBuilder.cpp /workspaces/spirit/src/framework/s_graphics/time/Time.cpp /workspaces/spirit/src/framework/s_graphics/uglad/uglad.cpp /workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp /workspaces/spirit/src/framework/s_graphics/appsetting/AppSetting.hpp /workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp /workspaces/spirit/src/framework/s_graphics/camera/CameraBuilder.hpp /workspaces/spirit/src/framework/s_graphics/camera/CameraUpdateDef.hpp /workspaces/spirit/src/framework/s_graphics/camera/ProjectionDef.hpp /workspaces/spirit/src/framework/s_graphics/color/ColorDef.hpp /workspaces/spirit/src/framework/s_graphics/color/Color_t.hpp /workspaces/spirit/src/framework/s_graphics/component/Component.hpp /workspaces/spirit/src/framework/s_graphics/component/Transform.hpp /workspaces/spirit/src/framework/s_graphics/input/Input.hpp /workspaces/spirit/src/framework/s_graphics/input/Key.hpp /workspaces/spirit/src/framework/s_graphics/model/GF2DCircle.hpp /workspaces/spirit/src/framework/s_graphics/model/GFSphere.hpp /workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp /workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.hpp /workspaces/spirit/src/framework/s_graphics/model/MeshDef.hpp /workspaces/spirit/src/framework/s_graphics/model/Model.hpp /workspaces/spirit/src/framework/s_graphics/model/ModelBuilder.hpp /workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp /workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp /workspaces/spirit/src/framework/s_graphics/scene/Scene.hpp /workspaces/spirit/src/framework/s_graphics/scene/SceneBuilder.hpp /workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.hpp /workspaces/spirit/src/framework/s_graphics/texture/GLTexture.hpp /workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp /workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp /workspaces/spirit/src/framework/s_graphics/texture/TextureBuilder.hpp /workspaces/spirit/src/framework/s_graphics/time/Time.hpp /workspaces/spirit/src/framework/s_graphics/uglad/uglad.hpp /workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.hpp --in-place
+[1/8] cd /workspaces/spirit/docs/framework/s_graphics && /usr/bin/doxygen
+warning: tag INPUT: input source '/home/david/Développements/spirit/src/framework/s_graphics' does not exist
+warning: The selected output language "french" has not been updated
+since release 1.9.5.  As a result some sentences may appear in English.
+
+warning: source '/home/david/Développements/spirit/src/framework/s_graphics' is not a readable file or directory... skipping.
+warning: No files to be processed, please check your settings, in particular INPUT, FILE_PATTERNS, and RECURSIVE
+Doxygen version used: 1.9.8
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching INPUT for files to process...
+Reading and parsing tag files
+Parsing files
+Building macro definition list...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Building concept list...
+Computing nesting relations for classes...
+Associating documentation with classes...
+Associating documentation with concepts...
+Associating documentation with modules...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Creating members for template instances...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Computing module relations...
+Sorting lists...
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Setting anonymous enum type...
+Computing dependencies between directories...
+Generating citations page...
+Counting members...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Correcting members for VHDL...
+Computing tooltip texts...
+Generating style sheet...
+Generating search indices...
+Generating example documentation...
+Generating file sources...
+Generating file documentation...
+Generating page documentation...
+Generating group documentation...
+Generating class documentation...
+Generating concept documentation...
+Generating module documentation...
+Generating namespace documentation...
+Generating graph info page...
+Generating directory documentation...
+Generating index page...
+Generating page index...
+Generating topic index...
+Generating module index...
+Generating module member index...
+Generating namespace index...
+Generating namespace member index...
+Generating concept index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating graphical class hierarchy...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+writing tag file...
+Running plantuml with JAVA...
+Running dot...
+type lookup cache used 0/65536 hits=0 misses=0
+symbol lookup cache used 0/65536 hits=0 misses=0
+finished...
+[2/8] cd /workspaces/spirit/src/framework/s_graphics && /usr/bin/python3 /workspaces/spirit/tools/run-clang-tidy.py camera/CameraBuilder.cpp camera/Camera.cpp input/Input.cpp model/Mesh.cpp model/Vertices.cpp model/MeshBuilder.cpp model/Model.cpp model/ModelBuilder.cpp component/Transform.cpp texture/Texture.cpp texture/TextureBuilder.cpp time/Time.cpp shader_program/ShaderProg.cpp scene/Scene.cpp uglad/uglad.cpp uglfw/uglfw.cpp -config-file=/workspaces/spirit/tools/.clang-tidy -extra-arg-before=-std=17 -header-filter=/workspaces/spirit/src/framework/s_graphics -p=/workspaces/spirit/build
+Enabled checks:
+    bugprone-argument-comment
+    bugprone-assert-side-effect
+    bugprone-assignment-in-if-condition
+    bugprone-bad-signal-to-kill-thread
+    bugprone-bool-pointer-implicit-conversion
+    bugprone-branch-clone
+    bugprone-casting-through-void
+    bugprone-chained-comparison
+    bugprone-compare-pointer-to-member-virtual-function
+    bugprone-copy-constructor-init
+    bugprone-dangling-handle
+    bugprone-dynamic-static-initializers
+    bugprone-empty-catch
+    bugprone-fold-init-type
+    bugprone-forward-declaration-namespace
+    bugprone-forwarding-reference-overload
+    bugprone-implicit-widening-of-multiplication-result
+    bugprone-inaccurate-erase
+    bugprone-inc-dec-in-conditions
+    bugprone-incorrect-enable-if
+    bugprone-incorrect-roundings
+    bugprone-infinite-loop
+    bugprone-integer-division
+    bugprone-lambda-function-name
+    bugprone-macro-parentheses
+    bugprone-macro-repeated-side-effects
+    bugprone-misplaced-operator-in-strlen-in-alloc
+    bugprone-misplaced-pointer-arithmetic-in-alloc
+    bugprone-misplaced-widening-cast
+    bugprone-move-forwarding-reference
+    bugprone-multi-level-implicit-pointer-conversion
+    bugprone-multiple-new-in-one-expression
+    bugprone-multiple-statement-macro
+    bugprone-narrowing-conversions
+    bugprone-no-escape
+    bugprone-non-zero-enum-to-bool-conversion
+    bugprone-not-null-terminated-result
+    bugprone-optional-value-conversion
+    bugprone-parent-virtual-call
+    bugprone-posix-return
+    bugprone-redundant-branch-condition
+    bugprone-reserved-identifier
+    bugprone-shared-ptr-array-mismatch
+    bugprone-signal-handler
+    bugprone-signed-char-misuse
+    bugprone-sizeof-container
+    bugprone-sizeof-expression
+    bugprone-spuriously-wake-up-functions
+    bugprone-standalone-empty
+    bugprone-string-constructor
+    bugprone-string-integer-assignment
+    bugprone-string-literal-with-embedded-nul
+    bugprone-stringview-nullptr
+    bugprone-suspicious-enum-usage
+    bugprone-suspicious-include
+    bugprone-suspicious-memory-comparison
+    bugprone-suspicious-memset-usage
+    bugprone-suspicious-missing-comma
+    bugprone-suspicious-realloc-usage
+    bugprone-suspicious-semicolon
+    bugprone-suspicious-string-compare
+    bugprone-swapped-arguments
+    bugprone-switch-missing-default-case
+    bugprone-terminating-continue
+    bugprone-throw-keyword-missing
+    bugprone-too-small-loop-variable
+    bugprone-unchecked-optional-access
+    bugprone-undefined-memory-manipulation
+    bugprone-undelegated-constructor
+    bugprone-unhandled-exception-at-new
+    bugprone-unhandled-self-assignment
+    bugprone-unique-ptr-array-mismatch
+    bugprone-unsafe-functions
+    bugprone-unused-local-non-trivial-variable
+    bugprone-unused-raii
+    bugprone-unused-return-value
+    bugprone-use-after-move
+    bugprone-virtual-near-miss
+    clang-analyzer-apiModeling.Errno
+    clang-analyzer-apiModeling.TrustNonnull
+    clang-analyzer-apiModeling.TrustReturnsNonnull
+    clang-analyzer-apiModeling.google.GTest
+    clang-analyzer-apiModeling.llvm.CastValue
+    clang-analyzer-apiModeling.llvm.ReturnValue
+    clang-analyzer-core.BitwiseShift
+    clang-analyzer-core.CallAndMessage
+    clang-analyzer-core.CallAndMessageModeling
+    clang-analyzer-core.DivideZero
+    clang-analyzer-core.DynamicTypePropagation
+    clang-analyzer-core.NonNullParamChecker
+    clang-analyzer-core.NonnilStringConstants
+    clang-analyzer-core.NullDereference
+    clang-analyzer-core.StackAddrEscapeBase
+    clang-analyzer-core.StackAddressEscape
+    clang-analyzer-core.UndefinedBinaryOperatorResult
+    clang-analyzer-core.VLASize
+    clang-analyzer-core.builtin.BuiltinFunctions
+    clang-analyzer-core.builtin.NoReturnFunctions
+    clang-analyzer-core.uninitialized.ArraySubscript
+    clang-analyzer-core.uninitialized.Assign
+    clang-analyzer-core.uninitialized.Branch
+    clang-analyzer-core.uninitialized.CapturedBlockVariable
+    clang-analyzer-core.uninitialized.NewArraySize
+    clang-analyzer-core.uninitialized.UndefReturn
+    clang-analyzer-cplusplus.InnerPointer
+    clang-analyzer-cplusplus.Move
+    clang-analyzer-cplusplus.NewDelete
+    clang-analyzer-cplusplus.NewDeleteLeaks
+    clang-analyzer-cplusplus.PlacementNew
+    clang-analyzer-cplusplus.PureVirtualCall
+    clang-analyzer-cplusplus.SelfAssignment
+    clang-analyzer-cplusplus.SmartPtrModeling
+    clang-analyzer-cplusplus.StringChecker
+    clang-analyzer-cplusplus.VirtualCallModeling
+    clang-analyzer-deadcode.DeadStores
+    clang-analyzer-fuchsia.HandleChecker
+    clang-analyzer-nullability.NullPassedToNonnull
+    clang-analyzer-nullability.NullReturnedFromNonnull
+    clang-analyzer-nullability.NullabilityBase
+    clang-analyzer-nullability.NullableDereferenced
+    clang-analyzer-nullability.NullablePassedToNonnull
+    clang-analyzer-nullability.NullableReturnedFromNonnull
+    clang-analyzer-optin.core.EnumCastOutOfRange
+    clang-analyzer-optin.cplusplus.UninitializedObject
+    clang-analyzer-optin.cplusplus.VirtualCall
+    clang-analyzer-optin.mpi.MPI-Checker
+    clang-analyzer-optin.osx.OSObjectCStyleCast
+    clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+    clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+    clang-analyzer-optin.performance.GCDAntipattern
+    clang-analyzer-optin.performance.Padding
+    clang-analyzer-optin.portability.UnixAPI
+    clang-analyzer-osx.API
+    clang-analyzer-osx.MIG
+    clang-analyzer-osx.NSOrCFErrorDerefChecker
+    clang-analyzer-osx.NumberObjectConversion
+    clang-analyzer-osx.OSObjectRetainCount
+    clang-analyzer-osx.ObjCProperty
+    clang-analyzer-osx.SecKeychainAPI
+    clang-analyzer-osx.cocoa.AtSync
+    clang-analyzer-osx.cocoa.AutoreleaseWrite
+    clang-analyzer-osx.cocoa.ClassRelease
+    clang-analyzer-osx.cocoa.Dealloc
+    clang-analyzer-osx.cocoa.IncompatibleMethodTypes
+    clang-analyzer-osx.cocoa.Loops
+    clang-analyzer-osx.cocoa.MissingSuperCall
+    clang-analyzer-osx.cocoa.NSAutoreleasePool
+    clang-analyzer-osx.cocoa.NSError
+    clang-analyzer-osx.cocoa.NilArg
+    clang-analyzer-osx.cocoa.NonNilReturnValue
+    clang-analyzer-osx.cocoa.ObjCGenerics
+    clang-analyzer-osx.cocoa.RetainCount
+    clang-analyzer-osx.cocoa.RetainCountBase
+    clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak
+    clang-analyzer-osx.cocoa.SelfInit
+    clang-analyzer-osx.cocoa.SuperDealloc
+    clang-analyzer-osx.cocoa.UnusedIvars
+    clang-analyzer-osx.cocoa.VariadicMethodTypes
+    clang-analyzer-osx.coreFoundation.CFError
+    clang-analyzer-osx.coreFoundation.CFNumber
+    clang-analyzer-osx.coreFoundation.CFRetainRelease
+    clang-analyzer-osx.coreFoundation.containers.OutOfBounds
+    clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+    clang-analyzer-security.FloatLoopCounter
+    clang-analyzer-security.cert.env.InvalidPtr
+    clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+    clang-analyzer-security.insecureAPI.SecuritySyntaxChecker
+    clang-analyzer-security.insecureAPI.UncheckedReturn
+    clang-analyzer-security.insecureAPI.bcmp
+    clang-analyzer-security.insecureAPI.bcopy
+    clang-analyzer-security.insecureAPI.bzero
+    clang-analyzer-security.insecureAPI.decodeValueOfObjCType
+    clang-analyzer-security.insecureAPI.getpw
+    clang-analyzer-security.insecureAPI.gets
+    clang-analyzer-security.insecureAPI.mkstemp
+    clang-analyzer-security.insecureAPI.mktemp
+    clang-analyzer-security.insecureAPI.rand
+    clang-analyzer-security.insecureAPI.strcpy
+    clang-analyzer-security.insecureAPI.vfork
+    clang-analyzer-unix.API
+    clang-analyzer-unix.DynamicMemoryModeling
+    clang-analyzer-unix.Errno
+    clang-analyzer-unix.Malloc
+    clang-analyzer-unix.MallocSizeof
+    clang-analyzer-unix.MismatchedDeallocator
+    clang-analyzer-unix.StdCLibraryFunctions
+    clang-analyzer-unix.Vfork
+    clang-analyzer-unix.cstring.BadSizeArg
+    clang-analyzer-unix.cstring.CStringModeling
+    clang-analyzer-unix.cstring.NullArg
+    clang-analyzer-valist.CopyToSelf
+    clang-analyzer-valist.Uninitialized
+    clang-analyzer-valist.Unterminated
+    clang-analyzer-valist.ValistBase
+    clang-analyzer-webkit.NoUncountedMemberChecker
+    clang-analyzer-webkit.RefCntblBaseVirtualDtor
+    clang-analyzer-webkit.UncountedLambdaCapturesChecker
+    cppcoreguidelines-avoid-c-arrays
+    cppcoreguidelines-avoid-capturing-lambda-coroutines
+    cppcoreguidelines-avoid-const-or-ref-data-members
+    cppcoreguidelines-avoid-do-while
+    cppcoreguidelines-avoid-goto
+    cppcoreguidelines-avoid-non-const-global-variables
+    cppcoreguidelines-avoid-reference-coroutine-parameters
+    cppcoreguidelines-c-copy-assignment-signature
+    cppcoreguidelines-explicit-virtual-functions
+    cppcoreguidelines-init-variables
+    cppcoreguidelines-interfaces-global-init
+    cppcoreguidelines-macro-to-enum
+    cppcoreguidelines-macro-usage
+    cppcoreguidelines-misleading-capture-default-by-value
+    cppcoreguidelines-missing-std-forward
+    cppcoreguidelines-narrowing-conversions
+    cppcoreguidelines-no-malloc
+    cppcoreguidelines-no-suspend-with-lock
+    cppcoreguidelines-noexcept-destructor
+    cppcoreguidelines-noexcept-move-operations
+    cppcoreguidelines-noexcept-swap
+    cppcoreguidelines-non-private-member-variables-in-classes
+    cppcoreguidelines-owning-memory
+    cppcoreguidelines-prefer-member-initializer
+    cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    cppcoreguidelines-pro-bounds-pointer-arithmetic
+    cppcoreguidelines-pro-type-const-cast
+    cppcoreguidelines-pro-type-cstyle-cast
+    cppcoreguidelines-pro-type-member-init
+    cppcoreguidelines-pro-type-reinterpret-cast
+    cppcoreguidelines-pro-type-static-cast-downcast
+    cppcoreguidelines-pro-type-union-access
+    cppcoreguidelines-pro-type-vararg
+    cppcoreguidelines-rvalue-reference-param-not-moved
+    cppcoreguidelines-slicing
+    cppcoreguidelines-special-member-functions
+    cppcoreguidelines-use-default-member-init
+    cppcoreguidelines-virtual-class-destructor
+    google-explicit-constructor
+    misc-const-correctness
+    misc-use-anonymous-namespace
+    modernize-avoid-bind
+    modernize-avoid-c-arrays
+    modernize-concat-nested-namespaces
+    modernize-deprecated-headers
+    modernize-deprecated-ios-base-aliases
+    modernize-loop-convert
+    modernize-macro-to-enum
+    modernize-make-shared
+    modernize-make-unique
+    modernize-pass-by-value
+    modernize-raw-string-literal
+    modernize-redundant-void-arg
+    modernize-replace-auto-ptr
+    modernize-replace-disallow-copy-and-assign-macro
+    modernize-replace-random-shuffle
+    modernize-return-braced-init-list
+    modernize-shrink-to-fit
+    modernize-type-traits
+    modernize-unary-static-assert
+    modernize-use-auto
+    modernize-use-bool-literals
+    modernize-use-constraints
+    modernize-use-default-member-init
+    modernize-use-emplace
+    modernize-use-equals-default
+    modernize-use-equals-delete
+    modernize-use-nodiscard
+    modernize-use-noexcept
+    modernize-use-nullptr
+    modernize-use-override
+    modernize-use-starts-ends-with
+    modernize-use-std-numbers
+    modernize-use-std-print
+    modernize-use-transparent-functors
+    modernize-use-uncaught-exceptions
+    modernize-use-using
+    performance-avoid-endl
+    performance-enum-size
+    performance-faster-string-find
+    performance-for-range-copy
+    performance-implicit-conversion-in-loop
+    performance-inefficient-algorithm
+    performance-inefficient-string-concatenation
+    performance-inefficient-vector-operation
+    performance-move-const-arg
+    performance-move-constructor-init
+    performance-no-automatic-move
+    performance-no-int-to-ptr
+    performance-noexcept-destructor
+    performance-noexcept-move-constructor
+    performance-noexcept-swap
+    performance-trivially-destructible
+    performance-type-promotion-in-math-fn
+    performance-unnecessary-copy-initialization
+    performance-unnecessary-value-param
+    readability-non-const-parameter
+
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/uglad/uglad.cpp
+/workspaces/spirit/external/glad/include/glad/glad.h:27:2: error: OpenGL header already included, remove this include, glad already provides it [clang-diagnostic-error]
+   27 | #error OpenGL header already included, remove this include, glad already provides it
+      |  ^
+/workspaces/spirit/src/framework/s_graphics/uglad/uglad.cpp:9:27: warning: do not use C-style cast to convert between unrelated types [cppcoreguidelines-pro-type-cstyle-cast]
+    9 |     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+      |                           ^
+/workspaces/spirit/src/framework/s_graphics/uglad/uglad.cpp:12:30: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   12 |     std::cout << E.what() << std::endl;
+      |                              ^~~~~~~~~
+      |                              '\n'
+/workspaces/spirit/src/framework/s_graphics/uglad/uglad.hpp:9:3: warning: function 'what' should be marked [[nodiscard]] [modernize-use-nodiscard]
+    9 |   const char *what() const throw() { return "Failed to initialize GLAD"; }
+      |   ^
+      |   [[nodiscard]] 
+/workspaces/spirit/src/framework/s_graphics/uglad/uglad.hpp:9:15: warning: annotate this function with 'override' or (rarely) 'final' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+    9 |   const char *what() const throw() { return "Failed to initialize GLAD"; }
+      |               ^
+      |                                    override
+/workspaces/spirit/src/framework/s_graphics/uglad/uglad.hpp:9:28: warning: dynamic exception specification 'throw()' is deprecated; consider using 'noexcept' instead [modernize-use-noexcept]
+    9 |   const char *what() const throw() { return "Failed to initialize GLAD"; }
+      |                            ^~~~~~~
+      |                            noexcept
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/input/Input.cpp
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:24:39: warning: unused parameter 'window' [clang-diagnostic-unused-parameter]
+   24 | void Input::MouseCallback(GLFWwindow *window, double xposIn, double yposIn) {
+      |                                       ^
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:26:3: warning: variable 'xpos' of type 'float' can be declared 'const' [misc-const-correctness]
+   26 |   float xpos = static_cast<float>(xposIn);
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:26:3: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   26 |   float xpos = static_cast<float>(xposIn);
+      |   ^~~~~
+      |   auto
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:27:3: warning: variable 'ypos' of type 'float' can be declared 'const' [misc-const-correctness]
+   27 |   float ypos = static_cast<float>(yposIn);
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:27:3: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   27 |   float ypos = static_cast<float>(yposIn);
+      |   ^~~~~
+      |   auto
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:29:9: warning: variable 'lastx' is not initialized [cppcoreguidelines-init-variables]
+    4 |   float lastx;
+      |         ^    
+      |               = NAN
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:30:9: warning: variable 'lasty' is not initialized [cppcoreguidelines-init-variables]
+   30 |   float lasty;
+      |         ^    
+      |               = NAN
+/workspaces/spirit/src/framework/s_graphics/input/Input.cpp:50:45: warning: unused parameter 'window' [clang-diagnostic-unused-parameter]
+   50 | void Input::MouseScrollCallback(GLFWwindow *window, double xoffset,
+      |                                             ^
+/workspaces/spirit/src/framework/s_graphics/input/Key.hpp:4:12: warning: enum 'Key' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+    4 | enum class Key {
+      |            ^
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp
+/workspaces/spirit/external/glad/include/glad/glad.h:27:2: error: OpenGL header already included, remove this include, glad already provides it [clang-diagnostic-error]
+   27 | #error OpenGL header already included, remove this include, glad already provides it
+      |  ^
+/workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp:32:63: warning: use nullptr [modernize-use-nullptr]
+   32 |   GLFWwindow *winctx = glfwCreateWindow(height, width, title, NULL, NULL);
+      |                                                               ^~~~
+      |                                                               nullptr
+/workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp:32:69: warning: use nullptr [modernize-use-nullptr]
+   32 |   GLFWwindow *winctx = glfwCreateWindow(height, width, title, NULL, NULL);
+      |                                                                     ^~~~
+      |                                                                     nullptr
+/workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp:33:17: warning: use nullptr [modernize-use-nullptr]
+   33 |   if (winctx == NULL) {
+      |                 ^~~~
+      |                 nullptr
+/workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp:34:52: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   34 |     std::cout << "Failed to create GLFW window" << std::endl;
+      |                                                    ^~~~~~~~~
+      |                                                    '\n'
+/workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp:36:12: warning: use nullptr [modernize-use-nullptr]
+   36 |     return NULL;
+      |            ^~~~
+      |            nullptr
+/workspaces/spirit/src/framework/s_graphics/uglfw/uglfw.cpp:49:35: warning: unused parameter 'window' [clang-diagnostic-unused-parameter]
+   49 |   auto resizefct = [](GLFWwindow *window, int width, int height) {
+      |                                   ^
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp
+/workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp:4:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    4 | typedef struct ImgLoadSetting {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5 |   bool flip_vertical = false;
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6 | } ILS;
+      | ~~~~~
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp:6:1: warning: constructor does not initialize these fields: _path, _TEX [cppcoreguidelines-pro-type-member-init]
+    6 | Texture::Texture() { glGenTextures(1, &_TEX); }
+      | ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp:8:10: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+    8 | Texture::~Texture() {}
+      |          ^          ~~
+      |                     = default;
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp:22:7: warning: variable 'width' is not initialized [cppcoreguidelines-init-variables]
+   22 |   int width, height, nrChannels;
+      |       ^    
+      |             = 0
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp:22:14: warning: variable 'height' is not initialized [cppcoreguidelines-init-variables]
+   22 |   int width, height, nrChannels;
+      |              ^     
+      |                     = 0
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp:22:22: warning: variable 'nrChannels' is not initialized [cppcoreguidelines-init-variables]
+   22 |   int width, height, nrChannels;
+      |                      ^         
+      |                                 = 0
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.cpp:35:46: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   35 |     std::cout << "Failed to load texture" << std::endl;
+      |                                              ^~~~~~~~~
+      |                                              '\n'
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:7:7: warning: class 'Texture' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    7 | class Texture {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:10:10: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   10 |   GLuint _TEX;
+      |          ^~~~
+      |          TEX
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:11:18: warning: declaration uses identifier '_ILS', which is a reserved identifier [bugprone-reserved-identifier]
+   11 |   ImgLoadSetting _ILS;
+      |                  ^~~~
+      |                  ILS
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/scene/Scene.cpp
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_ptr.h:99:2: warning: delete called on non-final 'Mesh' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
+   99 |         delete __ptr;
+      |         ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_ptr.h:404:4: note: in instantiation of member function 'std::default_delete<Mesh>::operator()' requested here
+  404 |           get_deleter()(std::move(__ptr));
+      |           ^
+/workspaces/spirit/src/framework/s_platform/builder/Builder.hpp:44:29: note: in instantiation of member function 'std::unique_ptr<Mesh>::~unique_ptr' requested here
+   44 |         Builder<T>() : _obj(std::make_unique<T>()){};
+      |                             ^
+/workspaces/spirit/src/framework/s_platform/builder/Builder.hpp:18:29: note: in instantiation of member function 'Builder<Mesh>::Builder' requested here
+   18 |             _instance = new Builder<T>();
+      |                             ^
+/workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp:4:52: note: in instantiation of member function 'Builder<Mesh>::GetInstance' requested here
+    4 |   return static_cast<MeshBuilder &>(Builder<Mesh>::GetInstance());
+      |                                                    ^
+/workspaces/spirit/src/framework/s_graphics/color/Color_t.hpp:7:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    7 | typedef struct Color_t {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+    8 |   float red;
+      |   ~~~~~~~~~~
+    9 |   float green;
+      |   ~~~~~~~~~~~~
+   10 |   float blue;
+      |   ~~~~~~~~~~~
+   11 |   float opacity;
+      |   ~~~~~~~~~~~~~~
+   12 | 
+   13 | } Color_t;
+      | ~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: class 'Mesh' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   12 | class Mesh {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: destructor of 'Mesh' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: note: make it public and virtual
+   12 | class Mesh {
+      |       ^
+   13 | public:
+   14 |   Mesh();
+   15 |   ~Mesh();
+      |   virtual 
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:23:12: warning: member variable 'MeshVertices' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   Vertices MeshVertices;
+      |            ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: declaration uses identifier '_VAO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                ^~~~
+      |                VAO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: member variable '_VAO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: declaration uses identifier '_VBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                      ^~~~
+      |                      VBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: member variable '_VBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: declaration uses identifier '_EBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                            ^~~~
+      |                            EBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: member variable '_EBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                                  ^~~~
+      |                                  TEX
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: member variable '_TEX' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:26:16: warning: member variable '_shaderId' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   26 |   unsigned int _shaderId;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:28:41: warning: member variable '_textures' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   28 |   std::vector<std::unique_ptr<Texture>> _textures;
+      |                                         ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:29:13: warning: member variable '_transform' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   29 |   glm::mat4 _transform;
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp:4:10: warning: do not use static_cast to downcast from a base to a derived class [cppcoreguidelines-pro-type-static-cast-downcast]
+    4 |   return static_cast<MeshBuilder &>(Builder<Mesh>::GetInstance());
+      |          ^
+/workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp:8:34: warning: parameter 'Vertices' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+    2 | 
+    3 | MeshBuilder &MeshBuilder::GetInstance() {
+    4 |   return static_cast<MeshBuilder &>(Builder<Mesh>::GetInstance());
+    5 | }
+    6 | 
+    7 | MeshBuilder &MeshBuilder::WithVertices(std::vector<glm::vec3> Vertices) {
+    8 |   _obj->MeshVertices.SetPosition(Vertices);
+      |                                  ^       
+      |                                  std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp:13:31: warning: parameter 'Color' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   13 |   _obj->MeshVertices.SetColor(Color);
+      |                               ^    
+      |                               std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp:18:33: warning: parameter 'TexCoord' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   18 |   _obj->MeshVertices.SetTexture(TexCoord);
+      |                                 ^       
+      |                                 std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/MeshBuilder.cpp:28:31: warning: parameter 'indexs' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   28 |   _obj->MeshVertices.Indexs = indexs;
+      |                               ^     
+      |                               std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:16:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   16 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:21:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   21 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:21:16: warning: member variable 'Count' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   21 |   unsigned int Count;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:22:22: warning: member variable 'Vertices' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   22 |   std::vector<float> Vertices;
+      |                      ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:23:29: warning: member variable 'Indexs' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   std::vector<unsigned int> Indexs;
+      |                             ^
+/workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp:4:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    4 | typedef struct ImgLoadSetting {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5 |   bool flip_vertical = false;
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6 | } ILS;
+      | ~~~~~
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:7:7: warning: class 'Texture' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    7 | class Texture {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:10:10: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   10 |   GLuint _TEX;
+      |          ^~~~
+      |          TEX
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:11:18: warning: declaration uses identifier '_ILS', which is a reserved identifier [bugprone-reserved-identifier]
+   11 |   ImgLoadSetting _ILS;
+      |                  ^~~~
+      |                  ILS
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/camera/CameraBuilder.cpp
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:11:7: warning: class 'Camera' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   11 | class Camera {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/camera/CameraBuilder.cpp:4:10: warning: do not use static_cast to downcast from a base to a derived class [cppcoreguidelines-pro-type-static-cast-downcast]
+    4 |   return static_cast<CameraBuilder &>(Builder<Camera>::GetInstance());
+      |          ^
+/workspaces/spirit/src/framework/s_graphics/camera/CameraBuilder.cpp:23:19: warning: parameter 'update' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+    2 |   _obj->_update = update;
+      |                   ^     
+      |                   std::move( )
+/workspaces/spirit/src/framework/s_graphics/camera/ProjectionDef.hpp:4:12: warning: enum 'Projection_t' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+    4 | enum class Projection_t { ORTHO, PERSPECTIVE };
+      |            ^
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/model/ModelBuilder.cpp
+/workspaces/spirit/src/framework/s_graphics/color/Color_t.hpp:7:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    7 | typedef struct Color_t {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+    8 |   float red;
+      |   ~~~~~~~~~~
+    9 |   float green;
+      |   ~~~~~~~~~~~~
+   10 |   float blue;
+      |   ~~~~~~~~~~~
+   11 |   float opacity;
+      |   ~~~~~~~~~~~~~~
+   12 | 
+   13 | } Color_t;
+      | ~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/component/Component.hpp:4:7: warning: destructor of 'Component' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+    4 | class Component {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/component/Component.hpp:4:7: note: make it public and virtual
+    4 | class Component {
+      |       ^
+    5 | public:
+      |        
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:10:7: warning: destructor of 'Transform' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+   10 | class Transform : public Component {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:10:7: note: make it public and virtual
+   10 | class Transform : public Component {
+      |       ^
+   11 | public:
+      |        
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:20:8: warning: annotate this function with 'override' or (rarely) 'final' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+   20 |   void Process();
+      |        ^        
+      |                  override
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: class 'Mesh' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   12 | class Mesh {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: destructor of 'Mesh' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: note: make it public and virtual
+   12 | class Mesh {
+      |       ^
+   13 | public:
+   14 |   Mesh();
+   15 |   ~Mesh();
+      |   virtual 
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:23:12: warning: member variable 'MeshVertices' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   Vertices MeshVertices;
+      |            ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: declaration uses identifier '_VAO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                ^~~~
+      |                VAO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: member variable '_VAO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: declaration uses identifier '_VBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                      ^~~~
+      |                      VBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: member variable '_VBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: declaration uses identifier '_EBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                            ^~~~
+      |                            EBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: member variable '_EBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                                  ^~~~
+      |                                  TEX
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: member variable '_TEX' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:26:16: warning: member variable '_shaderId' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   26 |   unsigned int _shaderId;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:28:41: warning: member variable '_textures' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   28 |   std::vector<std::unique_ptr<Texture>> _textures;
+      |                                         ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:29:13: warning: member variable '_transform' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   29 |   glm::mat4 _transform;
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/model/Model.hpp:12:7: warning: class 'Model' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   12 | class Model {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Model.hpp:28:10: warning: declaration uses identifier '_Update', which is a reserved identifier [bugprone-reserved-identifier]
+   28 |   Update _Update = nullptr;
+      |          ^~~~~~~
+      |          Update
+/workspaces/spirit/src/framework/s_graphics/model/ModelBuilder.cpp:4:10: warning: do not use static_cast to downcast from a base to a derived class [cppcoreguidelines-pro-type-static-cast-downcast]
+    4 |   return static_cast<ModelBuilder &>(Builder<Model>::GetInstance());
+      |          ^
+/workspaces/spirit/src/framework/s_graphics/model/ModelBuilder.cpp:40:19: warning: parameter 'update' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+    2 |   _obj->_Update = update;
+      |                   ^     
+      |                   std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:16:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   16 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:21:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   21 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:21:16: warning: member variable 'Count' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   21 |   unsigned int Count;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:22:22: warning: member variable 'Vertices' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   22 |   std::vector<float> Vertices;
+      |                      ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:23:29: warning: member variable 'Indexs' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   std::vector<unsigned int> Indexs;
+      |                             ^
+/workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp:4:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    4 | typedef struct ImgLoadSetting {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5 |   bool flip_vertical = false;
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6 | } ILS;
+      | ~~~~~
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:7:7: warning: class 'Texture' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    7 | class Texture {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:10:10: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   10 |   GLuint _TEX;
+      |          ^~~~
+      |          TEX
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:11:18: warning: declaration uses identifier '_ILS', which is a reserved identifier [bugprone-reserved-identifier]
+   11 |   ImgLoadSetting _ILS;
+      |                  ^~~~
+      |                  ILS
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/texture/TextureBuilder.cpp
+/workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp:4:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    4 | typedef struct ImgLoadSetting {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5 |   bool flip_vertical = false;
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6 | } ILS;
+      | ~~~~~
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:7:7: warning: class 'Texture' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    7 | class Texture {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:10:10: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   10 |   GLuint _TEX;
+      |          ^~~~
+      |          TEX
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:11:18: warning: declaration uses identifier '_ILS', which is a reserved identifier [bugprone-reserved-identifier]
+   11 |   ImgLoadSetting _ILS;
+      |                  ^~~~
+      |                  ILS
+/workspaces/spirit/src/framework/s_graphics/texture/TextureBuilder.cpp:4:10: warning: do not use static_cast to downcast from a base to a derived class [cppcoreguidelines-pro-type-static-cast-downcast]
+    4 |   return static_cast<TextureBuilder &>(Builder<Texture>::GetInstance());
+      |          ^
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/model/Model.cpp
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_construct.h:151:7: warning: destructor called on non-final 'Transform' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
+  151 |       __pointer->~_Tp();
+      |       ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/alloc_traits.h:675:9: note: in instantiation of function template specialization 'std::_Destroy<Transform>' requested here
+  675 |         { std::_Destroy(__p); }
+      |                ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_base.h:613:28: note: in instantiation of function template specialization 'std::allocator_traits<std::allocator<void>>::destroy<Transform>' requested here
+  613 |         allocator_traits<_Alloc>::destroy(_M_impl._M_alloc(), _M_ptr());
+      |                                   ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_base.h:599:2: note: in instantiation of member function 'std::_Sp_counted_ptr_inplace<Transform, std::allocator<void>, __gnu_cxx::_S_atomic>::_M_dispose' requested here
+  599 |         _Sp_counted_ptr_inplace(_Alloc __a, _Args&&... __args)
+      |         ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_base.h:972:6: note: in instantiation of function template specialization 'std::_Sp_counted_ptr_inplace<Transform, std::allocator<void>, __gnu_cxx::_S_atomic>::_Sp_counted_ptr_inplace<Transform>' requested here
+  972 |             _Sp_cp_type(__a._M_a, std::forward<_Args>(__args)...);
+      |             ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_base.h:1712:14: note: in instantiation of function template specialization 'std::__shared_count<>::__shared_count<Transform, std::allocator<void>, Transform>' requested here
+ 1712 |         : _M_ptr(), _M_refcount(_M_ptr, __tag, std::forward<_Args>(__args)...)
+      |                     ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr.h:464:4: note: in instantiation of function template specialization 'std::__shared_ptr<Transform>::__shared_ptr<std::allocator<void>, Transform>' requested here
+  464 |         : __shared_ptr<_Tp>(__tag, std::forward<_Args>(__args)...)
+      |           ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr.h:1009:14: note: in instantiation of function template specialization 'std::shared_ptr<Transform>::shared_ptr<std::allocator<void>, Transform>' requested here
+ 1009 |       return shared_ptr<_Tp>(_Sp_alloc_shared_tag<_Alloc>{__a},
+      |              ^
+/workspaces/spirit/src/framework/s_graphics/model/Model.cpp:7:12: note: in instantiation of function template specialization 'std::make_shared<Transform, Transform>' requested here
+    7 |       std::make_shared<Transform>(Transform());
+      |            ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_construct.h:151:19: note: qualify call to silence this warning
+  151 |       __pointer->~_Tp();
+      |                   ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_ptr.h:99:2: warning: delete called on non-final 'Mesh' that has virtual functions but non-virtual destructor [clang-diagnostic-delete-non-abstract-non-virtual-dtor]
+   99 |         delete __ptr;
+      |         ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_ptr.h:404:4: note: in instantiation of member function 'std::default_delete<Mesh>::operator()' requested here
+  404 |           get_deleter()(std::move(__ptr));
+      |           ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_construct.h:151:19: note: in instantiation of member function 'std::unique_ptr<Mesh>::~unique_ptr' requested here
+  151 |       __pointer->~_Tp();
+      |                   ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_construct.h:196:2: note: in instantiation of function template specialization 'std::_Destroy_aux<false>::__destroy<std::unique_ptr<Mesh> *>' requested here
+  196 |         __destroy(__first, __last);
+      |         ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/alloc_traits.h:948:12: note: in instantiation of function template specialization 'std::_Destroy<std::unique_ptr<Mesh> *>' requested here
+  948 |       std::_Destroy(__first, __last);
+      |            ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/deque.tcc:864:8: note: in instantiation of function template specialization 'std::_Destroy<std::unique_ptr<Mesh> *, std::unique_ptr<Mesh>>' requested here
+  864 |          std::_Destroy(*__node, *__node + _S_buffer_size(),
+      |               ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_deque.h:2091:4: note: in instantiation of member function 'std::deque<std::unique_ptr<Mesh>>::_M_destroy_data_aux' requested here
+ 2091 |           _M_destroy_data_aux(__first, __last);
+      |           ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_deque.h:1028:9: note: in instantiation of member function 'std::deque<std::unique_ptr<Mesh>>::_M_destroy_data' requested here
+ 1028 |       { _M_destroy_data(begin(), end(), _M_get_Tp_allocator()); }
+      |         ^
+/workspaces/spirit/src/framework/s_graphics/model/Model.cpp:5:8: note: in instantiation of member function 'std::deque<std::unique_ptr<Mesh>>::~deque' requested here
+    5 | Model::Model() {
+      |        ^
+/workspaces/spirit/src/framework/s_graphics/color/Color_t.hpp:7:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    7 | typedef struct Color_t {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+    8 |   float red;
+      |   ~~~~~~~~~~
+    9 |   float green;
+      |   ~~~~~~~~~~~~
+   10 |   float blue;
+      |   ~~~~~~~~~~~
+   11 |   float opacity;
+      |   ~~~~~~~~~~~~~~
+   12 | 
+   13 | } Color_t;
+      | ~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/component/Component.hpp:4:7: warning: destructor of 'Component' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+    4 | class Component {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/component/Component.hpp:4:7: note: make it public and virtual
+    4 | class Component {
+      |       ^
+    5 | public:
+      |        
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:10:7: warning: destructor of 'Transform' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+   10 | class Transform : public Component {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:10:7: note: make it public and virtual
+   10 | class Transform : public Component {
+      |       ^
+   11 | public:
+      |        
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:20:8: warning: annotate this function with 'override' or (rarely) 'final' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+   20 |   void Process();
+      |        ^        
+      |                  override
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: class 'Mesh' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   12 | class Mesh {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: destructor of 'Mesh' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: note: make it public and virtual
+   12 | class Mesh {
+      |       ^
+   13 | public:
+   14 |   Mesh();
+   15 |   ~Mesh();
+      |   virtual 
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:23:12: warning: member variable 'MeshVertices' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   Vertices MeshVertices;
+      |            ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: declaration uses identifier '_VAO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                ^~~~
+      |                VAO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: member variable '_VAO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: declaration uses identifier '_VBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                      ^~~~
+      |                      VBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: member variable '_VBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: declaration uses identifier '_EBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                            ^~~~
+      |                            EBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: member variable '_EBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                                  ^~~~
+      |                                  TEX
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: member variable '_TEX' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:26:16: warning: member variable '_shaderId' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   26 |   unsigned int _shaderId;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:28:41: warning: member variable '_textures' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   28 |   std::vector<std::unique_ptr<Texture>> _textures;
+      |                                         ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:29:13: warning: member variable '_transform' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   29 |   glm::mat4 _transform;
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/model/Model.cpp:10:8: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   10 | Model::~Model() {}
+      |        ^        ~~
+      |                 = default;
+/workspaces/spirit/src/framework/s_graphics/model/Model.cpp:14:50: warning: parameter 'update' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+    4 | 
+    5 | Model::Model() {
+    6 |   _components[std::type_index(typeid(Transform))] =
+    7 |       std::make_shared<Transform>(Transform());
+    8 | }
+    9 | 
+   10 | Model::~Model() {}
+   11 | 
+   12 | void Model::ProcessComponents() { get<Transform>()->Process(); }
+   13 | 
+   14 | void Model::SetUpdate(Update update) { _Update = update; }
+      |                                                  ^     
+      |                                                  std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/Model.hpp:12:7: warning: class 'Model' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   12 | class Model {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Model.hpp:28:10: warning: declaration uses identifier '_Update', which is a reserved identifier [bugprone-reserved-identifier]
+   28 |   Update _Update = nullptr;
+      |          ^~~~~~~
+      |          Update
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:16:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   16 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:21:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   21 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:21:16: warning: member variable 'Count' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   21 |   unsigned int Count;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:22:22: warning: member variable 'Vertices' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   22 |   std::vector<float> Vertices;
+      |                      ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:23:29: warning: member variable 'Indexs' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   std::vector<unsigned int> Indexs;
+      |                             ^
+/workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp:4:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    4 | typedef struct ImgLoadSetting {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5 |   bool flip_vertical = false;
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6 | } ILS;
+      | ~~~~~
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:7:7: warning: class 'Texture' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    7 | class Texture {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:10:10: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   10 |   GLuint _TEX;
+      |          ^~~~
+      |          TEX
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:11:18: warning: declaration uses identifier '_ILS', which is a reserved identifier [bugprone-reserved-identifier]
+   11 |   ImgLoadSetting _ILS;
+      |                  ^~~~
+      |                  ILS
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:9:1: warning: constructor does not initialize these fields: _projectionType, _up, _right, _view, _zoom, _shaderId [cppcoreguidelines-pro-type-member-init]
+    9 | Camera::Camera()
+      | ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:12:7: warning: initializer order does not match the declaration order [clang-diagnostic-reorder-ctor]
+   12 |       _speed(2.5f), _sensitivity(0.1f), _yaw(-90.0f), _pitch(0.0f), _fov(45.0f),
+      |       ^~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~  ~~~~~~~~~~~~
+      |       _yaw(-90.0f)  _pitch(0.0f)        _sensitivity(0.1f) _speed(2.5f)
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:12:7: note: field '_speed' will be initialized after field '_sensitivity'
+   12 |       _speed(2.5f), _sensitivity(0.1f), _yaw(-90.0f), _pitch(0.0f), _fov(45.0f),
+      |       ^~~~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:12:21: note: field '_sensitivity' will be initialized after field '_yaw'
+   12 |       _speed(2.5f), _sensitivity(0.1f), _yaw(-90.0f), _pitch(0.0f), _fov(45.0f),
+      |                     ^~~~~~~~~~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:15:9: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   15 | Camera::~Camera() {}
+      |         ^         ~~
+      |                   = default;
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:36:3: warning: variable 'velocity' of type 'float' can be declared 'const' [misc-const-correctness]
+   36 |   float velocity = Time::deltatime * _speed;
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:41:3: warning: variable 'velocity' of type 'float' can be declared 'const' [misc-const-correctness]
+   41 |   float velocity = Time::deltatime * _speed;
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:46:3: warning: variable 'speed' of type 'float' can be declared 'const' [misc-const-correctness]
+   46 |   float speed = Time::deltatime * _speed;
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:51:3: warning: variable 'speed' of type 'float' can be declared 'const' [misc-const-correctness]
+   51 |   float speed = Time::deltatime * _speed;
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:56:3: warning: variable 'speed' of type 'float' can be declared 'const' [misc-const-correctness]
+   56 |   float speed = Time::deltatime * _speed;
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:61:3: warning: variable 'speed' of type 'float' can be declared 'const' [misc-const-correctness]
+   61 |   float speed = Time::deltatime * _speed;
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:83:9: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   83 |   front.x = cos(glm::radians(_yaw)) * cos(glm::radians(_pitch));
+      |         ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:83:13: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   83 |   front.x = cos(glm::radians(_yaw)) * cos(glm::radians(_pitch));
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:84:9: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   84 |   front.y = sin(glm::radians(_pitch));
+      |         ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:84:13: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   84 |   front.y = sin(glm::radians(_pitch));
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:85:9: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   85 |   front.z = sin(glm::radians(_yaw)) * cos(glm::radians(_pitch));
+      |         ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.cpp:85:13: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   85 |   front.z = sin(glm::radians(_yaw)) * cos(glm::radians(_pitch));
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:11:7: warning: class 'Camera' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   11 | class Camera {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:42:9: warning: use default member initializer for '_yaw' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   42 |   float _yaw;
+      |         ^
+note: this fix will not be applied because it overlaps with another fix
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:43:9: warning: use default member initializer for '_pitch' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   43 |   float _pitch;
+      |         ^
+note: this fix will not be applied because it overlaps with another fix
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:44:9: warning: use default member initializer for '_sensitivity' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   44 |   float _sensitivity;
+      |         ^
+note: this fix will not be applied because it overlaps with another fix
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:45:9: warning: use default member initializer for '_speed' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   45 |   float _speed;
+      |         ^
+note: this fix will not be applied because it overlaps with another fix
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:47:9: warning: use default member initializer for '_fov' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   47 |   float _fov;
+      |         ^   
+      |             {45.0f}
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:48:9: warning: use default member initializer for '_near' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   48 |   float _near;
+      |         ^    
+      |              {0.1f}
+/workspaces/spirit/src/framework/s_graphics/camera/Camera.hpp:49:9: warning: use default member initializer for '_far' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   49 |   float _far;
+      |         ^   
+      |             {100.0f}
+/workspaces/spirit/src/framework/s_graphics/camera/ProjectionDef.hpp:4:12: warning: enum 'Projection_t' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+    4 | enum class Projection_t { ORTHO, PERSPECTIVE };
+      |            ^
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/time/Time.cpp
+/workspaces/spirit/src/framework/s_graphics/time/Time.cpp:8:3: warning: variable 'frame' of type 'float' can be declared 'const' [misc-const-correctness]
+    8 |   float frame = static_cast<float>(glfwGetTime());
+      |   ^
+      |         const 
+/workspaces/spirit/src/framework/s_graphics/time/Time.cpp:8:3: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+    8 |   float frame = static_cast<float>(glfwGetTime());
+      |   ^~~~~
+      |   auto
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/component/Transform.cpp
+/workspaces/spirit/src/framework/s_graphics/component/Component.hpp:4:7: warning: destructor of 'Component' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+    4 | class Component {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/component/Component.hpp:4:7: note: make it public and virtual
+    4 | class Component {
+      |       ^
+    5 | public:
+      |        
+/workspaces/spirit/src/framework/s_graphics/component/Transform.cpp:17:46: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   17 |   _mat = glm::rotate(_mat, glm::radians(_rot.x), glm::vec3(1.0f, 0.0f, 0.0f));
+      |                                              ^
+/workspaces/spirit/src/framework/s_graphics/component/Transform.cpp:18:46: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   18 |   _mat = glm::rotate(_mat, glm::radians(_rot.y), glm::vec3(0.0f, 1.0f, 0.0f));
+      |                                              ^
+/workspaces/spirit/src/framework/s_graphics/component/Transform.cpp:19:46: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   19 |   _mat = glm::rotate(_mat, glm::radians(_rot.z), glm::vec3(0.0f, 0.0f, 1.0f));
+      |                                              ^
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:10:7: warning: destructor of 'Transform' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+   10 | class Transform : public Component {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:10:7: note: make it public and virtual
+   10 | class Transform : public Component {
+      |       ^
+   11 | public:
+      |        
+/workspaces/spirit/src/framework/s_graphics/component/Transform.hpp:20:8: warning: annotate this function with 'override' or (rarely) 'final' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+   20 |   void Process();
+      |        ^        
+      |                  override
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp
+/workspaces/spirit/src/framework/s_graphics/color/Color_t.hpp:7:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    7 | typedef struct Color_t {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+    8 |   float red;
+      |   ~~~~~~~~~~
+    9 |   float green;
+      |   ~~~~~~~~~~~~
+   10 |   float blue;
+      |   ~~~~~~~~~~~
+   11 |   float opacity;
+      |   ~~~~~~~~~~~~~~
+   12 | 
+   13 | } Color_t;
+      | ~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:8:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [modernize-deprecated-headers]
+    8 | #include <stdio.h>
+      |          ^~~~~~~~~
+      |          <cstdio>
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:12:1: warning: constructor does not initialize these fields: _VAO, _VBO, _EBO, _TEX, _shaderId, _transform [cppcoreguidelines-pro-type-member-init]
+   12 | Mesh::Mesh() {
+      | ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:34:34: warning: narrowing conversion from 'size_type' (aka 'unsigned long') to signed type 'GLsizei' (aka 'int') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   34 |     glDrawElements(GL_TRIANGLES, MeshVertices.Indexs.size(), GL_UNSIGNED_INT,
+      |                                  ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:35:20: warning: use nullptr [modernize-use-nullptr]
+   35 |                    0);
+      |                    ^
+      |                    nullptr
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:37:35: warning: narrowing conversion from 'unsigned int' to signed type 'GLsizei' (aka 'int') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   37 |     glDrawArrays(GL_TRIANGLES, 0, MeshVertices.Count);
+      |                                   ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:50:33: warning: narrowing conversion from 'unsigned long' to signed type 'GLsizeiptr' (aka 'long') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   50 |   glBufferData(GL_ARRAY_BUFFER, MeshVertices.Vertices.size() * sizeof(float),
+      |                                 ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:55:16: warning: narrowing conversion from 'unsigned long' to signed type 'GLsizeiptr' (aka 'long') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   55 |                MeshVertices.Indexs.size() * sizeof(unsigned int),
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:67:21: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [clang-diagnostic-sign-compare]
+   67 |   for (int i = 0; i < _textures.size(); i++) {
+      |                   ~ ^ ~~~~~~~~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:68:5: warning: variable 'texname' of type 'std::string' (aka 'basic_string<char>') can be declared 'const' [misc-const-correctness]
+   68 |     std::string texname = "tex" + std::to_string(i);
+      |     ^
+      |                 const 
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:76:21: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [clang-diagnostic-sign-compare]
+   76 |   for (int i = 0; i < _textures.size(); i++) {
+      |                   ~ ^ ~~~~~~~~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:85:3: warning: variable 'transformLoc' of type 'unsigned int' can be declared 'const' [misc-const-correctness]
+   85 |   unsigned int transformLoc = glGetUniformLocation(_shaderId, "transform");
+      |   ^
+      |                const 
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.cpp:86:22: warning: narrowing conversion from 'unsigned int' to signed type 'GLint' (aka 'int') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   86 |   glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(_transform));
+      |                      ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: class 'Mesh' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   12 | class Mesh {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: warning: destructor of 'Mesh' is public and non-virtual [cppcoreguidelines-virtual-class-destructor]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:12:7: note: make it public and virtual
+   12 | class Mesh {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:23:12: warning: member variable 'MeshVertices' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   Vertices MeshVertices;
+      |            ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: declaration uses identifier '_VAO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                ^~~~
+      |                VAO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:16: warning: member variable '_VAO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: declaration uses identifier '_VBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                      ^~~~
+      |                      VBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:22: warning: member variable '_VBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: declaration uses identifier '_EBO', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                            ^~~~
+      |                            EBO
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:28: warning: member variable '_EBO' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   25 |   unsigned int _VAO, _VBO, _EBO, _TEX;
+      |                                  ^~~~
+      |                                  TEX
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:25:34: warning: member variable '_TEX' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:26:16: warning: member variable '_shaderId' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   26 |   unsigned int _shaderId;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:28:41: warning: member variable '_textures' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   28 |   std::vector<std::unique_ptr<Texture>> _textures;
+      |                                         ^
+/workspaces/spirit/src/framework/s_graphics/model/Mesh.hpp:29:13: warning: member variable '_transform' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   29 |   glm::mat4 _transform;
+      |             ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:16:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   16 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:21:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   21 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:12:7: warning: constructor does not initialize these fields: Count, _stride, _offset [cppcoreguidelines-pro-type-member-init]
+   12 | class Vertices {
+      |       ^
+   13 | public:
+   14 |   void SetPosition(std::vector<glm::vec3> position);
+   15 |   void SetColor(std::vector<Color_t> color);
+   16 |   void SetTexture(const std::vector<glm::vec2> TexCoord);
+   17 | 
+   18 |   void Build();
+   19 |   void SetVertexAttrPtr();
+   20 | 
+   21 |   unsigned int Count;
+      |                     
+      |                     {}
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:21:16: warning: member variable 'Count' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   21 |   unsigned int Count;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:22:22: warning: member variable 'Vertices' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   22 |   std::vector<float> Vertices;
+      |                      ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:23:29: warning: member variable 'Indexs' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   std::vector<unsigned int> Indexs;
+      |                             ^
+/workspaces/spirit/src/framework/s_graphics/texture/GLTexture.hpp:8:1: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,modernize-avoid-c-arrays]
+    8 | GLenum gltex[32] = {GL_TEXTURE0,  GL_TEXTURE1,  GL_TEXTURE2,  GL_TEXTURE3,
+      | ^
+/workspaces/spirit/src/framework/s_graphics/texture/GLTexture.hpp:8:8: warning: variable 'gltex' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    8 | GLenum gltex[32] = {GL_TEXTURE0,  GL_TEXTURE1,  GL_TEXTURE2,  GL_TEXTURE3,
+      |        ^
+/workspaces/spirit/src/framework/s_graphics/texture/ImgLoadSetting.hpp:4:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    4 | typedef struct ImgLoadSetting {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    5 |   bool flip_vertical = false;
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    6 | } ILS;
+      | ~~~~~
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:7:7: warning: class 'Texture' defines a destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    7 | class Texture {
+      |       ^
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:10:10: warning: declaration uses identifier '_TEX', which is a reserved identifier [bugprone-reserved-identifier]
+   10 |   GLuint _TEX;
+      |          ^~~~
+      |          TEX
+/workspaces/spirit/src/framework/s_graphics/texture/Texture.hpp:11:18: warning: declaration uses identifier '_ILS', which is a reserved identifier [bugprone-reserved-identifier]
+   11 |   ImgLoadSetting _ILS;
+      |                  ^~~~
+      |                  ILS
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:4:3: warning: variable 'vertexCode' of type 'std::string' (aka 'basic_string<char>') can be declared 'const' [misc-const-correctness]
+    4 |   std::string vertexCode = this->ReadShaderCode(vertexPath);
+      |   ^
+      |               const 
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:5:3: warning: variable 'fragmentCode' of type 'std::string' (aka 'basic_string<char>') can be declared 'const' [misc-const-correctness]
+    5 |   std::string fragmentCode = this->ReadShaderCode(fragmentPath);
+      |   ^
+      |               const 
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:7:3: warning: variable 'vertex' of type 'unsigned int' can be declared 'const' [misc-const-correctness]
+    7 |   unsigned int vertex = ShaderProg::Compile(vertexCode, GL_VERTEX_SHADER);
+      |   ^
+      |                const 
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:9:3: warning: variable 'fragment' of type 'unsigned int' can be declared 'const' [misc-const-correctness]
+    9 |   unsigned int fragment = ShaderProg::Compile(fragmentCode, GL_FRAGMENT_SHADER);
+      |   ^
+      |                const 
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:10:7: warning: variable 'success' is not initialized [cppcoreguidelines-init-variables]
+   10 |   int success;
+      |       ^      
+      |               = 0
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:11:3: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,modernize-avoid-c-arrays]
+   11 |   char infoLog[512];
+      |   ^
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:13:3: warning: '_id' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+    3 | ShaderProg::ShaderProg(const char *vertexPath, const char *fragmentPath) {
+      |                                                                          : _id(glCreateProgram())
+    4 |   std::string vertexCode = this->ReadShaderCode(vertexPath);
+    5 |   std::string fragmentCode = this->ReadShaderCode(fragmentPath);
+    6 | 
+    7 |   unsigned int vertex = ShaderProg::Compile(vertexCode, GL_VERTEX_SHADER);
+    8 | 
+    9 |   unsigned int fragment = ShaderProg::Compile(fragmentCode, GL_FRAGMENT_SHADER);
+   10 |   int success;
+   11 |   char infoLog[512];
+   12 | 
+   13 |   this->_id = glCreateProgram();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:20:41: warning: use nullptr [modernize-use-nullptr]
+   20 |     glGetProgramInfoLog(this->_id, 512, NULL, infoLog);
+      |                                         ^~~~
+      |                                         nullptr
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:20:47: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   20 |     glGetProgramInfoLog(this->_id, 512, NULL, infoLog);
+      |                                               ^
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:22:18: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   22 |               << infoLog << std::endl;
+      |                  ^
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:22:29: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   22 |               << infoLog << std::endl;
+      |                             ^~~~~~~~~
+      |                             '\n'
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:23:32: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   23 |     std::cout << vertexCode << std::endl;
+      |                                ^~~~~~~~~
+      |                                '\n'
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:53:46: warning: the parameter 'shaderCode' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   53 | unsigned int ShaderProg::Compile(std::string shaderCode,
+      |                                              ^
+      |                                  const      &
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:58:16: warning: variable 'shader' is not initialized [cppcoreguidelines-init-variables]
+   58 |   unsigned int shader;
+      |                ^     
+      |                       = 0
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:59:7: warning: variable 'success' is not initialized [cppcoreguidelines-init-variables]
+   59 |   int success;
+      |       ^      
+      |               = 0
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:60:3: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,modernize-avoid-c-arrays]
+   60 |   char infoLog[512];
+      |   ^
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:63:51: warning: use nullptr [modernize-use-nullptr]
+   63 |   glShaderSource(shader, 1, &shaderCodetocompile, NULL);
+      |                                                   ^~~~
+      |                                                   nullptr
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:69:37: warning: use nullptr [modernize-use-nullptr]
+   69 |     glGetShaderInfoLog(shader, 512, NULL, infoLog);
+      |                                     ^~~~
+      |                                     nullptr
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:69:43: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   69 |     glGetShaderInfoLog(shader, 512, NULL, infoLog);
+      |                                           ^
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:71:18: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   71 |               << infoLog << std::endl;
+      |                  ^
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:71:29: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   71 |               << infoLog << std::endl;
+      |                             ^~~~~~~~~
+      |                             '\n'
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.cpp:94:64: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   94 |     std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
+      |                                                                ^~~~~~~~~
+      |                                                                '\n'
+/workspaces/spirit/src/framework/s_graphics/shader_program/ShaderProg.hpp:14:7: warning: class 'ShaderProg' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   14 | class ShaderProg {
+      |       ^
+/usr/bin/clang-tidy -header-filter=/workspaces/spirit/src/framework/s_graphics -extra-arg-before=-std=17 -p=/workspaces/spirit/build --config-file=/workspaces/spirit/tools/.clang-tidy /workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp
+/workspaces/spirit/src/framework/s_graphics/color/Color_t.hpp:7:1: warning: use 'using' instead of 'typedef' [modernize-use-using]
+    7 | typedef struct Color_t {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+    8 |   float red;
+      |   ~~~~~~~~~~
+    9 |   float green;
+      |   ~~~~~~~~~~~~
+   10 |   float blue;
+      |   ~~~~~~~~~~~
+   11 |   float opacity;
+      |   ~~~~~~~~~~~~~~
+   12 | 
+   13 | } Color_t;
+      | ~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:16:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   16 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertex.hpp:21:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   21 |   Vertex(glm::vec3 pos) : position(pos) {}
+      |   ^
+      |   explicit 
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:12:51: warning: the parameter 'position' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   12 | void Vertices::SetPosition(std::vector<glm::vec3> position) {
+      |                                                   ^
+      |                            const                 &
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:25:10: warning: parameter 'color' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+    7 |   _col = color;
+      |          ^    
+      |          std::move( )
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:33:56: warning: the const qualified parameter 'TexCoord' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   33 | void Vertices::SetTexture(const std::vector<glm::vec2> TexCoord) {
+      |                                                        ^
+      |                                                       &
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:43:21: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [clang-diagnostic-sign-compare]
+   43 |   for (int i = 0; i < _pos.size(); i++) {
+      |                   ~ ^ ~~~~~~~~~~~
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:44:32: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   44 |     Vertices.push_back(_pos[i].x);
+      |                                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:45:32: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   45 |     Vertices.push_back(_pos[i].y);
+      |                                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:46:32: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   46 |     Vertices.push_back(_pos[i].z);
+      |                                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:49:34: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   49 |       Vertices.push_back(_tex[i].x);
+      |                                  ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:50:34: warning: do not access members of unions; use (boost::)variant instead [cppcoreguidelines-pro-type-union-access]
+   50 |       Vertices.push_back(_tex[i].y);
+      |                                  ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:70:27: warning: do not use C-style cast to convert between unrelated types [cppcoreguidelines-pro-type-cstyle-cast]
+   70 |                           (void *)_offset.pos);
+      |                           ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:70:27: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:75:27: warning: do not use C-style cast to convert between unrelated types [cppcoreguidelines-pro-type-cstyle-cast]
+   75 |                           (void *)_offset.tex);
+      |                           ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:75:27: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:80:27: warning: do not use C-style cast to convert between unrelated types [cppcoreguidelines-pro-type-cstyle-cast]
+   80 |                           (void *)_offset.col);
+      |                           ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.cpp:80:27: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:21:16: warning: member variable 'Count' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   21 |   unsigned int Count;
+      |                ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:22:22: warning: member variable 'Vertices' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   22 |   std::vector<float> Vertices;
+      |                      ^
+/workspaces/spirit/src/framework/s_graphics/model/Vertices.hpp:23:29: warning: member variable 'Indexs' has public visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+   23 |   std::vector<unsigned int> Indexs;
+      |                             ^
+[3/8] cd /workspaces/spirit/docs/framework/s_graphics/uml && java -jar /workspaces/spirit/tools/plantuml-1.2025.2.jar -o /workspaces/spirit/docs/framework/s_graphics/uml class_diagram.puml
+FAILED: src/framework/s_graphics/CMakeFiles/s_graphics_clangtidy /workspaces/spirit/build/src/framework/s_graphics/CMakeFiles/s_graphics_clangtidy 
+cd /workspaces/spirit/src/framework/s_graphics && /usr/bin/python3 /workspaces/spirit/tools/run-clang-tidy.py camera/CameraBuilder.cpp camera/Camera.cpp input/Input.cpp model/Mesh.cpp model/Vertices.cpp model/MeshBuilder.cpp model/Model.cpp model/ModelBuilder.cpp component/Transform.cpp texture/Texture.cpp texture/TextureBuilder.cpp time/Time.cpp shader_program/ShaderProg.cpp scene/Scene.cpp uglad/uglad.cpp uglfw/uglfw.cpp -config-file=/workspaces/spirit/tools/.clang-tidy -extra-arg-before=-std=17 -header-filter=/workspaces/spirit/src/framework/s_graphics -p=/workspaces/spirit/build
+ninja: build stopped: subcommand failed.

@@ -17,8 +17,12 @@ doc :
 graphics :
 	cmake --build build --config Debug --target s_graphics
 
+glad :
+	cmake --build build --config Debug --target glad
+
 itests :
 	cmake --build build --config Debug --target itests
 
 gf :
 	ninja -C build && ./build/src/app/gf/gf.exe
+
