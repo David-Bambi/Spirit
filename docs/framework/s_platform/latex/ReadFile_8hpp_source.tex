@@ -1,0 +1,39 @@
+\doxysection{Read\+File.\+hpp}
+\hypertarget{ReadFile_8hpp_source}{}\label{ReadFile_8hpp_source}\index{/workspaces/spirit/src/framework/s\_platform/file/ReadFile.hpp@{/workspaces/spirit/src/framework/s\_platform/file/ReadFile.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ READFILE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ READFILE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ std::string\ ReadFile(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classBuilder}{filePath}})}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ std::string\ \mbox{\hyperlink{classBuilder}{filestr}};}
+\DoxyCodeLine{00012\ \ \ \ \ std::ifstream\ \mbox{\hyperlink{classBuilder}{file}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classBuilder}{file}}.exceptions(std::ifstream::failbit\ |\ std::ifstream::badbit);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBuilder}{shaderFile}}.open(\mbox{\hyperlink{classBuilder}{filePath}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::stringstream\ \mbox{\hyperlink{classBuilder}{filestream}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBuilder}{filestream}}\ <<\ \mbox{\hyperlink{classBuilder}{file}}.rdbuf();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBuilder}{shaderFile}}.close();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBuilder}{filestr}}\ =\ \mbox{\hyperlink{classBuilder}{filestream}}.str();}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{catch}\ (std::ifstream::failure\&\ \mbox{\hyperlink{classBuilder}{e}})}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ERROR::FILE\_NOT\_SUCCESFULLY\_READ\ :\ "{}}\ <<\ \mbox{\hyperlink{classBuilder}{filePath}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classBuilder}{filestr}};}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

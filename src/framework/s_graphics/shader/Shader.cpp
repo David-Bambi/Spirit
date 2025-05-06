@@ -1,27 +1,31 @@
 #include <shader/Shader.hpp>
 
+#include <glad/glad.h>
+#include <array>
+#include <iostream>
+
 void Shader::Compile()
 {
-    const unsigned int vertex = ShaderProg::Compile(vertexCode, GL_VERTEX_SHADER);
-    const unsigned int fragment = ShaderProg::Compile(fragmentCode, GL_FRAGMENT_SHADER); 
+    const char* shaderCodetocompile = _shaderCode.c_str();
 
-    const char* shaderCodetocompile = shaderCode.c_str();
+    glShaderSource(_id, 1, &shaderCodetocompile, nullptr);
+    glCompileShader(_id);
+    LogCompileError();
+}
 
-    // 2. compile shaders
-    unsigned int shader = 0;
+void Shader::LogCompileError()
+{
     int success = 0;
-    std::array<char, 512> infoLog = {};
-
-    shader = glCreateShader(typeShader);
-    glShaderSource(shader, 1, &shaderCodetocompile, nullptr);
-    glCompileShader(shader);
-
-    // print compile errors if any
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+    glGetShaderiv(_id, GL_COMPILE_STATUS, &success);
     if (!success)
-    {
-        glGetShaderInfoLog(shader, 512, nullptr, infoLog.data());
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog.data() << '\n';
-    };
+    {    
+        std::array<char, 512> infoLog = {};
+        glGetShaderInfoLog(_id, 512, nullptr, infoLog.data());
+        std::cout << "ERROR::SHADER::" << _type << "::COMPILATION_FAILED" << "\n" << infoLog.data() << '\n';
+    }; 
+}
 
+void Shader::Create()
+{
+    _id = glCreateShader(_type);
 }

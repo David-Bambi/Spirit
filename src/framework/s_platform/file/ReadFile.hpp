@@ -6,7 +6,6 @@
 #include <sstream>
 #include <string>
 
-
 std::string ReadFile(const char* filePath)
 {
     std::string filestr;
@@ -16,12 +15,12 @@ std::string ReadFile(const char* filePath)
 
     try
     {
-        shaderFile.open(filePath);
+        file.open(filePath);
 
         std::stringstream filestream;
         filestream << file.rdbuf();
 
-        shaderFile.close();
+        file.close();
         filestr = filestream.str();
     }
     catch (std::ifstream::failure& e)

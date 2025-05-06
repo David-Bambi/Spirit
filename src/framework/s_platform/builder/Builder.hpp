@@ -33,7 +33,7 @@ class Builder
      * @brief Build a object and reset the builder objet
      *
      */
-    std::unique_ptr<T> Build()
+    virtual std::unique_ptr<T> Build()
     {
         std::unique_ptr<T> obj = std::make_unique<T>();
         obj.swap(_obj);

@@ -6,6 +6,8 @@
 
 #include <object/Object.hpp>
 #include <string/StrDef.hpp>
+#include <string>
+#include <shader/ShaderType.hpp>
 
 class Shader : public Object
 {
@@ -14,19 +16,13 @@ class Shader : public Object
 
   private:
     unsigned int _id = -1;
+    ShaderType _type = ShaderType::VERTEX_SHADER;
+    std::string _shaderCode = STREMPTY;
 
-    const std::string& _vertexShaderPath = STREMPTY;
-    const std::string& _fragmentShaderPath = STREMPTY;
-    const std::string& _geometryShaderPath = STREMPTY;
-
-    const std::string& _vertexShaderCode = STREMPTY;
-    const std::string& _fragmentShaderCode = STREMPTY;
-    const std::string& _geometryShaderCode = STREMPTY;
-
+    void Create();
     void Compile();
-    void Link();
-    void Use();
-    
+    void LogCompileError();
+
     friend class ShaderBuilder;
 };
 

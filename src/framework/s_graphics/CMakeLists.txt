@@ -15,7 +15,10 @@ set(S_GRAPHICS_SRC
     texture/Texture.cpp
     texture/TextureBuilder.cpp
     time/Time.cpp
-    shader/ShaderProg.cpp
+    shader/ProgramShader.cpp
+    shader/ProgramShaderBuilder.cpp
+    shader/Shader.cpp
+    shader/ShaderBuilder.cpp
     scene/Scene.cpp
     ugl/ugl.cpp
     uglad/uglad.cpp

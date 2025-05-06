@@ -1,5 +1,6 @@
 set(S_PLATFORM_LIB s_platform)
 set(S_PLATFORM_SRC builder/Builder.cpp)
+
 set(S_PLATFORM_INC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(${S_PLATFORM_LIB} SHARED ${S_PLATFORM_SRC})
