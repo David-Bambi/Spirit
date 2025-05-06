@@ -30,7 +30,7 @@ function(target_add_clang_tidy clang_target target)
                     ${Python3_EXECUTABLE}
                     ${CMAKE_SOURCE_DIR}/tools/run-clang-tidy.py
                     ${TARGET_SOURCES}
-                    -config-file=${CMAKE_SOURCE_DIR}/tools/.clang-tidy
+                    -config-file=${CMAKE_SOURCE_DIR}/.clang-tidy
                     -extra-arg-before=-std=${CMAKE_CXX_STANDARD}
                     -header-filter=${CMAKE_CURRENT_SOURCE_DIR}
                     -p=${CMAKE_BINARY_DIR}

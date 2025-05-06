@@ -4,21 +4,26 @@
 #include <glad/glad.h>
 #include <texture/ImgLoadSetting.hpp>
 
-class Texture {
-private:
-  const char *_path;
-  GLuint _TEX;
-  ImgLoadSetting _ILS;
+class Texture
+{
+  private:
+    const char* _path = nullptr;
+    GLuint _tex = 0;
+    ImgLoadSetting _ils = {false};
 
-  void ProcessILS();
+    void ProcessILS();
 
-public:
-  Texture();
-  ~Texture();
-  void GenerateTexture();
-  unsigned int Id();
+  public:
+    Texture();
+    Texture(const Texture& other) = default;
+    Texture(Texture&& other) noexcept = default;
+    Texture& operator=(const Texture& other) = default;
+    Texture& operator=(Texture&& other) noexcept = default;
+    ~Texture() = default;
+    void GenerateTexture();
+    unsigned int Id();
 
-  friend class TextureBuilder;
+    friend class TextureBuilder;
 };
 
 #endif

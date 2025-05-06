@@ -1,1 +1,1 @@
-add_subdirectory(s_platform_test)
+add_subdirectory(platform_utests)

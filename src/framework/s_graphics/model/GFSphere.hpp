@@ -8,15 +8,16 @@
 
 #include <GF/Shape/Renderable.hpp>
 
-class GFSphere : public Renderable {
-private:
-  unsigned int _vao;
-  unsigned int _vbo;
-  unsigned int _ebo;
+class GFSphere : public Renderable
+{
+  private:
+    unsigned int _vao;
+    unsigned int _vbo;
+    unsigned int _ebo;
 
-public:
-  GFSphere(int radius, int n);
-  virtual void Render();
+  public:
+    GFSphere(int radius, int n);
+    virtual void Render();
 };
 
 #endif

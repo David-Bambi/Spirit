@@ -29,7 +29,7 @@ RUN apt update -y && apt install -y \
    x11-apps \
    graphviz \
    openjdk-8-jdk \
-   doxygen \
+   doxygen \ 
    && apt clean
 
 CMD ["bash"]

@@ -5,7 +5,8 @@
 #include <input/Input.hpp>
 #include <input/Key.hpp>
 
-namespace CUD {
+namespace CUD
+{
 Camera::UpdateFct FreeMove = ([](Camera &camera) {
   if (Input::mousemov) {
     camera.MouseMovement(Input::xoffset, Input::yoffset);

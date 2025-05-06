@@ -9,35 +9,42 @@
 /**
  * @brief Class to manage the vertices of a mesh object.
  */
-class Vertices {
-public:
-  void SetPosition(std::vector<glm::vec3> position);
-  void SetColor(std::vector<Color_t> color);
-  void SetTexture(const std::vector<glm::vec2> TexCoord);
+class Vertices
+{
+  public:
+    void SetPosition(const std::vector<glm::vec3>& position);
+    void SetColor(std::vector<Color_t> color);
+    void SetTexture(const std::vector<glm::vec2>& TexCoord);
+    std::vector<float> VerticesVec();
+    std::vector<unsigned int> Indexs();
+    void SetIndexs(std::vector<unsigned int>& indexs);
+    unsigned int Count();
 
-  void Build();
-  void SetVertexAttrPtr();
+    void Build();
+    void SetVertexAttrPtr();
 
-  unsigned int Count;
-  std::vector<float> Vertices;
-  std::vector<unsigned int> Indexs;
+  private:
+    struct Offset
+    {
+        size_t pos;
+        size_t nor;
+        size_t tex;
+        size_t col;
+    };
 
-private:
-  struct Offset {
-    size_t pos;
-    size_t nor;
-    size_t tex;
-    size_t col;
-  };
+    int _stride = 0;
+    Offset _offset = {0, 0, 0, 0};
+    std::bitset<4> _vertextype = 0b0000;
+    unsigned int _count = 0;
 
-  int _stride;
-  Offset _offset;
-  std::bitset<4> _vertextype;
-  std::vector<Color_t> _col;
-  std::vector<glm::vec3> _pos;
-  std::vector<glm::vec2> _tex;
+    std::vector<Color_t> _col = {};
+    std::vector<glm::vec3> _pos = {};
+    std::vector<glm::vec2> _tex = {};
 
-  void InitVertexInfo();
+    std::vector<float> _vertices_vec = {};
+    std::vector<unsigned int> _indexs = {};
+
+    void InitVertexInfo();
 };
 
 #endif

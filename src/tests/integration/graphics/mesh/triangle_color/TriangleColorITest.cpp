@@ -1,10 +1,10 @@
 #include <color/ColorDef.hpp>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <model/Mesh.hpp>
-#include <model/MeshBuilder.hpp>
-#include <model/MeshDef.hpp>
-#include <shader_program/ShaderProg.hpp>
+#include <mesh/Mesh.hpp>
+#include <mesh/MeshBuilder.hpp>
+#include <mesh/VerticesDef.hpp>
+#include <shader/ShaderProg.hpp>
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 #include <memory>
@@ -23,7 +23,7 @@ int main()
 
     MeshBuilder& B = MeshBuilder::GetInstance();
 
-    std::unique_ptr<Mesh> M = B.WithVertices(MeshDef::TriangleV)
+    std::unique_ptr<Mesh> M = B.WithVertices(VerticesDef::TriangleV)
                                .WithColor({Color::Red, 
                                            Color::Cyan, 
                                            Color::Yellow}).Build();

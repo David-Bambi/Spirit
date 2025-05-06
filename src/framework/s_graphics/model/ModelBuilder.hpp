@@ -6,22 +6,23 @@
 #include <component/Transform.hpp>
 #include <functional>
 #include <glm/glm.hpp>
-#include <model/Mesh.hpp>
+#include <mesh/Mesh.hpp>
 #include <model/Model.hpp>
 
 /**
  * @brief Helper class to build model
  *
  */
-class ModelBuilder : public Builder<Model> {
-public:
-  ModelBuilder &WithMesh(std::unique_ptr<Mesh> mesh);
-  ModelBuilder &WithPosition(glm::vec3 pos);
-  ModelBuilder &WithRotation(glm::vec3 rot);
-  ModelBuilder &WithScale(glm::vec3 sca);
-  ModelBuilder &WithUpdate(std::function<void(Model &)> update);
+class ModelBuilder : public Builder<Model>
+{
+  public:
+    ModelBuilder& WithMesh(std::unique_ptr<Mesh> mesh);
+    ModelBuilder& WithPosition(glm::vec3 pos);
+    ModelBuilder& WithRotation(glm::vec3 rot);
+    ModelBuilder& WithScale(glm::vec3 sca);
+    ModelBuilder& WithUpdate(std::function<void(Model&)> update);
 
-  static ModelBuilder &GetInstance();
+    static ModelBuilder& GetInstance();
 };
 
 #endif

@@ -3,12 +3,12 @@
 #include <GLFW/glfw3.h>
 #include <camera/Camera.hpp>
 #include <camera/CameraBuilder.hpp>
-#include <model/Mesh.hpp>
-#include <model/MeshBuilder.hpp>
-#include <model/MeshDef.hpp>
+#include <mesh/Mesh.hpp>
+#include <mesh/MeshBuilder.hpp>
+#include <mesh/VerticesDef.hpp>
 #include <model/Model.hpp>
 #include <model/ModelBuilder.hpp>
-#include <shader_program/ShaderProg.hpp>
+#include <shader/ShaderProg.hpp>
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 #include <memory>
@@ -62,7 +62,7 @@ int main()
         {
 
           std::unique_ptr<Mesh> M = B.WithShader(SP.Id())
-                                     .WithVertices(MeshDef::CubeV)
+                                     .WithVertices(VerticesDef::CubeV)
                                      .WithColor({Color::Red, 
                                       Color::Cyan,
                                       Color::Magenta,
@@ -71,7 +71,7 @@ int main()
                                       Color::Blue,
                                       Color::White,
                                       Color::Black})
-                                     .WithIndexs(MeshDef::CubeI)
+                                     .WithIndexs(VerticesDef::CubeI)
                                      .Build();
           M->Setup(); 
         

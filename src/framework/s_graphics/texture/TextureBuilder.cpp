@@ -1,7 +1,12 @@
 #include <texture/TextureBuilder.hpp>
 
-TextureBuilder &TextureBuilder::GetInstance() {
-  return static_cast<TextureBuilder &>(Builder<Texture>::GetInstance());
+#include <iostream>
+#include <stdexcept>
+
+TextureBuilder& TextureBuilder::GetInstance()
+{
+    static TextureBuilder instance;
+    return instance;
 }
 
 /**
@@ -10,9 +15,10 @@ TextureBuilder &TextureBuilder::GetInstance() {
  * @param Path
  * @return TextureBuilder&
  */
-TextureBuilder &TextureBuilder::WithPath(const char *Path) {
-  _obj->_path = Path;
-  return *this;
+TextureBuilder& TextureBuilder::WithPath(const char* Path)
+{
+    _obj->_path = Path;
+    return *this;
 }
 
 /**
@@ -21,7 +27,8 @@ TextureBuilder &TextureBuilder::WithPath(const char *Path) {
  * @param Path
  * @return TextureBuilder&
  */
-TextureBuilder &TextureBuilder::WithImagLoadSetting(ILS ils) {
-  _obj->_ILS = ils;
-  return *this;
+TextureBuilder& TextureBuilder::WithImagLoadSetting(ImgLoadSetting ils)
+{
+    _obj->_ils = ils;
+    return *this;
 }

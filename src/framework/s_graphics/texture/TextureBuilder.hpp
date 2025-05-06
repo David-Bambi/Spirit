@@ -6,12 +6,13 @@
 #include <builder/Builder.hpp>
 #include <memory>
 
-class TextureBuilder : public Builder<Texture> {
-public:
-  TextureBuilder &WithPath(const char *Path);
-  TextureBuilder &WithImagLoadSetting(ILS ils);
+class TextureBuilder : public Builder<Texture>
+{
+  public:
+    TextureBuilder& WithPath(const char* Path);
+    TextureBuilder& WithImagLoadSetting(ImgLoadSetting ils);
 
-  static TextureBuilder &GetInstance();
+    static TextureBuilder& GetInstance();
 };
 
 #endif

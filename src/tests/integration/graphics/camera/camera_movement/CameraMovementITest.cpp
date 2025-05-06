@@ -3,12 +3,12 @@
 #include <GLFW/glfw3.h>
 #include <camera/Camera.hpp>
 #include <camera/CameraBuilder.hpp>
-#include <model/Mesh.hpp>
-#include <model/MeshBuilder.hpp>
-#include <model/MeshDef.hpp>
+#include <mesh/Mesh.hpp>
+#include <mesh/MeshBuilder.hpp>
+#include <mesh/VerticesDef.hpp>
 #include <model/Model.hpp>
 #include <model/ModelBuilder.hpp>
-#include <shader_program/ShaderProg.hpp>
+#include <shader/ShaderProg.hpp>
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 #include <memory>
@@ -25,6 +25,7 @@ int main()
   uglfw::InitializeGlfw();
   GLFWwindow* Win = uglfw::CreateWinContext(800, 600, "Test camera movement");
   uglad::GladInit();
+  
   glEnable(GL_DEPTH_TEST);
   Input::Window = Win;
   
@@ -43,7 +44,7 @@ int main()
 
     MeshBuilder& B = MeshBuilder::GetInstance();
     std::unique_ptr<Mesh> M = B.WithShader(SP.Id())
-                               .WithVertices(MeshDef::CubeV)
+                               .WithVertices(VerticesDef::CubeV)
                                .WithColor({Color::Red, 
                                            Color::Red,
                                            Color::Red, 
@@ -52,7 +53,7 @@ int main()
                                            Color::Green,
                                            Color::Green,
                                            Color::Green})
-                               .WithIndexs(MeshDef::CubeI)
+                               .WithIndexs(VerticesDef::CubeI)
                                .Build();
     M->Setup(); 
 

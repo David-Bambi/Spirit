@@ -1,10 +1,10 @@
 #include <color/ColorDef.hpp>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <model/Mesh.hpp>
-#include <model/MeshBuilder.hpp>
-#include <model/MeshDef.hpp>
-#include <shader_program/ShaderProg.hpp>
+#include <mesh/Mesh.hpp>
+#include <mesh/MeshBuilder.hpp>
+#include <mesh/VerticesDef.hpp>
+#include <shader/ShaderProg.hpp>
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 #include <texture/TextureBuilder.hpp>
@@ -28,9 +28,9 @@ int main()
     MeshBuilder& B = MeshBuilder::GetInstance();
     TextureBuilder& TB = TextureBuilder::GetInstance();
 
-    std::unique_ptr<Mesh> M = B.WithVertices(MeshDef::RectangleV)
-                               .WithIndexs(MeshDef::RectangleI)
-                               .WithTextureCoord(MeshDef::RectangleT)
+    std::unique_ptr<Mesh> M = B.WithVertices(VerticesDef::RectangleV)
+                               .WithIndexs(VerticesDef::RectangleI)
+                               .WithTextureCoord(VerticesDef::RectangleT)
                                .WithColor({Color::Blue,
                                            Color::Cyan,
                                            Color::Magenta,

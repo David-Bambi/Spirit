@@ -1,12 +1,12 @@
 #include <color/ColorDef.hpp>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <model/Mesh.hpp>
-#include <model/MeshBuilder.hpp>
-#include <model/MeshDef.hpp>
+#include <mesh/Mesh.hpp>
+#include <mesh/MeshBuilder.hpp>
+#include <mesh/VerticesDef.hpp>
 #include <model/Model.hpp>
 #include <model/ModelBuilder.hpp>
-#include <shader_program/ShaderProg.hpp>
+#include <shader/ShaderProg.hpp>
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 
@@ -25,8 +25,8 @@ int main()
 
     MeshBuilder B = MeshBuilder();
     std::unique_ptr<Mesh> M = B.WithShader(SP.Id())
-                               .WithVertices(MeshDef::RectangleV)
-                               .WithIndexs(MeshDef::RectangleI)
+                               .WithVertices(VerticesDef::RectangleV)
+                               .WithIndexs(VerticesDef::RectangleI)
                                .WithColor({Color::Red, 
                                            Color::Cyan, 
                                            Color::Yellow,

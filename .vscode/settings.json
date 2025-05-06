@@ -79,12 +79,19 @@
         "future": "cpp",
         "complex": "cpp",
         "expected": "cpp",
-        "source_location": "cpp"
+        "source_location": "cpp",
+        "cfenv": "cpp",
+        "ranges": "cpp",
+        "pointers": "cpp",
+        "util": "cpp"
     },
-
+    "[cpp]": {
+        "editor.defaultFormatter": null
+      },
     "C_Cpp.default.includePath": ["${workspaceFolder}/**/**"],
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmaketools",
-
+    "C_Cpp.formatting": "disabled",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
     "editor.rulers": [
         100
     ],

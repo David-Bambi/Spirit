@@ -21,7 +21,7 @@ if (JAVA)
 		add_custom_target(
 	        ${target}
 	        COMMAND
-	           java -jar ${CMAKE_SOURCE_DIR}/tools/plantuml-1.2025.2.jar -o ${working_dir} class_diagram.puml
+	           java -jar ${CMAKE_SOURCE_DIR}/tools/plantuml-1.2025.2.jar -o ${working_dir} *.puml
 	        WORKING_DIRECTORY ${working_dir}
 		)
 	else()

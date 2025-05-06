@@ -8,26 +8,32 @@
 
 #include <component/Component.hpp>
 #include <functional>
-#include <model/Mesh.hpp>
-class Model {
-public:
-  Model();
-  ~Model();
-  void Render();
+#include <mesh/Mesh.hpp>
+class Model
+{
+  public:
+    Model();
+    Model(const Model& other) = default;
+    Model(Model&& other) noexcept = default;
+    Model& operator=(const Model& other) = default;
+    Model& operator=(Model&& other) noexcept = default;
+    ~Model() = default;
 
-  using Update = std::function<void(Model &)>;
+    void Render();
+    using Update = std::function<void(Model&)>;
 
-  template <typename T> std::shared_ptr<T> get();
+    template <typename T>
+    std::shared_ptr<T> get();
 
-  void ProcessComponents();
-  void SetUpdate(Update update);
+    void ProcessComponents();
+    void SetUpdate(Update update);
 
-private:
-  std::deque<std::unique_ptr<Mesh>> _meshes;
-  std::unordered_map<std::type_index, std::shared_ptr<Component>> _components;
-  Update _Update = nullptr;
+  private:
+    std::deque<std::unique_ptr<Mesh>> _meshes;
+    std::unordered_map<std::type_index, std::shared_ptr<Component>> _components;
+    Update _update = nullptr;
 
-  friend class ModelBuilder;
+    friend class ModelBuilder;
 };
 
 #include <model/Model.tpp>

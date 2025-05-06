@@ -1,0 +1,77 @@
+\doxysection{Builder\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classBuilder}{}\label{classBuilder}\index{Builder$<$ T $>$@{Builder$<$ T $>$}}
+
+
+Collaboration diagram for Builder\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classBuilder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBuilder_a2bfa9718984965205e54e1ec7e7cb0e1}\label{classBuilder_a2bfa9718984965205e54e1ec7e7cb0e1} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ {\bfseries Build} ()
+\begin{DoxyCompactList}\small\item\em Build a object and reset the builder objet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuilder}{static}} \mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \& \mbox{\hyperlink{classBuilder_acfeee07f648d14a07a3c8bfcb33599e8}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the unique instance of the \doxylink{classBuilder}{Builder} class. \end{DoxyCompactList}\item 
+\Hypertarget{classBuilder_a08d5bfa4728e0c1d74b17b2d334e6553}\label{classBuilder_a08d5bfa4728e0c1d74b17b2d334e6553} 
+\mbox{\hyperlink{classBuilder}{static}} \mbox{\hyperlink{classBuilder}{void}} {\bfseries Delete\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Clean the memory for the singleton instance of the \doxylink{classBuilder}{Builder}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBuilder_a57162e833e7328db4cd2138678dc3e49}\label{classBuilder_a57162e833e7328db4cd2138678dc3e49} 
+{\bfseries Builder} (\mbox{\hyperlink{classBuilder}{const}} \mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \&)=\mbox{\hyperlink{classBuilder}{default}}
+\item 
+\Hypertarget{classBuilder_a10f5555cf4b6232685644c7ba82d9ce9}\label{classBuilder_a10f5555cf4b6232685644c7ba82d9ce9} 
+{\bfseries Builder} (\mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \&\&\mbox{\hyperlink{classBuilder}{obj}})=\mbox{\hyperlink{classBuilder}{default}}
+\item 
+\Hypertarget{classBuilder_afe503af08ff76191f28772d0b278789f}\label{classBuilder_afe503af08ff76191f28772d0b278789f} 
+\mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \& {\bfseries operator=} (\mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \&\&\mbox{\hyperlink{classBuilder}{obj}})=\mbox{\hyperlink{classBuilder}{default}}
+\item 
+\Hypertarget{classBuilder_a583fb3c101080adc0ceb52aecbdb739d}\label{classBuilder_a583fb3c101080adc0ceb52aecbdb739d} 
+\mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \& {\bfseries operator=} (\mbox{\hyperlink{classBuilder}{const}} \mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \&)=\mbox{\hyperlink{classBuilder}{default}}
+\item 
+\Hypertarget{classBuilder_a145a05059a2e50a9635f2e355e8e8f25}\label{classBuilder_a145a05059a2e50a9635f2e355e8e8f25} 
+\mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \& {\bfseries operator=} (\mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \&\mbox{\hyperlink{classBuilder}{obj}})=\mbox{\hyperlink{classBuilder}{default}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBuilder_a4b9f8184e9be7eca6a98a94823b5aa3b}\label{classBuilder_a4b9f8184e9be7eca6a98a94823b5aa3b} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ {\bfseries \+\_\+obj} = \mbox{\hyperlink{classBuilder}{nullptr}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBuilder_a5c37c341577b000500c436dce3e56e3b}\label{classBuilder_a5c37c341577b000500c436dce3e56e3b} 
+\mbox{\hyperlink{classBuilder}{static}} \mbox{\hyperlink{classBuilder}{Builder}} \texorpdfstring{$\ast$}{*} {\bfseries \+\_\+instance} = \mbox{\hyperlink{classBuilder}{nullptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBuilder_acfeee07f648d14a07a3c8bfcb33599e8}\label{classBuilder_acfeee07f648d14a07a3c8bfcb33599e8} 
+\index{Builder$<$ T $>$@{Builder$<$ T $>$}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Builder$<$ T $>$@{Builder$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classBuilder}{class}} \mbox{\hyperlink{classBuilder}{T}} $>$ \\
+\mbox{\hyperlink{classBuilder}{static}} \mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$ \& \mbox{\hyperlink{classBuilder}{Builder}}$<$ \mbox{\hyperlink{classBuilder}{T}} $>$\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the unique instance of the \doxylink{classBuilder}{Builder} class. 
+
+\begin{DoxyReturn}{Returns}
+Builder\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+platform/builder/Builder.\+hpp\end{DoxyCompactItemize}

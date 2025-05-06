@@ -5,7 +5,6 @@ set(GRAPHICI_TEST_LIB
     glfw)
 set(GRAPHICI_TEST_INC ${EXTERNAL_LIB_DIR} ${CMAKE_SOURCE_DIR} .)
 
-add_subdirectory(basic_window_opengl)
 add_subdirectory(mesh/triangle)
 add_subdirectory(mesh/triangle_color)
 add_subdirectory(mesh/rectangle)

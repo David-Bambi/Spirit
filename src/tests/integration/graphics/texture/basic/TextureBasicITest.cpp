@@ -1,10 +1,10 @@
 #include <color/ColorDef.hpp>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <model/Mesh.hpp>
-#include <model/MeshBuilder.hpp>
-#include <model/MeshDef.hpp>
-#include <shader_program/ShaderProg.hpp>
+#include <mesh/Mesh.hpp>
+#include <mesh/MeshBuilder.hpp>
+#include <mesh/VerticesDef.hpp>
+#include <shader/ShaderProg.hpp>
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 #include <texture/TextureBuilder.hpp>
@@ -31,8 +31,8 @@ int main()
     SP.Use();
 
     MeshBuilder& B = MeshBuilder::GetInstance();
-    std::unique_ptr<Mesh> M = B.WithVertices(MeshDef::TriangleV)
-                               .WithTextureCoord(MeshDef::TriangleT)
+    std::unique_ptr<Mesh> M = B.WithVertices(VerticesDef::TriangleV)
+                               .WithTextureCoord(VerticesDef::TriangleT)
                                .WithTexture(TextureBuilder::GetInstance().WithPath("./texture/wood.jpg").Build())
                                .WithShader(SP.Id())
                                .Build();

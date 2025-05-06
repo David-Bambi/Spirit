@@ -15,6 +15,9 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_src/")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Options
+include(CmkOptions)
+
 # Warning
 include(Warnings)
 
@@ -29,8 +32,11 @@ include(CmakeFormat)
 add_cmake_format()
 
 # Sanitizer
+
 include(Sanitizer)
-#add_sanitizer_flags(TRUE TRUE)
+if(SANITIZER_OPT)
+    add_sanitizer_flags(TRUE TRUE)
+endif()
 
 # LTO
 include(LTO)
@@ -38,12 +44,16 @@ include(LTO)
 # Documentation
 include(docs)
 
+# Tools
+include(Tools)
+
 # Ajouter les libraries externes
 include(CPM)
 cpmaddpackage("gh:catchorg/Catch2@3.8.1")
 cpmaddpackage("gh:gabime/spdlog@1.15.2")
 cpmaddpackage("gh:fmtlib/fmt#11.1.4")
 cpmaddpackage("gh:jarro2783/cxxopts@3.2.0")
+cpmaddpackage("gh:microsoft/gsl@4.2.0")
 
 # Chemin d'accès importantes pour la compilation du projet
 set(EXTERNAL_LIB_DIR ${CMAKE_SOURCE_DIR}/external)
@@ -54,9 +64,3 @@ enable_testing()
 
 add_subdirectory(external)
 add_subdirectory(src)
-
-# add_subdirectory(src/tests)
-# add_subdirectory(src/ptr_dyna_stat)
-# add_subdirectory(src/raster_f)
-# add_subdirectory(src/java_src)
-#add_subdirectory(src/utility)

@@ -6,7 +6,9 @@
 /**
  * @brief Namespace for predefine colors.
  */
-namespace Color {
+namespace Color
+{
+
 Color_t Red = {1.0f, 0.0f, 0.0f, 1.0f};
 Color_t Green = {0.0f, 1.0f, 0.0f, 1.0f};
 Color_t Blue = {0.0f, 0.0f, 1.0f, 1.0f};

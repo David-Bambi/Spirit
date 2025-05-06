@@ -8,52 +8,57 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <memory>
 
-class Camera {
-public:
-  Camera();
-  ~Camera();
+class Camera
+{
+  public:
+    Camera() = default;
+    ~Camera() = default;
+    Camera(const Camera& other) = default;
+    Camera(Camera&& other) noexcept = default;
+    Camera& operator=(const Camera& other) = default;
+    Camera& operator=(Camera&& other) noexcept = default;
 
-  using UpdateFct = std::function<void(Camera &)>;
-  void Update();
+    using UpdateFct = std::function<void(Camera&)>;
+    void Update();
 
-  void MoveForward();
-  void MoveBackward();
-  void MoveLeft();
-  void MoveRight();
-  void MoveUp();
-  void MoveDown();
-  void MouseMovement(float xoffset, float yoffset);
-  void Zoom(float yoffset);
+    void MoveForward();
+    void MoveBackward();
+    void MoveLeft();
+    void MoveRight();
+    void MoveUp();
+    void MoveDown();
+    void MouseMovement(float xoffset, float yoffset);
+    void Zoom(float yoffset);
 
-private:
-  Projection_t _projectionType;
+  private:
+    Projection_t _projectionType = Projection_t::PERSPECTIVE;
 
-  glm::vec3 _pos;
-  glm::vec3 _front;
-  glm::vec3 _up;
-  glm::vec3 _right;
-  glm::vec3 _worldup;
+    glm::vec3 _pos = {0.0f, 0.0f, 0.0f};
+    glm::vec3 _front = {0.0f, 0.0f, -1.0f};
+    glm::vec3 _up = {0.0f, 1.0f, 0.0f};
+    glm::vec3 _right = {1.0f, 0.0f, 0.0f};
+    glm::vec3 _worldup = {0.0f, 1.0f, 0.0f};
 
-  glm::mat4 _view;
-  glm::mat4 _projection;
+    glm::mat4 _view = glm::mat4(1.0f);
+    glm::mat4 _projection = glm::mat4(1.0f);
 
-  UpdateFct _update;
+    UpdateFct _update = nullptr;
 
-  float _yaw;
-  float _pitch;
-  float _sensitivity;
-  float _speed;
-  float _zoom;
-  float _fov;
-  float _near;
-  float _far;
+    float _yaw = -90.0f;
+    float _pitch = 0.0f;
+    float _sensitivity = 0.1f;
+    float _speed = 2.5f;
+    float _zoom = 45.0f;
+    float _fov = 45.0f;
+    float _near = 0.1f;
+    float _far = 100.0f;
 
-  unsigned int _shaderId;
+    unsigned int _shaderId = 0;
 
-  glm::vec3 Right();
-  glm::vec3 Up();
+    glm::vec3 Right();
+    glm::vec3 Up();
 
-  friend class CameraBuilder;
+    friend class CameraBuilder;
 };
 
 #endif

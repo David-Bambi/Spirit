@@ -1,0 +1,43 @@
+# Options 
+option(SANITIZER_OPT "Activate sanitizer" OFF)
+if (SANITIZER_OPT)
+    message(STATUS "Sanitizer activated")
+else()
+    message(STATUS "Sanitizer not activated")
+endif()
+
+option(WARNINGS_OPT "Activate warnings" OFF)
+if (WARNINGS_OPT)
+    message(STATUS "Warnings activated")
+else()
+    message(STATUS "Warnings not activated")
+endif()
+
+option(LTO_OPT "Activate LTO" OFF)
+if (LTO_OPT)
+    message(STATUS "LTO activated")
+else()
+    message(STATUS "LTO not activated")
+endif()
+
+option(DOCUMENTATION_OPT "Activate documentation" OFF)
+if (DOCUMENTATION_OPT)
+    message(STATUS "Documentation activated")
+else()
+    message(STATUS "Documentation not activated")
+endif()
+
+option(CLANGTIDY_OPT "Activate clang-tidy" OFF)
+if (CLANGTIDY_OPT)
+    message(STATUS "Clang-tidy activated")
+else()
+    message(STATUS "Clang-tidy not activated")
+endif()
+
+
+option(CLANGFORMAT_OPT "Activate clang format" OFF)
+if (CLANGFORMAT_OPT)
+    message(STATUS "Clang format activated")
+else()
+    message(STATUS "Clang format not activated")
+endif()
