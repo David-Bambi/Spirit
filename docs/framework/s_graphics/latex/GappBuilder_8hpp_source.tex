@@ -1,0 +1,23 @@
+\doxysection{Gapp\+Builder.\+hpp}
+\hypertarget{GappBuilder_8hpp_source}{}\label{GappBuilder_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/gapp/GappBuilder.hpp@{/workspaces/spirit/src/framework/s\_graphics/gapp/GappBuilder.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAPPBUILDER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAPPBUILDER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <builder/Builder.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <gapp/Gapp.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGappBuilder}{GappBuilder}}\ :\ \textcolor{keyword}{public}\ Builder<Gapp>}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classGappBuilder}{GappBuilder}}\&\ GetInstance();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classGappBuilder}{GappBuilder}}\&\ WithAppSetting(\textcolor{keyword}{const}\ \mbox{\hyperlink{structAppSetting}{AppSetting}}\&\ setting);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classGappBuilder}{GappBuilder}}\&\ WithScene(\textcolor{keyword}{const}\ std::shared\_ptr<Scene>\&\ scene);}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

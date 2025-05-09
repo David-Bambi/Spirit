@@ -1,0 +1,30 @@
+\doxysection{Model\+Builder.\+hpp}
+\hypertarget{ModelBuilder_8hpp_source}{}\label{ModelBuilder_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/model/ModelBuilder.hpp@{/workspaces/spirit/src/framework/s\_graphics/model/ModelBuilder.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODELBUILDER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODELBUILDER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <builder/Builder.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <component/Component.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <component/Transform.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <mesh/Mesh.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <model/Model.hpp>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\ :\ \textcolor{keyword}{public}\ Builder<Model>}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\&\ \mbox{\hyperlink{classModelBuilder_a4c7dc35411bf8f8c314a3fb4e6f0ef88}{WithMesh}}(\textcolor{keyword}{const}\ std::shared\_ptr<Mesh>\&\ mesh);}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\&\ \mbox{\hyperlink{classModelBuilder_a1c4b88a6ce99f9b934f6a610f7d89807}{WithPosition}}(glm::vec3\ pos);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\&\ WithRotation(glm::vec3\ rot);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\&\ WithScale(glm::vec3\ sca);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\&\ WithUpdate(std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{classModel}{Model}}\&)>\ update);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classModelBuilder}{ModelBuilder}}\&\ GetInstance();}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

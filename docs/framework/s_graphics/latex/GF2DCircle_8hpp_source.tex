@@ -1,0 +1,64 @@
+\doxysection{GF2\+DCircle.\+hpp}
+\hypertarget{GF2DCircle_8hpp_source}{}\label{GF2DCircle_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/model/GF2DCircle.hpp@{/workspaces/spirit/src/framework/s\_graphics/model/GF2DCircle.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ GF2DCIRCLE\_HPP}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ GF2DCIRCLE\_HPP}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <GF\_C/GFColor.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <GF\_C/GFData.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <GF\_C/GFDraw\_I.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVectorStruc}{VectorStruc}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Vec3\_f\ Position;}
+\DoxyCodeLine{00027\ \ \ \ \ Vec3\_f\ \mbox{\hyperlink{namespaceColor}{Color}};}
+\DoxyCodeLine{00028\ \ \ \ \ Vec3\_f\ Tex;}
+\DoxyCodeLine{00029\ \ \ \ \ Vec3\_f\ Normal;}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGF2DCircle}{GF2DCircle}}\ :\ \textcolor{keyword}{public}\ GFDraw\_I}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<struct\ VectorStruc>\ vertices;}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Vec3\_ui>\ indices;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_vao;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_vbo;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_ebo;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_usage;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_shaderprogram;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_tex;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ GFColor\ color;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_shaderType;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ PrepareRendering();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{classGF2DCircle_a2f861c0359f7eb0f8ea53fb3cfbf16d5}{T}};}
+\DoxyCodeLine{00053\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{classGF2DCircle_a2f9394e76e40e7a906e95df70b13e072}{V}};}
+\DoxyCodeLine{00055\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{classGF2DCircle_a9b8a1f92eca163f7dc2abcf42c477f7a}{P}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{classGF2DCircle}{GF2DCircle}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ shaderprogram,\ \textcolor{keywordtype}{float}\ smoothing\ =\ 1.0f,\ GFColor\ color\ =\ Color::Black,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ texture\ =\ 0,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ usage\ =\ GL\_STATIC\_DRAW);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ShaderType();}
+\DoxyCodeLine{00062\ \ \ \ \ GFColor\ \mbox{\hyperlink{namespaceColor}{Color}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceColor}{Color}}(GFColor\ color);}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

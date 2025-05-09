@@ -1,8 +1,13 @@
 #include <mesh/MeshBuilder.hpp>
 
+#include <iostream>
+
 MeshBuilder& MeshBuilder::GetInstance()
 {
+    std::cout << "TEST\n";
     static MeshBuilder instance;
+    std::cout << "TEST\n";
+
     return instance;
 }
 
@@ -24,9 +29,9 @@ MeshBuilder& MeshBuilder::WithTextureCoord(const std::vector<glm::vec2>& TexCoor
     return *this;
 }
 
-MeshBuilder& MeshBuilder::WithTexture(std::unique_ptr<Texture> Tex)
+MeshBuilder& MeshBuilder::WithTexture(const std::shared_ptr<Texture>& Tex)
 {
-    _obj->_textures.push_back(std::move(Tex));
+    _obj->_textures.push_back(Tex);
     return *this;
 }
 

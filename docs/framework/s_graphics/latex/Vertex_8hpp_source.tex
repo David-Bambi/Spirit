@@ -1,0 +1,63 @@
+\doxysection{Vertex.\+hpp}
+\hypertarget{Vertex_8hpp_source}{}\label{Vertex_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/model/Vertex.hpp@{/workspaces/spirit/src/framework/s\_graphics/model/Vertex.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VERTEX\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VERTEX\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <color/Color\_t.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{bool}\ HasNormal,\ \textcolor{keywordtype}{bool}\ HasTexture,\ \textcolor{keywordtype}{bool}\ HasColor>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ glm::vec3\ position;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structVertex}{Vertex}}(glm::vec3\ pos)\ :\ position(pos)\ \{\}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}}<false,\ false,\ false>}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ glm::vec3\ position;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structVertex}{Vertex}}(glm::vec3\ pos)\ :\ position(pos)\ \{\}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}}<false,\ false,\ true>}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ glm::vec3\ position;}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structColor__t}{Color\_t}}\ color;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structVertex}{Vertex}}(glm::vec3\ pos,\ \mbox{\hyperlink{structColor__t}{Color\_t}}\ col)\ :\ position(pos),\ color(col)\ \{\}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00038\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}}<false,\ true,\ true>}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ glm::vec3\ position;}
+\DoxyCodeLine{00041\ \ \ \ \ glm::vec2\ texture;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{structColor__t}{Color\_t}}\ color;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structVertex}{Vertex}}(glm::vec3\ pos,\ glm::vec2\ tex,\ \mbox{\hyperlink{structColor__t}{Color\_t}}\ col)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ :\ position(pos),\ texture(tex),\ color(col)}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00051\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}}<false,\ true,\ false>}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ glm::vec3\ position;}
+\DoxyCodeLine{00054\ \ \ \ \ glm::vec2\ texture;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structVertex}{Vertex}}(glm::vec3\ pos,\ glm::vec2\ tex)\ :\ position(pos),\ texture(tex)\ \{\}}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structVertex_3_01false_00_01false_00_01false_01_4}{VertexPos}}\ =\ \mbox{\hyperlink{structVertex}{Vertex<false,\ false,\ false>}};}
+\DoxyCodeLine{00060\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structVertex_3_01false_00_01true_00_01false_01_4}{VertexPosTex}}\ =\ \mbox{\hyperlink{structVertex}{Vertex<false,\ true,\ false>}};}
+\DoxyCodeLine{00061\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structVertex_3_01false_00_01false_00_01true_01_4}{VertexPosCol}}\ =\ \mbox{\hyperlink{structVertex}{Vertex<false,\ false,\ true>}};}
+\DoxyCodeLine{00062\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structVertex_3_01false_00_01true_00_01true_01_4}{VertexPosTexCol}}\ =\ \mbox{\hyperlink{structVertex}{Vertex<false,\ true,\ true>}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

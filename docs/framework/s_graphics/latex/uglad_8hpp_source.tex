@@ -1,0 +1,27 @@
+\doxysection{uglad.\+hpp}
+\hypertarget{uglad_8hpp_source}{}\label{uglad_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/uglad/uglad.hpp@{/workspaces/spirit/src/framework/s\_graphics/uglad/uglad.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UGLAD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UGLAD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }uglad}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structuglad_1_1FailedInitGladException}{FailedInitGladException}}\ :\ \textcolor{keyword}{public}\ std::exception}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ [[nodiscard]]}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ what()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Failed\ to\ initialize\ GLAD"{}};}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ GladInit();}
+\DoxyCodeLine{00019\ \}\ \textcolor{comment}{//\ namespace\ uglad}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

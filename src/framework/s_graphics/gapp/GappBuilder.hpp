@@ -15,6 +15,7 @@ class GappBuilder : public Builder<Gapp>
     static GappBuilder& GetInstance();
 
     GappBuilder& WithAppSetting(const AppSetting& setting);
+    GappBuilder& WithScene(const std::shared_ptr<Scene>& scene);
 };
 
 #endif

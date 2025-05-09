@@ -1,0 +1,44 @@
+\doxysection{Camera\+Update\+Def.\+hpp}
+\hypertarget{CameraUpdateDef_8hpp_source}{}\label{CameraUpdateDef_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/camera/CameraUpdateDef.hpp@{/workspaces/spirit/src/framework/s\_graphics/camera/CameraUpdateDef.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAMERAUPDATEDEF\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAMERAUPDATEDEF\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <camera/Camera.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <input/Input.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <input/Key.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }CUD}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ Camera::UpdateFct\ FreeMove\ =\ ([](\mbox{\hyperlink{classCamera}{Camera}}\ \&camera)\ \{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keywordflow}{if}\ (Input::mousemov)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ camera.MouseMovement(Input::xoffset,\ Input::yoffset);}
+\DoxyCodeLine{00013\ \ \ \ \ Input::mousemov\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00014\ \ \ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordflow}{if}\ (Input::scrollback)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ camera.Zoom(Input::ysboffset);}
+\DoxyCodeLine{00018\ \ \ \ \ Input::scrollback\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00019\ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordflow}{if}\ (Input::Pressed(Key::W)\ \&\&\ Input::Pressed(Key::MAJ))}
+\DoxyCodeLine{00022\ \ \ \ \ camera.MoveUp();}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Input::Pressed(Key::W))}
+\DoxyCodeLine{00024\ \ \ \ \ camera.MoveForward();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordflow}{if}\ (Input::Pressed(Key::S)\ \&\&\ Input::Pressed(Key::MAJ))}
+\DoxyCodeLine{00027\ \ \ \ \ camera.MoveDown();}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Input::Pressed(Key::S))}
+\DoxyCodeLine{00029\ \ \ \ \ camera.MoveBackward();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{if}\ (Input::Pressed(Key::A))}
+\DoxyCodeLine{00032\ \ \ \ \ camera.MoveLeft();}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordflow}{if}\ (Input::Pressed(Key::D))}
+\DoxyCodeLine{00034\ \ \ \ \ camera.MoveRight();}
+\DoxyCodeLine{00035\ \});}
+\DoxyCodeLine{00036\ \};\ \textcolor{comment}{//\ namespace\ CUD}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

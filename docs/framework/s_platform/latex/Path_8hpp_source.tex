@@ -6,21 +6,26 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PATH\_HPP}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <object/Object.hpp>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPath}{Path}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}}
-\DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00010\ \ \ \ \ std::string\ \_path\ =\ STREMPTY;}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classPath}{Path}}(std::string\ \mbox{\hyperlink{classBuilder}{path}})\ :\ \_path(\mbox{\hyperlink{classBuilder}{path}})\{\};}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classPath}{Path}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{00015\ \textcolor{keyword}{\ \ \ \ }\{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_path;}
-\DoxyCodeLine{00017\ \ \ \ \ \};}
-\DoxyCodeLine{00018\ \};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string/StrDef.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPath}{Path}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::string\ \_path\ =\ STREMPTY;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classPath}{Path}}(std::string\ path)\ :\ \_path(path)\{\};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ PathCstr()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_path.c\_str();}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ GetPath()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_path;}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

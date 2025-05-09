@@ -1,0 +1,99 @@
+\doxysection{Model\+Builder Class Reference}
+\hypertarget{classModelBuilder}{}\label{classModelBuilder}\index{ModelBuilder@{ModelBuilder}}
+
+
+Helper class to build model.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Builder.\+hpp$>$}
+
+
+
+Inheritance diagram for Model\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classModelBuilder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classModelBuilder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& \mbox{\hyperlink{classModelBuilder_a4c7dc35411bf8f8c314a3fb4e6f0ef88}{With\+Mesh}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classMesh}{Mesh}} $>$ \&mesh)
+\begin{DoxyCompactList}\small\item\em Add a mesh to the model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& \mbox{\hyperlink{classModelBuilder_a1c4b88a6ce99f9b934f6a610f7d89807}{With\+Position}} (glm\+::vec3 pos)
+\begin{DoxyCompactList}\small\item\em Add a compoenent to the model. \end{DoxyCompactList}\item 
+\Hypertarget{classModelBuilder_a2f3ec8b61262c4dd8cd355414056fd6c}\label{classModelBuilder_a2f3ec8b61262c4dd8cd355414056fd6c} 
+\mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& {\bfseries With\+Rotation} (glm\+::vec3 rot)
+\item 
+\Hypertarget{classModelBuilder_a84723920dded1d137842cd641069e54d}\label{classModelBuilder_a84723920dded1d137842cd641069e54d} 
+\mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& {\bfseries With\+Scale} (glm\+::vec3 sca)
+\item 
+\Hypertarget{classModelBuilder_ad08b7565c6de7c3959183f01fc616c86}\label{classModelBuilder_ad08b7565c6de7c3959183f01fc616c86} 
+\mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& {\bfseries With\+Update} (std\+::function$<$ void(\mbox{\hyperlink{classModel}{Model}} \&)$>$ update)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classModelBuilder_a4af89688af7af661cfbba765c021dbf7}\label{classModelBuilder_a4af89688af7af661cfbba765c021dbf7} 
+static \mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& {\bfseries Get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class to build model. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelBuilder_a4c7dc35411bf8f8c314a3fb4e6f0ef88}\label{classModelBuilder_a4c7dc35411bf8f8c314a3fb4e6f0ef88} 
+\index{ModelBuilder@{ModelBuilder}!WithMesh@{WithMesh}}
+\index{WithMesh@{WithMesh}!ModelBuilder@{ModelBuilder}}
+\doxysubsubsection{\texorpdfstring{WithMesh()}{WithMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& Model\+Builder\+::\+With\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classMesh}{Mesh}} $>$ \&}]{mesh }\end{DoxyParamCaption})}
+
+
+
+Add a mesh to the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classModelBuilder}{Model\+Builder}\& 
+\end{DoxyReturn}
+\Hypertarget{classModelBuilder_a1c4b88a6ce99f9b934f6a610f7d89807}\label{classModelBuilder_a1c4b88a6ce99f9b934f6a610f7d89807} 
+\index{ModelBuilder@{ModelBuilder}!WithPosition@{WithPosition}}
+\index{WithPosition@{WithPosition}!ModelBuilder@{ModelBuilder}}
+\doxysubsubsection{\texorpdfstring{WithPosition()}{WithPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelBuilder}{Model\+Builder}} \& Model\+Builder\+::\+With\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{pos }\end{DoxyParamCaption})}
+
+
+
+Add a compoenent to the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classModelBuilder}{Model\+Builder}\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/Model\+Builder.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/Model\+Builder.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\doxysection{Program\+Shader.\+hpp}
+\hypertarget{ProgramShader_8hpp_source}{}\label{ProgramShader_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/shader/ProgramShader.hpp@{/workspaces/spirit/src/framework/s\_graphics/shader/ProgramShader.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROGRAMSHADER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROGRAMSHADER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <object/Object.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <shader/Shader.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProgramShader}{ProgramShader}}\ :\ \textcolor{keyword}{public}\ Object}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ Use()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Id()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_id\ =\ -\/1;}
+\DoxyCodeLine{00018\ \ \ \ \ std::shared\_ptr<Shader>\ \_vertexShader\ =\ \{\};}
+\DoxyCodeLine{00019\ \ \ \ \ std::shared\_ptr<Shader>\ \_fragmentShader\ =\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ GenerateId();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ Link()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ LogLinkError()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProgramShaderBuilder}{ProgramShaderBuilder}};}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

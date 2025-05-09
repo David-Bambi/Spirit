@@ -1,0 +1,71 @@
+\doxysection{Model Class Reference}
+\hypertarget{classModel}{}\label{classModel}\index{Model@{Model}}
+
+
+Inheritance diagram for Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classModel_a7aa1bc67e26471e23779139fc95ca3c2}\label{classModel_a7aa1bc67e26471e23779139fc95ca3c2} 
+using {\bfseries Update} = std\+::function$<$ void(\mbox{\hyperlink{classModel}{Model}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classModel_af7af52de89eece740f13e719c228d923}\label{classModel_af7af52de89eece740f13e719c228d923} 
+void {\bfseries Init} (unsigned int progshader)
+\item 
+\Hypertarget{classModel_a0a3de8a969bada5a82ffa727f8c216b5}\label{classModel_a0a3de8a969bada5a82ffa727f8c216b5} 
+void {\bfseries Render} ()
+\item 
+\Hypertarget{classModel_a0bac0a2714b37b61d12a7b0a23bddf94}\label{classModel_a0bac0a2714b37b61d12a7b0a23bddf94} 
+void {\bfseries Clean} ()
+\item 
+\Hypertarget{classModel_a1411409af8bdfb9c14bfe91a9c71fe52}\label{classModel_a1411409af8bdfb9c14bfe91a9c71fe52} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries get} ()
+\item 
+\Hypertarget{classModel_adad28510eab529a153cd816303fa6cce}\label{classModel_adad28510eab529a153cd816303fa6cce} 
+void {\bfseries Process\+Components} ()
+\item 
+\Hypertarget{classModel_affd5a369f4521369cfc597fe8096fe88}\label{classModel_affd5a369f4521369cfc597fe8096fe88} 
+void {\bfseries Set\+Update} (Update update)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classModel_a30e0473a8d00b626704de975237647eb}\label{classModel_a30e0473a8d00b626704de975237647eb} 
+std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classMesh}{Mesh}} $>$ $>$ {\bfseries \+\_\+meshes}
+\item 
+\Hypertarget{classModel_a2eb18907ccf592bc083dad374a138d48}\label{classModel_a2eb18907ccf592bc083dad374a138d48} 
+std\+::unordered\+\_\+map$<$ std\+::type\+\_\+index, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classComponent}{Component}} $>$ $>$ {\bfseries \+\_\+components}
+\item 
+\Hypertarget{classModel_a1ec8ada0f31add39c218801f070e3a94}\label{classModel_a1ec8ada0f31add39c218801f070e3a94} 
+Update {\bfseries \+\_\+update} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classModel_a77c3d1f6a449713b2a45b269ff0dd07a}\label{classModel_a77c3d1f6a449713b2a45b269ff0dd07a} 
+class {\bfseries Model\+Builder}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/Model.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/Model.\+cpp\end{DoxyCompactItemize}

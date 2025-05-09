@@ -1,0 +1,41 @@
+@startuml SceneRender
+
+participant Scene
+participant ProgramShader
+participant Model
+participant Transform
+participant Mesh
+participant OpenGL
+
+Scene -> ProgramShader : Use
+ProgramShader -> OpenGL : glUseProgram
+loop Scene.models.size()
+    Scene -> Model : Render
+    alt _update != nullptr
+        Model -> Model : Update
+        Model -> Model : ProcessTransform
+        Model -> Transform : Process
+        Transform -> OpenGL : Translate
+        Transform -> OpenGL : Rotate
+        Transform -> OpenGL : Scale
+    end
+    loop Model.meshes.size()
+        Model -> Mesh : Transform
+        Model -> Mesh : Render
+        Mesh -> OpenGL : glUseProgram
+        Mesh -> Mesh : ProcessTransform
+        Mesh -> Mesh : ActiveAndBindTexture
+        loop Mesh.textures.size()
+            Mesh -> OpenGL : glActiveTexture
+            Mesh -> OpenGL : glBindTexture
+        end
+        Mesh -> OpenGL : glBindVertexArray
+        alt Mesh.Indexes.size() > 0
+            Mesh -> OpenGL : glDrawElements
+        else
+            Mesh -> OpenGL : glDrawArrays
+        end
+        Mesh -> OpenGL : glBindVertexArray(0)
+    end
+end
+@enduml

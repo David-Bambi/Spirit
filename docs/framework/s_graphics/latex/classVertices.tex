@@ -1,0 +1,145 @@
+\doxysection{Vertices Class Reference}
+\hypertarget{classVertices}{}\label{classVertices}\index{Vertices@{Vertices}}
+
+
+Class to manage the vertices of a mesh object.  
+
+
+
+
+{\ttfamily \#include $<$Vertices.\+hpp$>$}
+
+
+
+Collaboration diagram for Vertices\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classVertices__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structVertices_1_1Offset}{Offset}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classVertices_aa4aa94941424e06b57c8fd86289ab027}{Set\+Position}} (const std\+::vector$<$ glm\+::vec3 $>$ \&position)
+\begin{DoxyCompactList}\small\item\em Set the position vertices for the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertices_a6a7fa1b90d01e690104774ffe8b435aa}{Set\+Color}} (std\+::vector$<$ \mbox{\hyperlink{structColor__t}{Color\+\_\+t}} $>$ color)
+\begin{DoxyCompactList}\small\item\em Set the color for each vertex for the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertices_aa773016176d68e782bc6ded75cc22251}{Set\+Texture}} (const std\+::vector$<$ glm\+::vec2 $>$ \&Tex\+Coord)
+\begin{DoxyCompactList}\small\item\em Set the texture coordinate for each certex of the mesh. \end{DoxyCompactList}\item 
+\Hypertarget{classVertices_aa976919a20c7f9ea8fad2fb74ea62447}\label{classVertices_aa976919a20c7f9ea8fad2fb74ea62447} 
+std\+::vector$<$ float $>$ {\bfseries Vertices\+Vec} ()
+\item 
+\Hypertarget{classVertices_a78dd360c625615aeb706367686c27c4e}\label{classVertices_a78dd360c625615aeb706367686c27c4e} 
+std\+::vector$<$ unsigned int $>$ {\bfseries Indexs} ()
+\item 
+\Hypertarget{classVertices_a6882df83bb10dbbe6a879f70c96d0bb9}\label{classVertices_a6882df83bb10dbbe6a879f70c96d0bb9} 
+void {\bfseries Set\+Indexs} (std\+::vector$<$ unsigned int $>$ \&indexs)
+\item 
+\Hypertarget{classVertices_ad54b1518b4bc1b1a6786f58b10aaa638}\label{classVertices_ad54b1518b4bc1b1a6786f58b10aaa638} 
+unsigned int {\bfseries Count} ()
+\item 
+\Hypertarget{classVertices_a3775a7b5ea09d08ee38ae2fca75d497d}\label{classVertices_a3775a7b5ea09d08ee38ae2fca75d497d} 
+void {\bfseries Build} ()
+\begin{DoxyCompactList}\small\item\em Build the vertice vector to send on VBO. \end{DoxyCompactList}\item 
+\Hypertarget{classVertices_ab6451710a3b7f085b405c465895ca81a}\label{classVertices_ab6451710a3b7f085b405c465895ca81a} 
+void {\bfseries Set\+Vertex\+Attr\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em Set the vertex attribute pointer for the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVertices_a6da5258e56ad2c4b32b45097ec4660c2}\label{classVertices_a6da5258e56ad2c4b32b45097ec4660c2} 
+void {\bfseries Init\+Vertex\+Info} ()
+\begin{DoxyCompactList}\small\item\em Initialise the stride and the offset for setting attribute pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVertices_a5217cc080b905fe3d401055d36bbf4b0}\label{classVertices_a5217cc080b905fe3d401055d36bbf4b0} 
+int {\bfseries \+\_\+stride} = 0
+\item 
+\Hypertarget{classVertices_a5cc4762b0cbcdd37878d767d54dcbbe1}\label{classVertices_a5cc4762b0cbcdd37878d767d54dcbbe1} 
+\mbox{\hyperlink{structVertices_1_1Offset}{Offset}} {\bfseries \+\_\+offset} = \{0, 0, 0, 0\}
+\item 
+\Hypertarget{classVertices_ab0aaabacd7a0217798cd9f35ce91f6f8}\label{classVertices_ab0aaabacd7a0217798cd9f35ce91f6f8} 
+std\+::bitset$<$ 4 $>$ {\bfseries \+\_\+vertextype} = 0b0000
+\item 
+\Hypertarget{classVertices_a2915fa3544834e493fcec89fd218a313}\label{classVertices_a2915fa3544834e493fcec89fd218a313} 
+unsigned int {\bfseries \+\_\+count} = 0
+\item 
+\Hypertarget{classVertices_a413fd23f6b1bc4c6d0726a7fbdea329c}\label{classVertices_a413fd23f6b1bc4c6d0726a7fbdea329c} 
+std\+::vector$<$ \mbox{\hyperlink{structColor__t}{Color\+\_\+t}} $>$ {\bfseries \+\_\+col} = \{\}
+\item 
+\Hypertarget{classVertices_abbfa4fa822f31117d410d9f502d09bde}\label{classVertices_abbfa4fa822f31117d410d9f502d09bde} 
+std\+::vector$<$ glm\+::vec3 $>$ {\bfseries \+\_\+pos} = \{\}
+\item 
+\Hypertarget{classVertices_a9b93697bacc393448739b60e92b7a609}\label{classVertices_a9b93697bacc393448739b60e92b7a609} 
+std\+::vector$<$ glm\+::vec2 $>$ {\bfseries \+\_\+tex} = \{\}
+\item 
+\Hypertarget{classVertices_a22974276ccb58a3f7665a6d45aa811d6}\label{classVertices_a22974276ccb58a3f7665a6d45aa811d6} 
+std\+::vector$<$ float $>$ {\bfseries \+\_\+vertices\+\_\+vec} = \{\}
+\item 
+\Hypertarget{classVertices_ad6499dd45dbd396665362e76b74a2e6e}\label{classVertices_ad6499dd45dbd396665362e76b74a2e6e} 
+std\+::vector$<$ unsigned int $>$ {\bfseries \+\_\+indexs} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to manage the vertices of a mesh object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVertices_a6a7fa1b90d01e690104774ffe8b435aa}\label{classVertices_a6a7fa1b90d01e690104774ffe8b435aa} 
+\index{Vertices@{Vertices}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!Vertices@{Vertices}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Vertices\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structColor__t}{Color\+\_\+t}} $>$}]{color }\end{DoxyParamCaption})}
+
+
+
+Set the color for each vertex for the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \+: vector of color. It must be the same size as the position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVertices_aa4aa94941424e06b57c8fd86289ab027}\label{classVertices_aa4aa94941424e06b57c8fd86289ab027} 
+\index{Vertices@{Vertices}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Vertices@{Vertices}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Vertices\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ glm\+::vec3 $>$ \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Set the position vertices for the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \+: vector of normilized position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVertices_aa773016176d68e782bc6ded75cc22251}\label{classVertices_aa773016176d68e782bc6ded75cc22251} 
+\index{Vertices@{Vertices}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!Vertices@{Vertices}}
+\doxysubsubsection{\texorpdfstring{SetTexture()}{SetTexture()}}
+{\footnotesize\ttfamily void Vertices\+::\+Set\+Texture (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ glm\+::vec2 $>$ \&}]{Tex\+Coord }\end{DoxyParamCaption})}
+
+
+
+Set the texture coordinate for each certex of the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tex\+Coord} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/Vertices.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/Vertices.\+cpp\end{DoxyCompactItemize}

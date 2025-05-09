@@ -37,11 +37,11 @@ if(DOCUMENTATION_OPT)
     add_dependencies_if_exist(${GF_EXE} ${S_GRAPHICS_DOC})
 
     # UML target
-    set(S_GRAPHICS_UML gf_uml)
-    set(S_GRAPHICS_UML_PATH ${CMAKE_SOURCE_DIR}/docs/app/gf/uml)
-    target_generate_uml(${S_GRAPHICS_UML} ${S_GRAPHICS_UML_PATH})
+    # set(S_GRAPHICS_UML gf_uml)
+    # set(S_GRAPHICS_UML_PATH ${CMAKE_SOURCE_DIR}/docs/app/gf/uml)
+    # target_generate_uml(${S_GRAPHICS_UML} ${S_GRAPHICS_UML_PATH})
 
-    add_dependencies_if_exist(${GF_EXE} ${S_GRAPHICS_UML})
+    # add_dependencies_if_exist(${GF_EXE} ${S_GRAPHICS_UML})
 endif()
 
 # Clang-tidy target

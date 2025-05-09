@@ -1,0 +1,30 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{Scene_8hpp_source}{}\label{Scene_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/scene/Scene.hpp@{/workspaces/spirit/src/framework/s\_graphics/scene/Scene.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SNCENE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SNCENE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <object/Object.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <model/Model.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <shader/ProgramShader.hpp>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classScene}{Scene}}\ :\ \textcolor{keyword}{public}\ Object}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ Render();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Clean();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::deque<std::shared\_ptr<Model>>\ \_models\ =\ \{\};}
+\DoxyCodeLine{00019\ \ \ \ \ std::shared\_ptr<ProgramShader>\ \_programShader\ =\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSceneBuilder}{SceneBuilder}};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

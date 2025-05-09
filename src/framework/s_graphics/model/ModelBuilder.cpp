@@ -12,9 +12,9 @@ ModelBuilder& ModelBuilder::GetInstance()
  * @param Path
  * @return ModelBuilder&
  */
-ModelBuilder& ModelBuilder::WithMesh(std::unique_ptr<Mesh> mesh)
+ModelBuilder& ModelBuilder::WithMesh(const std::shared_ptr<Mesh>& mesh)
 {
-    _obj->_meshes.push_back(std::move(mesh));
+    _obj->_meshes.push_back(mesh);
     return *this;
 }
 

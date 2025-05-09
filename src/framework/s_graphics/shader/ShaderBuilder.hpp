@@ -1,10 +1,11 @@
 #ifndef SHADERBUILDER_HPP
 #define SHADERBUILDER_HPP
 
-#include <shader/Shader.hpp>
-#include <file/Path.hpp>
-#include <shader/ShaderType.hpp>
 #include <builder/Builder.hpp>
+#include <file/Path.hpp>
+#include <memory>
+#include <shader/Shader.hpp>
+#include <shader/ShaderType.hpp>
 
 class ShaderBuilder : public Builder<Shader>
 {
@@ -14,8 +15,6 @@ class ShaderBuilder : public Builder<Shader>
     ShaderBuilder& WithCode(const Path& ShaderPath);
     ShaderBuilder& WithCode(const std::string& ShaderCode);
     ShaderBuilder& WithType(ShaderType type);
-
-    std::unique_ptr<Shader> Build();
 };
 
 #endif

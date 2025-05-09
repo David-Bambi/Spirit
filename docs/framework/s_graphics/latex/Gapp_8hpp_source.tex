@@ -1,0 +1,36 @@
+\doxysection{Gapp.\+hpp}
+\hypertarget{Gapp_8hpp_source}{}\label{Gapp_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/gapp/Gapp.hpp@{/workspaces/spirit/src/framework/s\_graphics/gapp/Gapp.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAPP\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAPP\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <gapp/AppSetting.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <object/Object.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <scene/Scene.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGapp}{Gapp}}\ :\ \textcolor{keyword}{public}\ Object}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Run();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structAppSetting}{AppSetting}}\ \_setting\ =\ \{\textcolor{stringliteral}{"{}Graphic\ application"{}},\ 640,\ 480\};}
+\DoxyCodeLine{00019\ \ \ \ \ GLFWwindow*\ \_window\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00020\ \ \ \ \ std::shared\_ptr<Scene>\ \_scene\ =\ \{\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ BeforeRenderPhase();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ RenderPhase();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ CleanUp();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ InitContext();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGappBuilder}{GappBuilder}};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

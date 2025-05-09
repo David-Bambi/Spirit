@@ -1,0 +1,28 @@
+\doxysection{Mesh\+Builder.\+hpp}
+\hypertarget{MeshBuilder_8hpp_source}{}\label{MeshBuilder_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/mesh/MeshBuilder.hpp@{/workspaces/spirit/src/framework/s\_graphics/mesh/MeshBuilder.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MESHBUILDER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MESHBUILDER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <builder/Builder.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <mesh/Mesh.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <texture/Texture.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\ :\ \textcolor{keyword}{public}\ Builder<Mesh>}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ GetInstance();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ WithVertices(\textcolor{keyword}{const}\ std::vector<glm::vec3>\&\ \mbox{\hyperlink{classVertices}{Vertices}});}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ WithColor(std::vector<Color\_t>\ \mbox{\hyperlink{namespaceColor}{Color}});}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ WithTexture(\textcolor{keyword}{const}\ std::shared\_ptr<Texture>\&\ Tex);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ WithTextureCoord(\textcolor{keyword}{const}\ std::vector<glm::vec2>\&\ TexCoord);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ WithIndexs(std::vector<unsigned\ int>\&\ indexs);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classMeshBuilder}{MeshBuilder}}\&\ WithShader(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ShaderId);}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

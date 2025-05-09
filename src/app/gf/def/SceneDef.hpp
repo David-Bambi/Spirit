@@ -4,12 +4,15 @@
 #include <scene/Scene.hpp>
 #include <scene/SceneBuilder.hpp>
 #include <memory>
-#include <model/ModelDef.hpp>
+#include <def/ModelDef.hpp>
+#include <def/ProgramShaderDef.hpp>
 
 namespace SceneDef
 {
-const std::unique_ptr<Scene> =
-    SceneBuilder::GetInstance().WithModel(ModelDef::ColorRGBTriangle).Build();
+const std::shared_ptr<Scene> ShapeScene = SceneBuilder::GetInstance()
+                                              .WithModel(ModelDef::ColorRGBTriangle)
+                                              .WithProgramShader(ProgramShaderDef::Program01)
+                                              .BuildShared();
 };
 
 #endif

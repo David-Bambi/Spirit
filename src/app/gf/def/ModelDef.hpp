@@ -8,8 +8,8 @@
 
 namespace ModelDef
 {
-const std::unique_ptr<Model> ColorRGBTriangle =
-    ModelBuilder::GetInstance().WithMesh(MeshDef::ColorRGBTriangle);
+const std::shared_ptr<Model> ColorRGBTriangle =
+    ModelBuilder::GetInstance().WithMesh(MeshDef::ColorRGBTriangle).BuildShared();
 };
 
 #endif

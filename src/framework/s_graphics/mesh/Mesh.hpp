@@ -1,26 +1,19 @@
 #ifndef MESH_HPP
 #define MESH_HPP
 
+#include <glm/glm.hpp>
 #include <memory>
+#include <model/Vertices.hpp>
+#include <object/Object.hpp>
+#include <texture/Texture.hpp>
 #include <vector>
 
-#include <model/Vertices.hpp>
-#include <texture/Texture.hpp>
-
-#include <glm/glm.hpp>
-
-class Mesh
+class Mesh : public Object
 {
   public:
-    Mesh();
-    virtual ~Mesh();
-    Mesh(const Mesh& other) = default;
-    Mesh(Mesh&& other) noexcept = default;
-    Mesh& operator=(const Mesh& other) = default;
-    Mesh& operator=(Mesh&& other) noexcept = default;
-
-    virtual void Setup();
-    virtual void Render();
+    void Init(unsigned int progshader);
+    void Render();
+    void Clean();
 
     void Transform(glm::mat4 transform);
 
@@ -38,7 +31,7 @@ class Mesh
     unsigned int _shaderId = 0;
     Vertices MeshVertices = {};
 
-    std::vector<std::unique_ptr<Texture>> _textures = {};
+    std::vector<std::shared_ptr<Texture>> _textures = {};
     glm::mat4 _transform = glm::mat4(1.0f);
 
     friend class MeshBuilder;

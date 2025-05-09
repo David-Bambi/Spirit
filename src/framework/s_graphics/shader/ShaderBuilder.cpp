@@ -25,12 +25,3 @@ ShaderBuilder& ShaderBuilder::WithType(ShaderType type)
     _obj->_type = type;
     return *this;
 }
-
-std::unique_ptr<Shader> ShaderBuilder::Build()
-{
-    Builder::_obj->Create();
-    Builder::_obj->Compile();
-
-    return Builder::Build();
-}
-

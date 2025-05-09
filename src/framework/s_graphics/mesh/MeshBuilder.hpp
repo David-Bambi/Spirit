@@ -13,14 +13,14 @@
 class MeshBuilder : public Builder<Mesh>
 {
   public:
+    static MeshBuilder& GetInstance();
+
     MeshBuilder& WithVertices(const std::vector<glm::vec3>& Vertices);
     MeshBuilder& WithColor(std::vector<Color_t> Color);
-    MeshBuilder& WithTexture(std::unique_ptr<Texture> Tex);
+    MeshBuilder& WithTexture(const std::shared_ptr<Texture>& Tex);
     MeshBuilder& WithTextureCoord(const std::vector<glm::vec2>& TexCoord);
     MeshBuilder& WithIndexs(std::vector<unsigned int>& indexs);
     MeshBuilder& WithShader(unsigned int ShaderId);
-
-    static MeshBuilder& GetInstance();
 };
 
 #endif

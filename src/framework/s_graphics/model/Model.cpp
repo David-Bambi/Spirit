@@ -7,6 +7,18 @@ Model::Model()
     _components[std::type_index(typeid(Transform))] = std::make_shared<Transform>(Transform());
 }
 
+void Model::Init(unsigned int progshader)
+{
+    for (const auto& mesh : _meshes)
+        mesh->Init(progshader);
+}
+
+void Model::Clean()
+{
+    for (const auto& mesh : _meshes)
+        mesh->Clean();
+}
+
 void Model::ProcessComponents()
 {
     get<Transform>()->Process();

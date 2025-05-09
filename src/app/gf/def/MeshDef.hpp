@@ -4,13 +4,15 @@
 #include <mesh/Mesh.hpp>
 #include <mesh/MeshBuilder.hpp>
 #include <mesh/VerticesDef.hpp>
+#include <color/ColorDef.hpp>
 
 namespace MeshDef
 {
-std::unique_ptr<Mesh> ColorRGBTriangle = MeshBuilder::GetInstance()
-                                             .WithVertices(VerticesDef::TriangleV)
-                                             .WithColor({Color::Red, Color::Green, Color::Blue})
-                                             .Build();
+const std::shared_ptr<Mesh> ColorRGBTriangle =
+    MeshBuilder::GetInstance()
+        .WithVertices(VerticesDef::TriangleV)
+        .WithColor({Color::Red, Color::Green, Color::Blue})
+        .BuildShared();
 }
 
 #endif

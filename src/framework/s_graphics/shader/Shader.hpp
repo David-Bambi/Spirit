@@ -12,15 +12,15 @@
 class Shader : public Object
 {
   public:
-    unsigned int Id() const { return _id; }
+    [[nodiscard]] unsigned int Id() const;
+
+    void Compile();
 
   private:
     unsigned int _id = -1;
     ShaderType _type = ShaderType::VERTEX_SHADER;
     std::string _shaderCode = STREMPTY;
 
-    void Create();
-    void Compile();
     void LogCompileError();
 
     friend class ShaderBuilder;

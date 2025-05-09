@@ -1,0 +1,51 @@
+@startuml SceneInit
+
+participant Scene
+participant ProgramShader
+participant Shader
+participant Model
+participant Mesh
+participant Texture
+participant OpenGL
+
+Scene -> ProgramShader : init
+ProgramShader -> Shader : Compile
+Shader -> OpenGL : glCreateShader
+OpenGL -> Shader : ShaderId
+Shader -> OpenGL : glShaderSource
+Shader -> OpenGL : glCompileShader
+ProgramShader -> ProgramShader : GenerateId
+ProgramShader -> OpenGL : glCreateProgram
+OpenGL -> ProgramShader : ProgramId
+ProgramShader -> ProgramShader : Link
+ProgramShader -> OpenGL : glAttachShader
+ProgramShader -> OpenGL : glLinkProgram
+ProgramShader -> OpenGL : glDeleteShader
+ProgramShader --> Scene : 
+loop Scene.models.size()
+    Scene -> Model : Init (ProgramId)
+    loop Model.meshes.size()
+        Model -> Mesh : Init (ProgramId)
+        Mesh -> OpenGL : glGenVertexArrays
+        OpenGL -> Mesh : _vao
+        Mesh -> OpenGL : glGenBuffers
+        OpenGL -> Mesh : _vbo
+        Mesh -> OpenGL : glBindVertexArray
+        Mesh -> OpenGL : glBindBuffer
+        Mesh -> OpenGL : glBufferData
+        Mesh -> OpenGL : glVertexAttribPointer
+        Mesh -> Mesh : SetupTexture
+        Mesh -> OpenGL : glUniform1i
+        Mesh -> Texture : GenerateTexture 
+        Texture -> OpenGL : glGenTextures
+        OpenGL -> Texture : TextureId
+        Texture -> OpenGL : glBindTexture
+        Texture -> stb_image : Load
+        stb_image -> Texture : ImageData
+        Texture -> OpenGL : glTexImage2D
+        Texture -> OpenGL : glGenerateMipmap
+        Texture -> stb_image : Free
+    end
+end
+
+@enduml

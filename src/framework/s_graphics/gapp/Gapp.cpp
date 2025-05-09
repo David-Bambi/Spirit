@@ -3,7 +3,15 @@
 #include <uglad/uglad.hpp>
 #include <uglfw/uglfw.hpp>
 
-void Gapp::Init()
+void Gapp::Run()
+{
+    InitContext();
+    BeforeRenderPhase();
+    RenderPhase();
+    CleanUp();
+}
+
+void Gapp::InitContext()
 {
     uglfw::InitializeGlfw();
     _window =
@@ -11,7 +19,13 @@ void Gapp::Init()
     uglad::GladInit();
 }
 
-void Gapp::Run()
+void Gapp::BeforeRenderPhase()
+{
+    if (_scene != nullptr)
+        _scene->Init();
+}
+
+void Gapp::RenderPhase()
 {
     while (!glfwWindowShouldClose(_window))
     {
@@ -21,12 +35,18 @@ void Gapp::Run()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        if (_scene != nullptr)
+            _scene->Render();
+
         glfwPollEvents();
         glfwSwapBuffers(_window);
     }
 }
 
-void Gapp::Shutdown()
+void Gapp::CleanUp()
 {
+    if (_scene != nullptr)
+        _scene->Clean();
+
     glfwTerminate();
 }

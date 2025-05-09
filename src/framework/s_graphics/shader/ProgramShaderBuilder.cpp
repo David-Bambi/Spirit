@@ -6,22 +6,16 @@ ProgramShaderBuilder& ProgramShaderBuilder::GetInstance()
     return instance;
 }
 
-ProgramShaderBuilder& ProgramShaderBuilder::WithVertexShader(std::unique_ptr<Shader> vertexShader)
+ProgramShaderBuilder&
+ProgramShaderBuilder::WithVertexShader(const std::shared_ptr<Shader>& vertexShader)
 {
-    _obj->_vertexShader = std::move(vertexShader);
-    return *this;   
-}
-
-ProgramShaderBuilder& ProgramShaderBuilder::WithFragmentShader(std::unique_ptr<Shader> fragmentShader)
-{
-    _obj->_fragmentShader = std::move(fragmentShader);
+    _obj->_vertexShader = vertexShader;
     return *this;
 }
 
-std::unique_ptr<ProgramShader> ProgramShaderBuilder::Build()
+ProgramShaderBuilder&
+ProgramShaderBuilder::WithFragmentShader(const std::shared_ptr<Shader>& fragmentShader)
 {
-    Builder::_obj->Create();
-    Builder::_obj->Link();
-    
-    return Builder::Build();
+    _obj->_fragmentShader = fragmentShader;
+    return *this;
 }

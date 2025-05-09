@@ -3,11 +3,6 @@
 #include <stb_image/stb_image.h>
 #include <texture/Texture.hpp>
 
-Texture::Texture()
-{
-    glGenTextures(1, &_tex);
-}
-
 unsigned int Texture::Id()
 {
     return _tex;
@@ -15,6 +10,7 @@ unsigned int Texture::Id()
 
 void Texture::GenerateTexture()
 {
+    glGenTextures(1, &_tex);
     glBindTexture(GL_TEXTURE_2D, _tex);
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);

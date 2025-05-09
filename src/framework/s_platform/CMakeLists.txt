@@ -1,5 +1,5 @@
 set(S_PLATFORM_LIB s_platform)
-set(S_PLATFORM_SRC builder/Builder.cpp)
+set(S_PLATFORM_SRC builder/Builder.cpp builder/Builder.tpp)
 
 set(S_PLATFORM_INC ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -25,11 +25,11 @@ if(DOCUMENTATION_OPT)
     add_dependencies_if_exist(${S_PLATFORM_LIB} ${S_PLATFORM_DOC})
 
     # UML target
-    set(S_PLATFORM_UML s_platform_uml)
-    set(S_PLATFORM_UML_PATH ${CMAKE_SOURCE_DIR}/docs/framework/s_platform/uml)
-    target_generate_uml(${S_PLATFORM_UML} ${S_PLATFORM_UML_PATH})
+    # set(S_PLATFORM_UML s_platform_uml)
+    # set(S_PLATFORM_UML_PATH ${CMAKE_SOURCE_DIR}/docs/framework/s_platform/uml)
+    # target_generate_uml(${S_PLATFORM_UML} ${S_PLATFORM_UML_PATH})
 
-    add_dependencies_if_exist(${S_PLATFORM_LIB} ${S_PLATFORM_UML})
+    # add_dependencies_if_exist(${S_PLATFORM_LIB} ${S_PLATFORM_UML})
 endif()
 
 # Clang-tidy target

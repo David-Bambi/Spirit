@@ -16,7 +16,7 @@
 class ModelBuilder : public Builder<Model>
 {
   public:
-    ModelBuilder& WithMesh(std::unique_ptr<Mesh> mesh);
+    ModelBuilder& WithMesh(const std::shared_ptr<Mesh>& mesh);
     ModelBuilder& WithPosition(glm::vec3 pos);
     ModelBuilder& WithRotation(glm::vec3 rot);
     ModelBuilder& WithScale(glm::vec3 sca);

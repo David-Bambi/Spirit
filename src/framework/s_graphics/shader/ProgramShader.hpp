@@ -4,22 +4,25 @@
 #include <glad/glad.h>
 #include <object/Object.hpp>
 #include <memory>
-#include <shader/Shader.hpp> 
+#include <shader/Shader.hpp>
 
 class ProgramShader : public Object
 {
-    public :
-        void Use() const;
-    private :
-        unsigned int _id = -1;
-        std::unique_ptr<Shader> _vertexShader = {};
-        std::unique_ptr<Shader> _fragmentShader = {};
+  public:
+    void Init();
+    void Use() const;
+    [[nodiscard]] unsigned int Id() const;
 
-        void Create();
-        void Link() const;
-        void LogLinkError() const;
+  private:
+    unsigned int _id = -1;
+    std::shared_ptr<Shader> _vertexShader = {};
+    std::shared_ptr<Shader> _fragmentShader = {};
 
-        friend class ProgramShaderBuilder;
+    void GenerateId();
+    void Link() const;
+    void LogLinkError() const;
+
+    friend class ProgramShaderBuilder;
 };
 
-#endif 
+#endif

@@ -9,17 +9,17 @@
 #include <component/Component.hpp>
 #include <functional>
 #include <mesh/Mesh.hpp>
-class Model
+#include <object/Object.hpp>
+
+class Model : public Object
 {
   public:
     Model();
-    Model(const Model& other) = default;
-    Model(Model&& other) noexcept = default;
-    Model& operator=(const Model& other) = default;
-    Model& operator=(Model&& other) noexcept = default;
-    ~Model() = default;
 
+    void Init(unsigned int progshader);
     void Render();
+    void Clean();
+
     using Update = std::function<void(Model&)>;
 
     template <typename T>
@@ -29,7 +29,7 @@ class Model
     void SetUpdate(Update update);
 
   private:
-    std::deque<std::unique_ptr<Mesh>> _meshes;
+    std::deque<std::shared_ptr<Mesh>> _meshes;
     std::unordered_map<std::type_index, std::shared_ptr<Component>> _components;
     Update _update = nullptr;
 

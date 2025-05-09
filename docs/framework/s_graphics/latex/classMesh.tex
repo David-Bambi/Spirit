@@ -1,0 +1,86 @@
+\doxysection{Mesh Class Reference}
+\hypertarget{classMesh}{}\label{classMesh}\index{Mesh@{Mesh}}
+
+
+Inheritance diagram for Mesh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classMesh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mesh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classMesh__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMesh_a48883c5436e54468bc8dc2c03115d9db}\label{classMesh_a48883c5436e54468bc8dc2c03115d9db} 
+void {\bfseries Init} (unsigned int progshader)
+\item 
+\Hypertarget{classMesh_a75e66bcd90c09492676a4cfe5b23c3af}\label{classMesh_a75e66bcd90c09492676a4cfe5b23c3af} 
+void {\bfseries Render} ()
+\item 
+\Hypertarget{classMesh_abbbed7b94c36595d63c091227778d0b8}\label{classMesh_abbbed7b94c36595d63c091227778d0b8} 
+void {\bfseries Clean} ()
+\item 
+\Hypertarget{classMesh_ac7d7b79e29580967f63eea69d7a8b231}\label{classMesh_ac7d7b79e29580967f63eea69d7a8b231} 
+void {\bfseries Transform} (glm\+::mat4 transform)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMesh_a3bb355f80c61f4a67cc319c646ab9642}\label{classMesh_a3bb355f80c61f4a67cc319c646ab9642} 
+void {\bfseries Setup\+Texture} ()
+\item 
+\Hypertarget{classMesh_a18d42ed108a21abe795184886644e907}\label{classMesh_a18d42ed108a21abe795184886644e907} 
+void {\bfseries Active\+And\+Bind\+Texture} ()
+\item 
+\Hypertarget{classMesh_a952f846a12f43ff6dcb08df6ae4200e4}\label{classMesh_a952f846a12f43ff6dcb08df6ae4200e4} 
+void {\bfseries Process\+Transform} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMesh_a5fbb81f3fbce474d11367ec08b03e805}\label{classMesh_a5fbb81f3fbce474d11367ec08b03e805} 
+unsigned int {\bfseries \+\_\+vao} = 0
+\item 
+\Hypertarget{classMesh_ac1697e0cf0b0e87eabb2d3c952d3e1d2}\label{classMesh_ac1697e0cf0b0e87eabb2d3c952d3e1d2} 
+unsigned int {\bfseries \+\_\+vbo} = 0
+\item 
+\Hypertarget{classMesh_a18e50488b25721530e19594b4c60f717}\label{classMesh_a18e50488b25721530e19594b4c60f717} 
+unsigned int {\bfseries \+\_\+ebo} = 0
+\item 
+\Hypertarget{classMesh_aabfce5d5bbf0e30277126ff03b6025d9}\label{classMesh_aabfce5d5bbf0e30277126ff03b6025d9} 
+unsigned int {\bfseries \+\_\+tex} = 0
+\item 
+\Hypertarget{classMesh_a49310e55d56206f4990bbaa4b879bc55}\label{classMesh_a49310e55d56206f4990bbaa4b879bc55} 
+unsigned int {\bfseries \+\_\+shader\+Id} = 0
+\item 
+\Hypertarget{classMesh_a72702b49fe216b5ad2ced3320219a587}\label{classMesh_a72702b49fe216b5ad2ced3320219a587} 
+\mbox{\hyperlink{classVertices}{Vertices}} {\bfseries Mesh\+Vertices} = \{\}
+\item 
+\Hypertarget{classMesh_aa45524388dd88aa8bfe1156824fe30da}\label{classMesh_aa45524388dd88aa8bfe1156824fe30da} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture}{Texture}} $>$ $>$ {\bfseries \+\_\+textures} = \{\}
+\item 
+\Hypertarget{classMesh_ab02e0750c79bcc460bd6a273d6c50f8a}\label{classMesh_ab02e0750c79bcc460bd6a273d6c50f8a} 
+glm\+::mat4 {\bfseries \+\_\+transform} = glm\+::mat4(1.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMesh_aa3269776db01bf5eb6249201233796de}\label{classMesh_aa3269776db01bf5eb6249201233796de} 
+class {\bfseries Mesh\+Builder}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/mesh/Mesh.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/mesh/Mesh.\+cpp\end{DoxyCompactItemize}

@@ -9,14 +9,7 @@
 #include <texture/GLTexture.hpp>
 #include <ugl/ugl.hpp>
 
-Mesh::Mesh()
-{
-    glGenVertexArrays(1, &_vao);
-    glGenBuffers(1, &_vbo);
-    glGenBuffers(1, &_ebo);
-}
-
-Mesh::~Mesh()
+void Mesh::Clean()
 {
     glDeleteVertexArrays(1, &_vao);
     glDeleteBuffers(1, &_vbo);
@@ -42,12 +35,16 @@ void Mesh::Render()
     glBindVertexArray(0);
 }
 
-void Mesh::Setup()
+void Mesh::Init(unsigned int progshader)
 {
+    glGenVertexArrays(1, &_vao);
+    glGenBuffers(1, &_vbo);
+    glGenBuffers(1, &_ebo);
+    _shaderId = progshader;
+
     MeshVertices.Build();
 
     glUseProgram(_shaderId);
-
     glBindVertexArray(_vao);
 
     glBindBuffer(GL_ARRAY_BUFFER, _vbo);

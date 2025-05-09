@@ -49,4 +49,6 @@ itests :
 utests :
 	cmake --build build --config Debug --target utests
 
+sharedptr : 
+	cmake --build build --config Debug --target sharedptr && ./build/src/app/sharedptr/sharedptr
 

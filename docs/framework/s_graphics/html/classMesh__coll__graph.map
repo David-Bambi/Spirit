@@ -1,0 +1,9 @@
+<map id="Mesh" name="Mesh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,641,187,947"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,353,83,419"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,432,83,641,78,641,57,433"/>
+<area shape="rect" id="Node000003" href="$classVertices.html" title="Class to manage the vertices of a mesh object." alt="" coords="107,193,251,579"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,579,133,626,128,625,137,578"/>
+<area shape="rect" id="Node000004" href="$structVertices_1_1Offset.html" title=" " alt="" coords="122,5,235,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,131,181,176,176,176,176,131"/>
+</map>

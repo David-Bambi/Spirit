@@ -1,25 +1,26 @@
 set(S_GRAPHICS_LIB s_graphics)
 
 set(S_GRAPHICS_SRC
-    camera/CameraBuilder.cpp
     camera/Camera.cpp
+    camera/CameraBuilder.cpp
+    component/Transform.cpp
     gapp/Gapp.cpp
     gapp/GappBuilder.cpp
     input/Input.cpp
     mesh/Mesh.cpp
-    model/Vertices.cpp
     mesh/MeshBuilder.cpp
     model/Model.cpp
     model/ModelBuilder.cpp
-    component/Transform.cpp
-    texture/Texture.cpp
-    texture/TextureBuilder.cpp
-    time/Time.cpp
+    model/Vertices.cpp
+    scene/Scene.cpp
+    scene/SceneBuilder.cpp
     shader/ProgramShader.cpp
     shader/ProgramShaderBuilder.cpp
     shader/Shader.cpp
     shader/ShaderBuilder.cpp
-    scene/Scene.cpp
+    texture/Texture.cpp
+    texture/TextureBuilder.cpp
+    time/Time.cpp
     ugl/ugl.cpp
     uglad/uglad.cpp
     uglfw/uglfw.cpp)

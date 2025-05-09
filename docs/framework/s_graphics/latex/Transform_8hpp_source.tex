@@ -1,0 +1,36 @@
+\doxysection{Transform.\+hpp}
+\hypertarget{Transform_8hpp_source}{}\label{Transform_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/component/Transform.hpp@{/workspaces/spirit/src/framework/s\_graphics/component/Transform.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRANSFORM\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRANSFORM\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <component/Component.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTransform}{Transform}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classComponent}{Component}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classTransform}{Transform}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ Translate(glm::vec3\ translate);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Rotate(glm::vec3\ rotate);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ Scale(glm::vec3\ scale);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ SetRotation(glm::vec3\ rotation);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ glm::mat4\ Mat();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ Process()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ glm::mat4\ \_mat;}
+\DoxyCodeLine{00025\ \ \ \ \ glm::vec3\ \_pos;}
+\DoxyCodeLine{00026\ \ \ \ \ glm::vec3\ \_rot;}
+\DoxyCodeLine{00027\ \ \ \ \ glm::vec3\ \_sca;}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

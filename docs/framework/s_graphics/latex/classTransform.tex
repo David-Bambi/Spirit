@@ -1,0 +1,85 @@
+\doxysection{Transform Class Reference}
+\hypertarget{classTransform}{}\label{classTransform}\index{Transform@{Transform}}
+
+
+Inheritance diagram for Transform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classTransform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Transform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classTransform__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTransform_a34c4ab8eea0a3515e9ce1f85a9d01c07}\label{classTransform_a34c4ab8eea0a3515e9ce1f85a9d01c07} 
+void {\bfseries Translate} (glm\+::vec3 translate)
+\item 
+\Hypertarget{classTransform_ac8e841196b85fa117d6c47da8e2a583d}\label{classTransform_ac8e841196b85fa117d6c47da8e2a583d} 
+void {\bfseries Rotate} (glm\+::vec3 rotate)
+\item 
+\Hypertarget{classTransform_a2b0584819816bcc3a790c5a6d7d69fb2}\label{classTransform_a2b0584819816bcc3a790c5a6d7d69fb2} 
+void {\bfseries Scale} (glm\+::vec3 scale)
+\item 
+\Hypertarget{classTransform_a5a785270a1a2ea6b3dec27a831dcdfd5}\label{classTransform_a5a785270a1a2ea6b3dec27a831dcdfd5} 
+void {\bfseries Set\+Rotation} (glm\+::vec3 rotation)
+\item 
+\Hypertarget{classTransform_a75f126190a7b5f3175faa2e052e76d89}\label{classTransform_a75f126190a7b5f3175faa2e052e76d89} 
+glm\+::mat4 {\bfseries Mat} ()
+\item 
+void \mbox{\hyperlink{classTransform_aef4895118b3d6bb3c24f259a5c21bef8}{Process}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classComponent}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Component} (const \mbox{\hyperlink{classComponent}{Component}} \&)=default
+\item 
+{\bfseries Component} (\mbox{\hyperlink{classComponent}{Component}} \&\&)=default
+\item 
+\mbox{\hyperlink{classComponent}{Component}} \& {\bfseries operator=} (const \mbox{\hyperlink{classComponent}{Component}} \&)=default
+\item 
+\mbox{\hyperlink{classComponent}{Component}} \& {\bfseries operator=} (\mbox{\hyperlink{classComponent}{Component}} \&\&)=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTransform_afb3237e8309786a2f2c86971c8dc918a}\label{classTransform_afb3237e8309786a2f2c86971c8dc918a} 
+glm\+::mat4 {\bfseries \+\_\+mat}
+\item 
+\Hypertarget{classTransform_aa43a19d8532ed7f7031690d8f4c9d8d1}\label{classTransform_aa43a19d8532ed7f7031690d8f4c9d8d1} 
+glm\+::vec3 {\bfseries \+\_\+pos}
+\item 
+\Hypertarget{classTransform_a3232582ad8fca8344dcfb2218e4bd4fc}\label{classTransform_a3232582ad8fca8344dcfb2218e4bd4fc} 
+glm\+::vec3 {\bfseries \+\_\+rot}
+\item 
+\Hypertarget{classTransform_a511299c5ed6334ef3e33070660d9ca34}\label{classTransform_a511299c5ed6334ef3e33070660d9ca34} 
+glm\+::vec3 {\bfseries \+\_\+sca}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTransform_aef4895118b3d6bb3c24f259a5c21bef8}\label{classTransform_aef4895118b3d6bb3c24f259a5c21bef8} 
+\index{Transform@{Transform}!Process@{Process}}
+\index{Process@{Process}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily void Transform\+::\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/component/Transform.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/component/Transform.\+cpp\end{DoxyCompactItemize}

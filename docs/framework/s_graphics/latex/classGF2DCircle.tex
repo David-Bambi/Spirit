@@ -1,0 +1,123 @@
+\doxysection{GF2\+DCircle Class Reference}
+\hypertarget{classGF2DCircle}{}\label{classGF2DCircle}\index{GF2DCircle@{GF2DCircle}}
+
+
+{\ttfamily \#include $<$GF2\+DCircle.\+hpp$>$}
+
+
+
+Inheritance diagram for GF2\+DCircle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classGF2DCircle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GF2\+DCircle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classGF2DCircle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGF2DCircle_a457a301a885114c1f2310b0fe1b3235e}\label{classGF2DCircle_a457a301a885114c1f2310b0fe1b3235e} 
+{\bfseries GF2\+DCircle} (unsigned int shaderprogram, float smoothing=1.\+0f, GFColor color=Color\+::\+Black, unsigned int texture=0, unsigned int usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+\Hypertarget{classGF2DCircle_ad2e8117e2cb8e3033c70430b9e8f3b96}\label{classGF2DCircle_ad2e8117e2cb8e3033c70430b9e8f3b96} 
+virtual void {\bfseries Draw} ()
+\item 
+\Hypertarget{classGF2DCircle_ad94fd4a11e10476715b205c21ea0c05b}\label{classGF2DCircle_ad94fd4a11e10476715b205c21ea0c05b} 
+virtual unsigned int {\bfseries Shader\+Type} ()
+\item 
+\Hypertarget{classGF2DCircle_a39245b97be3bd0bc0d0628df1e49dd28}\label{classGF2DCircle_a39245b97be3bd0bc0d0628df1e49dd28} 
+GFColor {\bfseries Color} ()
+\item 
+\Hypertarget{classGF2DCircle_a839a4d2174d4d2de7e5e5dba61347086}\label{classGF2DCircle_a839a4d2174d4d2de7e5e5dba61347086} 
+void {\bfseries Color} (GFColor color)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classGF2DCircle_a2f861c0359f7eb0f8ea53fb3cfbf16d5}{T}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classGF2DCircle_a2f9394e76e40e7a906e95df70b13e072}{V}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classGF2DCircle_a9b8a1f92eca163f7dc2abcf42c477f7a}{P}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGF2DCircle_a2565b25d4094a81353f4cfcb1a25096a}\label{classGF2DCircle_a2565b25d4094a81353f4cfcb1a25096a} 
+void {\bfseries Prepare\+Rendering} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGF2DCircle_a0aecccd2288933c4a463056c25c14f31}\label{classGF2DCircle_a0aecccd2288933c4a463056c25c14f31} 
+std\+::vector$<$ struct \mbox{\hyperlink{structVectorStruc}{Vector\+Struc}} $>$ {\bfseries vertices}
+\item 
+\Hypertarget{classGF2DCircle_ad61f156ce6d8bceee280decea7b29f97}\label{classGF2DCircle_ad61f156ce6d8bceee280decea7b29f97} 
+std\+::vector$<$ Vec3\+\_\+ui $>$ {\bfseries indices}
+\item 
+\Hypertarget{classGF2DCircle_a16dd1481b6cec98307c40ea490d16b01}\label{classGF2DCircle_a16dd1481b6cec98307c40ea490d16b01} 
+unsigned int {\bfseries \+\_\+vao}
+\item 
+\Hypertarget{classGF2DCircle_a784a6e9bcb08bd61af85dc94e8ff1c27}\label{classGF2DCircle_a784a6e9bcb08bd61af85dc94e8ff1c27} 
+unsigned int {\bfseries \+\_\+vbo}
+\item 
+\Hypertarget{classGF2DCircle_ab1d6f5e1fde25dbc9243072b8a8d59ae}\label{classGF2DCircle_ab1d6f5e1fde25dbc9243072b8a8d59ae} 
+unsigned int {\bfseries \+\_\+ebo}
+\item 
+\Hypertarget{classGF2DCircle_aac439f878cbb96d4a28a70cc5d5b61e3}\label{classGF2DCircle_aac439f878cbb96d4a28a70cc5d5b61e3} 
+unsigned int {\bfseries \+\_\+usage}
+\item 
+\Hypertarget{classGF2DCircle_a8d9da46daba54d666e6c2627337f1c99}\label{classGF2DCircle_a8d9da46daba54d666e6c2627337f1c99} 
+unsigned int {\bfseries \+\_\+shaderprogram}
+\item 
+\Hypertarget{classGF2DCircle_a5ffabbb6e65fdff98efdd8b308fc1eb8}\label{classGF2DCircle_a5ffabbb6e65fdff98efdd8b308fc1eb8} 
+unsigned int {\bfseries \+\_\+tex}
+\item 
+\Hypertarget{classGF2DCircle_a9a37484a9e0c75b10fefe3d09263cbd8}\label{classGF2DCircle_a9a37484a9e0c75b10fefe3d09263cbd8} 
+GFColor {\bfseries color}
+\item 
+\Hypertarget{classGF2DCircle_a1e7c3a92eeeb0259585f3b5c785756a3}\label{classGF2DCircle_a1e7c3a92eeeb0259585f3b5c785756a3} 
+unsigned int {\bfseries \+\_\+shader\+Type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+David Boivin Object that represent a primitive circle to be draw. 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGF2DCircle_a9b8a1f92eca163f7dc2abcf42c477f7a}\label{classGF2DCircle_a9b8a1f92eca163f7dc2abcf42c477f7a} 
+\index{GF2DCircle@{GF2DCircle}!P@{P}}
+\index{P@{P}!GF2DCircle@{GF2DCircle}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily glm\+::mat4 GF2\+DCircle\+::P}
+
+Projection matrix \Hypertarget{classGF2DCircle_a2f861c0359f7eb0f8ea53fb3cfbf16d5}\label{classGF2DCircle_a2f861c0359f7eb0f8ea53fb3cfbf16d5} 
+\index{GF2DCircle@{GF2DCircle}!T@{T}}
+\index{T@{T}!GF2DCircle@{GF2DCircle}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily glm\+::mat4 GF2\+DCircle\+::T}
+
+\doxylink{classModel}{Model} transformation matrix \Hypertarget{classGF2DCircle_a2f9394e76e40e7a906e95df70b13e072}\label{classGF2DCircle_a2f9394e76e40e7a906e95df70b13e072} 
+\index{GF2DCircle@{GF2DCircle}!V@{V}}
+\index{V@{V}!GF2DCircle@{GF2DCircle}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily glm\+::mat4 GF2\+DCircle\+::V}
+
+View matrix 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/GF2\+DCircle.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/model/GF2\+DCircle.\+cpp\end{DoxyCompactItemize}

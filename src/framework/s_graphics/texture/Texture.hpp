@@ -14,7 +14,7 @@ class Texture
     void ProcessILS();
 
   public:
-    Texture();
+    Texture() = default;
     Texture(const Texture& other) = default;
     Texture(Texture&& other) noexcept = default;
     Texture& operator=(const Texture& other) = default;

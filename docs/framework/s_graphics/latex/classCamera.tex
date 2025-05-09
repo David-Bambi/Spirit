@@ -1,0 +1,137 @@
+\doxysection{Camera Class Reference}
+\hypertarget{classCamera}{}\label{classCamera}\index{Camera@{Camera}}
+
+
+Collaboration diagram for Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classCamera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCamera_a2bd990dd6bec268b1dfc58831f579e7c}\label{classCamera_a2bd990dd6bec268b1dfc58831f579e7c} 
+using {\bfseries Update\+Fct} = std\+::function$<$ void(\mbox{\hyperlink{classCamera}{Camera}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCamera_a19ffe7a3aa828b0a4920f8b43f9b2335}\label{classCamera_a19ffe7a3aa828b0a4920f8b43f9b2335} 
+{\bfseries Camera} (const \mbox{\hyperlink{classCamera}{Camera}} \&other)=default
+\item 
+\Hypertarget{classCamera_a1d0e57999e50164c3c6d6ea730918c33}\label{classCamera_a1d0e57999e50164c3c6d6ea730918c33} 
+{\bfseries Camera} (\mbox{\hyperlink{classCamera}{Camera}} \&\&other) noexcept=default
+\item 
+\Hypertarget{classCamera_aceef51a0db03572813d1e2a7f8b13c11}\label{classCamera_aceef51a0db03572813d1e2a7f8b13c11} 
+\mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCamera}{Camera}} \&other)=default
+\item 
+\Hypertarget{classCamera_a982eb835172bdec941676bf7ff4048ae}\label{classCamera_a982eb835172bdec941676bf7ff4048ae} 
+\mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries operator=} (\mbox{\hyperlink{classCamera}{Camera}} \&\&other) noexcept=default
+\item 
+\Hypertarget{classCamera_a4a596a3ea1fdc7d244ba4268031a360b}\label{classCamera_a4a596a3ea1fdc7d244ba4268031a360b} 
+void {\bfseries Update} ()
+\item 
+\Hypertarget{classCamera_a00bd495b8f247ac7a9e5de1fd1866bef}\label{classCamera_a00bd495b8f247ac7a9e5de1fd1866bef} 
+void {\bfseries Move\+Forward} ()
+\item 
+\Hypertarget{classCamera_a3ee9d79d50ebf1c365c2558ae4a5ea70}\label{classCamera_a3ee9d79d50ebf1c365c2558ae4a5ea70} 
+void {\bfseries Move\+Backward} ()
+\item 
+\Hypertarget{classCamera_abbc8e3c66029cd2adbd59c64ab8e3b25}\label{classCamera_abbc8e3c66029cd2adbd59c64ab8e3b25} 
+void {\bfseries Move\+Left} ()
+\item 
+\Hypertarget{classCamera_a497ed87c48b0a09e25dc3adb9ee31ec7}\label{classCamera_a497ed87c48b0a09e25dc3adb9ee31ec7} 
+void {\bfseries Move\+Right} ()
+\item 
+\Hypertarget{classCamera_a753b70d1a77f27a2bbec166b374a5271}\label{classCamera_a753b70d1a77f27a2bbec166b374a5271} 
+void {\bfseries Move\+Up} ()
+\item 
+\Hypertarget{classCamera_a98e7e9b431241e5b263d77be99a9a8ff}\label{classCamera_a98e7e9b431241e5b263d77be99a9a8ff} 
+void {\bfseries Move\+Down} ()
+\item 
+\Hypertarget{classCamera_a1e83c1a5c765272dacea96972e049daa}\label{classCamera_a1e83c1a5c765272dacea96972e049daa} 
+void {\bfseries Mouse\+Movement} (float xoffset, float yoffset)
+\item 
+\Hypertarget{classCamera_a8cb0c3634b0b857f7912d4da11d66cf9}\label{classCamera_a8cb0c3634b0b857f7912d4da11d66cf9} 
+void {\bfseries Zoom} (float yoffset)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCamera_a75ab8b454b1b5e0ab4380d48de2dd600}\label{classCamera_a75ab8b454b1b5e0ab4380d48de2dd600} 
+glm\+::vec3 {\bfseries Right} ()
+\item 
+\Hypertarget{classCamera_aeb60a23bd7ce1940187ccba109f6366c}\label{classCamera_aeb60a23bd7ce1940187ccba109f6366c} 
+glm\+::vec3 {\bfseries Up} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCamera_aa61808746d60f0921db360dedaaf14c4}\label{classCamera_aa61808746d60f0921db360dedaaf14c4} 
+Projection\+\_\+t {\bfseries \+\_\+projection\+Type} = Projection\+\_\+t\+::\+PERSPECTIVE
+\item 
+\Hypertarget{classCamera_a61f4abcc8747521b7caa115e216eeff1}\label{classCamera_a61f4abcc8747521b7caa115e216eeff1} 
+glm\+::vec3 {\bfseries \+\_\+pos} = \{0.\+0f, 0.\+0f, 0.\+0f\}
+\item 
+\Hypertarget{classCamera_ac610e748840c4b70c9081c2d68df2e8d}\label{classCamera_ac610e748840c4b70c9081c2d68df2e8d} 
+glm\+::vec3 {\bfseries \+\_\+front} = \{0.\+0f, 0.\+0f, -\/1.\+0f\}
+\item 
+\Hypertarget{classCamera_a323a698e4c5773ee3ec380851b145e2d}\label{classCamera_a323a698e4c5773ee3ec380851b145e2d} 
+glm\+::vec3 {\bfseries \+\_\+up} = \{0.\+0f, 1.\+0f, 0.\+0f\}
+\item 
+\Hypertarget{classCamera_a4c556280ed181d8589c28eec7ebebb49}\label{classCamera_a4c556280ed181d8589c28eec7ebebb49} 
+glm\+::vec3 {\bfseries \+\_\+right} = \{1.\+0f, 0.\+0f, 0.\+0f\}
+\item 
+\Hypertarget{classCamera_a77a18bc2dfb7ba9deec5f06b17eebf03}\label{classCamera_a77a18bc2dfb7ba9deec5f06b17eebf03} 
+glm\+::vec3 {\bfseries \+\_\+worldup} = \{0.\+0f, 1.\+0f, 0.\+0f\}
+\item 
+\Hypertarget{classCamera_a73f8dffa2d1e422f1b0fa3d5d6a043fa}\label{classCamera_a73f8dffa2d1e422f1b0fa3d5d6a043fa} 
+glm\+::mat4 {\bfseries \+\_\+view} = glm\+::mat4(1.\+0f)
+\item 
+\Hypertarget{classCamera_a5ae78f01917c3871a57142884e9a8089}\label{classCamera_a5ae78f01917c3871a57142884e9a8089} 
+glm\+::mat4 {\bfseries \+\_\+projection} = glm\+::mat4(1.\+0f)
+\item 
+\Hypertarget{classCamera_a7edc685c36854e5a23484e88e1f3ecde}\label{classCamera_a7edc685c36854e5a23484e88e1f3ecde} 
+Update\+Fct {\bfseries \+\_\+update} = nullptr
+\item 
+\Hypertarget{classCamera_a20b2e0a12e053acd7cb5bf7acc1e36ba}\label{classCamera_a20b2e0a12e053acd7cb5bf7acc1e36ba} 
+float {\bfseries \+\_\+yaw} = -\/90.\+0f
+\item 
+\Hypertarget{classCamera_a685190408518a0fac51af843fb6a5473}\label{classCamera_a685190408518a0fac51af843fb6a5473} 
+float {\bfseries \+\_\+pitch} = 0.\+0f
+\item 
+\Hypertarget{classCamera_a795992ec7320b0b973683a4780cc263f}\label{classCamera_a795992ec7320b0b973683a4780cc263f} 
+float {\bfseries \+\_\+sensitivity} = 0.\+1f
+\item 
+\Hypertarget{classCamera_a9d0177836f15215bc4d8d7c4bff1852c}\label{classCamera_a9d0177836f15215bc4d8d7c4bff1852c} 
+float {\bfseries \+\_\+speed} = 2.\+5f
+\item 
+\Hypertarget{classCamera_a468cc68ddf381d2c99a00ce8d9ee0bf8}\label{classCamera_a468cc68ddf381d2c99a00ce8d9ee0bf8} 
+float {\bfseries \+\_\+zoom} = 45.\+0f
+\item 
+\Hypertarget{classCamera_adbe2dda1c394b5407fe925ea30dc6429}\label{classCamera_adbe2dda1c394b5407fe925ea30dc6429} 
+float {\bfseries \+\_\+fov} = 45.\+0f
+\item 
+\Hypertarget{classCamera_ab42939a48150d37bee65e85fcf5d3e12}\label{classCamera_ab42939a48150d37bee65e85fcf5d3e12} 
+float {\bfseries \+\_\+near} = 0.\+1f
+\item 
+\Hypertarget{classCamera_aaf4541d449dd15e00c5d28f844de81ea}\label{classCamera_aaf4541d449dd15e00c5d28f844de81ea} 
+float {\bfseries \+\_\+far} = 100.\+0f
+\item 
+\Hypertarget{classCamera_a2837b2363cdb2c16c2f862a5fd9ebf64}\label{classCamera_a2837b2363cdb2c16c2f862a5fd9ebf64} 
+unsigned int {\bfseries \+\_\+shader\+Id} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCamera_a7752fee1bd2b982e8f23fedc42a80a2c}\label{classCamera_a7752fee1bd2b982e8f23fedc42a80a2c} 
+class {\bfseries Camera\+Builder}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/camera/Camera.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+graphics/camera/Camera.\+cpp\end{DoxyCompactItemize}

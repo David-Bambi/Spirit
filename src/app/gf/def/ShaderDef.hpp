@@ -1,36 +1,22 @@
 #ifndef SHADERDEF_HPP
 #define SHADERDEF_HPP
 
+#include <shader/Shader.hpp>
+#include <shader/ShaderBuilder.hpp>
+#include <def/ShaderCodeDef.hpp>
+#include <memory>
+
 namespace ShaderDef
 {
-    const std::string vertexshadercode01 = R"(
-        #version 330 core
-        layout (location = 0) in vec3 aPos;
-        layout (location = 3) in vec4 aCol;
+const std::shared_ptr<Shader> VertexShader01 = ShaderBuilder::GetInstance()
+                                                   .WithCode(ShaderCodeDef::vertexshadercode01)
+                                                   .WithType(ShaderType::VERTEX_SHADER)
+                                                   .BuildShared();
 
-        out vec4 Color;
-
-        uniform mat4 transform;
-
-        void main()
-        {
-            gl_Position = transform * vec4(aPos, 1.0f);
-            Color = aCol;
-        }
-    )";
-
-    const std::string fragmentshadercode01 = R"(
-        #version 330 core
-        out vec4 FragColor;
-
-        in vec4 Color;
-
-        void main()
-        {
-            FragColor = Color;
-        }
-    )";
-};
-
+const std::shared_ptr<Shader> FragmentShader01 = ShaderBuilder::GetInstance()
+                                                     .WithCode(ShaderCodeDef::fragmentshadercode01)
+                                                     .WithType(ShaderType::FRAGMENT_SHADER)
+                                                     .BuildShared();
+}; // namespace ShaderDef
 
 #endif

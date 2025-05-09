@@ -5,7 +5,7 @@
 
 namespace ShaderCodeDef
 {
-    const std::string vertexshadercode01 = R"(
+const std::string vertexshadercode01 = R"(
         #version 330 core
         layout (location = 0) in vec3 aPos;
         layout (location = 3) in vec4 aCol;
@@ -21,7 +21,7 @@ namespace ShaderCodeDef
         }
     )";
 
-    const std::string fragmentshadercode01 = R"(
+const std::string fragmentshadercode01 = R"(
         #version 330 core
         out vec4 FragColor;
 
@@ -32,6 +32,6 @@ namespace ShaderCodeDef
             FragColor = Color;
         }
     )";
-};
+}; // namespace ShaderCodeDef
 
 #endif

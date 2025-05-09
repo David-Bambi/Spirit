@@ -1,0 +1,7 @@
+<map id="Gapp" name="Gapp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="10,173,177,339"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,25,61,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,103,71,172,66,174,44,104"/>
+<area shape="rect" id="Node000003" href="$structAppSetting.html" title=" " alt="" coords="86,5,223,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,112,126,159,121,157,136,110"/>
+</map>

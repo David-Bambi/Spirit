@@ -3,22 +3,20 @@
 
 #include <deque>
 #include <memory>
+#include <object/Object.hpp>
 #include <model/Model.hpp>
+#include <shader/ProgramShader.hpp>
 
-class Scene
+class Scene : public Object
 {
   public:
-    Scene() = default;
-    Scene(const Scene&) = default;
-    Scene(Scene&&) noexcept = default;
-    Scene& operator=(const Scene&) = default;
-    Scene& operator=(Scene&&) = default;
-    virtual ~Scene() = default;
-
+    void Init();
     void Render();
+    void Clean();
 
   private:
-    std::deque<std::unique_ptr<Model>> _models = {};
+    std::deque<std::shared_ptr<Model>> _models = {};
+    std::shared_ptr<ProgramShader> _programShader = {};
 
     friend class SceneBuilder;
 };

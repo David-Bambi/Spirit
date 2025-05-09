@@ -79,96 +79,58 @@ $(function() {
   <div class="headertitle"><div class="title">Builder&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for Builder&lt; T &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBuilder__coll__graph.png" border="0" usemap="#aBuilder_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="aBuilder_3_01T_01_4_coll__map" id="aBuilder_3_01T_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,93,112,119"/>
-<area shape="rect" href="classBuilder.html" title=" " alt="" coords="5,5,112,31"/>
-<area shape="poly" title=" " alt="" coords="61,45,61,93,56,93,56,45"/>
-<area shape="poly" title=" " alt="" coords="127,9,139,18,130,26,113,29,112,23,128,21,133,18,124,14"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2bfa9718984965205e54e1ec7e7cb0e1" id="r_a2bfa9718984965205e54e1ec7e7cb0e1"><td class="memItemLeft" align="right" valign="top"><a id="a2bfa9718984965205e54e1ec7e7cb0e1" name="a2bfa9718984965205e54e1ec7e7cb0e1"></a>
-std::unique_ptr&lt; <a class="el" href="classBuilder.html">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Build</b> ()</td></tr>
-<tr class="memdesc:a2bfa9718984965205e54e1ec7e7cb0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a object and reset the builder objet. <br /></td></tr>
-<tr class="separator:a2bfa9718984965205e54e1ec7e7cb0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba159a8c557202b220b66a8c2de41b4" id="r_a6ba159a8c557202b220b66a8c2de41b4"><td class="memItemLeft" align="right" valign="top"><a id="a6ba159a8c557202b220b66a8c2de41b4" name="a6ba159a8c557202b220b66a8c2de41b4"></a>
+virtual T *&#160;</td><td class="memItemRight" valign="bottom"><b>Build</b> ()</td></tr>
+<tr class="separator:a6ba159a8c557202b220b66a8c2de41b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7db7009527eec7e8b7b96e46c47548" id="r_abc7db7009527eec7e8b7b96e46c47548"><td class="memItemLeft" align="right" valign="top"><a id="abc7db7009527eec7e8b7b96e46c47548" name="abc7db7009527eec7e8b7b96e46c47548"></a>
+virtual std::unique_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BuildUnique</b> ()</td></tr>
+<tr class="separator:abc7db7009527eec7e8b7b96e46c47548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e328b6e2668813dfb42707eb885a488" id="r_a0e328b6e2668813dfb42707eb885a488"><td class="memItemLeft" align="right" valign="top"><a id="a0e328b6e2668813dfb42707eb885a488" name="a0e328b6e2668813dfb42707eb885a488"></a>
+virtual std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BuildShared</b> ()</td></tr>
+<tr class="separator:a0e328b6e2668813dfb42707eb885a488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:acfeee07f648d14a07a3c8bfcb33599e8" id="r_acfeee07f648d14a07a3c8bfcb33599e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBuilder.html">static</a> <a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuilder.html#acfeee07f648d14a07a3c8bfcb33599e8">GetInstance</a> ()</td></tr>
-<tr class="memdesc:acfeee07f648d14a07a3c8bfcb33599e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unique instance of the <a class="el" href="classBuilder.html">Builder</a> class.  <br /></td></tr>
+<tr class="memitem:acfeee07f648d14a07a3c8bfcb33599e8" id="r_acfeee07f648d14a07a3c8bfcb33599e8"><td class="memItemLeft" align="right" valign="top"><a id="acfeee07f648d14a07a3c8bfcb33599e8" name="acfeee07f648d14a07a3c8bfcb33599e8"></a>
+static <a class="el" href="classBuilder.html">Builder</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
 <tr class="separator:acfeee07f648d14a07a3c8bfcb33599e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d5bfa4728e0c1d74b17b2d334e6553" id="r_a08d5bfa4728e0c1d74b17b2d334e6553"><td class="memItemLeft" align="right" valign="top"><a id="a08d5bfa4728e0c1d74b17b2d334e6553" name="a08d5bfa4728e0c1d74b17b2d334e6553"></a>
-<a class="el" href="classBuilder.html">static</a> <a class="el" href="classBuilder.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteInstance</b> ()</td></tr>
-<tr class="memdesc:a08d5bfa4728e0c1d74b17b2d334e6553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean the memory for the singleton instance of the <a class="el" href="classBuilder.html">Builder</a>. <br /></td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteInstance</b> ()</td></tr>
 <tr class="separator:a08d5bfa4728e0c1d74b17b2d334e6553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a57162e833e7328db4cd2138678dc3e49" id="r_a57162e833e7328db4cd2138678dc3e49"><td class="memItemLeft" align="right" valign="top"><a id="a57162e833e7328db4cd2138678dc3e49" name="a57162e833e7328db4cd2138678dc3e49"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Builder</b> (<a class="el" href="classBuilder.html">const</a> <a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;)=<a class="el" href="classBuilder.html">default</a></td></tr>
-<tr class="separator:a57162e833e7328db4cd2138678dc3e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f5555cf4b6232685644c7ba82d9ce9" id="r_a10f5555cf4b6232685644c7ba82d9ce9"><td class="memItemLeft" align="right" valign="top"><a id="a10f5555cf4b6232685644c7ba82d9ce9" name="a10f5555cf4b6232685644c7ba82d9ce9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Builder</b> (<a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;&amp;<a class="el" href="classBuilder.html">obj</a>)=<a class="el" href="classBuilder.html">default</a></td></tr>
-<tr class="separator:a10f5555cf4b6232685644c7ba82d9ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe503af08ff76191f28772d0b278789f" id="r_afe503af08ff76191f28772d0b278789f"><td class="memItemLeft" align="right" valign="top"><a id="afe503af08ff76191f28772d0b278789f" name="afe503af08ff76191f28772d0b278789f"></a>
-<a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;&amp;<a class="el" href="classBuilder.html">obj</a>)=<a class="el" href="classBuilder.html">default</a></td></tr>
-<tr class="separator:afe503af08ff76191f28772d0b278789f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a583fb3c101080adc0ceb52aecbdb739d" id="r_a583fb3c101080adc0ceb52aecbdb739d"><td class="memItemLeft" align="right" valign="top"><a id="a583fb3c101080adc0ceb52aecbdb739d" name="a583fb3c101080adc0ceb52aecbdb739d"></a>
-<a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classBuilder.html">const</a> <a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;)=<a class="el" href="classBuilder.html">default</a></td></tr>
-<tr class="separator:a583fb3c101080adc0ceb52aecbdb739d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a145a05059a2e50a9635f2e355e8e8f25" id="r_a145a05059a2e50a9635f2e355e8e8f25"><td class="memItemLeft" align="right" valign="top"><a id="a145a05059a2e50a9635f2e355e8e8f25" name="a145a05059a2e50a9635f2e355e8e8f25"></a>
-<a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp;<a class="el" href="classBuilder.html">obj</a>)=<a class="el" href="classBuilder.html">default</a></td></tr>
-<tr class="separator:a145a05059a2e50a9635f2e355e8e8f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceed0a24091f17359c7f56b8d5d6a456" id="r_aceed0a24091f17359c7f56b8d5d6a456"><td class="memItemLeft" align="right" valign="top"><a id="aceed0a24091f17359c7f56b8d5d6a456" name="aceed0a24091f17359c7f56b8d5d6a456"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Builder</b> (const <a class="el" href="classBuilder.html">Builder</a> &amp;)=default</td></tr>
+<tr class="separator:aceed0a24091f17359c7f56b8d5d6a456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b45cf8140d56ce9bad1d21d86949396" id="r_a8b45cf8140d56ce9bad1d21d86949396"><td class="memItemLeft" align="right" valign="top"><a id="a8b45cf8140d56ce9bad1d21d86949396" name="a8b45cf8140d56ce9bad1d21d86949396"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Builder</b> (<a class="el" href="classBuilder.html">Builder</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a8b45cf8140d56ce9bad1d21d86949396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab516aac79a505efcd3ca04cc7038479e" id="r_ab516aac79a505efcd3ca04cc7038479e"><td class="memItemLeft" align="right" valign="top"><a id="ab516aac79a505efcd3ca04cc7038479e" name="ab516aac79a505efcd3ca04cc7038479e"></a>
+<a class="el" href="classBuilder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classBuilder.html">Builder</a> &amp;)=default</td></tr>
+<tr class="separator:ab516aac79a505efcd3ca04cc7038479e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512dc21477c225076ecadd3b2eea3ea3" id="r_a512dc21477c225076ecadd3b2eea3ea3"><td class="memItemLeft" align="right" valign="top"><a id="a512dc21477c225076ecadd3b2eea3ea3" name="a512dc21477c225076ecadd3b2eea3ea3"></a>
+<a class="el" href="classBuilder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classBuilder.html">Builder</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a512dc21477c225076ecadd3b2eea3ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac177813987ee2dc5d3473e7ee85dbbe4" id="r_ac177813987ee2dc5d3473e7ee85dbbe4"><td class="memItemLeft" align="right" valign="top"><a id="ac177813987ee2dc5d3473e7ee85dbbe4" name="ac177813987ee2dc5d3473e7ee85dbbe4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>BeforeBuild</b> ()</td></tr>
+<tr class="separator:ac177813987ee2dc5d3473e7ee85dbbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a4b9f8184e9be7eca6a98a94823b5aa3b" id="r_a4b9f8184e9be7eca6a98a94823b5aa3b"><td class="memItemLeft" align="right" valign="top"><a id="a4b9f8184e9be7eca6a98a94823b5aa3b" name="a4b9f8184e9be7eca6a98a94823b5aa3b"></a>
-std::unique_ptr&lt; <a class="el" href="classBuilder.html">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_obj</b> = <a class="el" href="classBuilder.html">nullptr</a></td></tr>
+std::unique_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_obj</b> = {}</td></tr>
 <tr class="separator:a4b9f8184e9be7eca6a98a94823b5aa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a5c37c341577b000500c436dce3e56e3b" id="r_a5c37c341577b000500c436dce3e56e3b"><td class="memItemLeft" align="right" valign="top"><a id="a5c37c341577b000500c436dce3e56e3b" name="a5c37c341577b000500c436dce3e56e3b"></a>
-<a class="el" href="classBuilder.html">static</a> <a class="el" href="classBuilder.html">Builder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_instance</b> = <a class="el" href="classBuilder.html">nullptr</a></td></tr>
-<tr class="separator:a5c37c341577b000500c436dce3e56e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a49533b5bd419a6bc2550d652416a62" id="r_a9a49533b5bd419a6bc2550d652416a62"><td class="memItemLeft" align="right" valign="top"><a id="a9a49533b5bd419a6bc2550d652416a62" name="a9a49533b5bd419a6bc2550d652416a62"></a>
+static <a class="el" href="classBuilder.html">Builder</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>_instance</b></td></tr>
+<tr class="separator:a9a49533b5bd419a6bc2550d652416a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="acfeee07f648d14a07a3c8bfcb33599e8" name="acfeee07f648d14a07a3c8bfcb33599e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfeee07f648d14a07a3c8bfcb33599e8">&#9670;&#160;</a></span>GetInstance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classBuilder.html">class</a> <a class="el" href="classBuilder.html">T</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classBuilder.html">static</a> <a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt; &amp; <a class="el" href="classBuilder.html">Builder</a>&lt; <a class="el" href="classBuilder.html">T</a> &gt;::GetInstance </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the unique instance of the <a class="el" href="classBuilder.html">Builder</a> class. </p>
-<dl class="section return"><dt>Returns</dt><dd>Builder* </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/workspaces/spirit/src/framework/s_platform/builder/<a class="el" href="Builder_8hpp_source.html">Builder.hpp</a></li>
 </ul>

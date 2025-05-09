@@ -2,6 +2,7 @@
 #define PATH_HPP
 
 #include <object/Object.hpp>
+#include <string/StrDef.hpp>
 #include <string>
 
 class Path : public Object
@@ -11,8 +12,14 @@ class Path : public Object
 
   public:
     explicit Path(std::string path) : _path(path){};
-    const char* PathCstr() const { return _path.c_str();};
-    std::string GetPath() const { return _path;};
+    const char* PathCstr() const
+    {
+        return _path.c_str();
+    };
+    std::string GetPath() const
+    {
+        return _path;
+    };
 };
 
 #endif

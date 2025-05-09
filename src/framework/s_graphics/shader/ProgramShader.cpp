@@ -1,12 +1,21 @@
 
 #include <glad/glad.h>
 #include <shader/ProgramShader.hpp>
-#include <iostream> 
+#include <iostream>
 #include <array>
 
-void ProgramShader::Create()
+void ProgramShader::Init()
 {
-    unsigned int _id = glCreateProgram();
+    _vertexShader->Compile();
+    _fragmentShader->Compile();
+
+    GenerateId();
+    Link();
+}
+
+void ProgramShader::GenerateId()
+{
+    _id = glCreateProgram();
 }
 
 void ProgramShader::Link() const
@@ -23,6 +32,11 @@ void ProgramShader::Link() const
 void ProgramShader::Use() const
 {
     glUseProgram(_id);
+}
+
+unsigned int ProgramShader::Id() const
+{
+    return _id;
 }
 
 void ProgramShader::LogLinkError() const

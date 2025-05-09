@@ -1,0 +1,33 @@
+\doxysection{Camera\+Builder.\+hpp}
+\hypertarget{CameraBuilder_8hpp_source}{}\label{CameraBuilder_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/camera/CameraBuilder.hpp@{/workspaces/spirit/src/framework/s\_graphics/camera/CameraBuilder.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAMERABUILDER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAMERABUILDER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <builder/Builder.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <camera/Camera.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <camera/ProjectionDef.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\ :\ \textcolor{keyword}{public}\ Builder<Camera>}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ WithUpdate(std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{classCamera}{Camera}}\&)>\ update);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ WithFront(glm::vec3\ front);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ Up(glm::vec3\ up);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ WithPosition(glm::vec3\ position);}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ WithShader(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ shaderid);}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ WithMouvementSettings(\textcolor{keywordtype}{float}\ sensitivity,\ \textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ WithProjectionType(Projection\_t\ type);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classCameraBuilder}{CameraBuilder}}\&\ GetInstance();}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
