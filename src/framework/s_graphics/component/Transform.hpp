@@ -18,6 +18,10 @@ class Transform : public Component
 
     glm::mat4 Mat();
 
+    glm::vec3 Position();
+    glm::vec3 Rotation();
+    glm::vec3 Scale();
+
     void Process() override;
 
   private:

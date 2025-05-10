@@ -7,17 +7,12 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <memory>
+#include <object/Object.hpp>
 
-class Camera
+class Camera : public Object
 {
   public:
-    Camera() = default;
-    ~Camera() = default;
-    Camera(const Camera& other) = default;
-    Camera(Camera&& other) noexcept = default;
-    Camera& operator=(const Camera& other) = default;
-    Camera& operator=(Camera&& other) noexcept = default;
-
+    void Init(unsigned int progshader);
     using UpdateFct = std::function<void(Camera&)>;
     void Update();
 

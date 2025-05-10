@@ -21,7 +21,6 @@ class CameraBuilder : public Builder<Camera>
     CameraBuilder& WithFront(glm::vec3 front);
     CameraBuilder& Up(glm::vec3 up);
     CameraBuilder& WithPosition(glm::vec3 position);
-    CameraBuilder& WithShader(unsigned int shaderid);
     CameraBuilder& WithMouvementSettings(float sensitivity, float speed);
     CameraBuilder& WithProjectionType(Projection_t type);
 

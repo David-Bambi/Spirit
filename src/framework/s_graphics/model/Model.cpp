@@ -1,7 +1,8 @@
 #include <model/Model.hpp>
 
 #include <component/Transform.hpp>
-
+#include <iostream>
+#include <glm/glm.hpp>
 Model::Model()
 {
     _components[std::type_index(typeid(Transform))] = std::make_shared<Transform>(Transform());

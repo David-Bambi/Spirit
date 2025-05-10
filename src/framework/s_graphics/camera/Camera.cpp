@@ -4,17 +4,29 @@
 #include <iostream>
 #include <time/Time.hpp>
 #include <uglfw/uglfw.hpp>
+#include <gapp/Gapp.hpp>
+
+void Camera::Init(unsigned int progshader)
+{
+    _shaderId = progshader;
+}
 
 void Camera::Update()
 {
+    
     if (_update)
     {
         _update(*this);
     }
     _view = glm::lookAt(_pos, _pos + _front, _up);
+    float screenWidth = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_WIDTH);
+    float screenHeight = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_HEIGHT);
 
     if (_projectionType == Projection_t::PERSPECTIVE)
-        _projection = glm::perspective(glm::radians(_fov), 640.0f / 480.0f, _near, _far);
+        _projection = glm::perspective(glm::radians(_fov), 
+                                       screenWidth/screenHeight, 
+                                       _near, 
+                                       _far);
 
     glUniformMatrix4fv(glGetUniformLocation(_shaderId, "view"), 1, GL_FALSE, glm::value_ptr(_view));
     glUniformMatrix4fv(glGetUniformLocation(_shaderId, "projection"), 1, GL_FALSE,
@@ -94,3 +106,4 @@ glm::vec3 Camera::Up()
 {
     return glm::normalize(glm::cross(_right, _front));
 }
+

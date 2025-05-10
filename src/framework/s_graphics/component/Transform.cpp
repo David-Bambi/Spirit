@@ -34,3 +34,16 @@ void Transform::Process()
     _mat = glm::rotate(_mat, glm::radians(_rot.z), glm::vec3(0.0f, 0.0f, 1.0f));
     _mat = glm::scale(_mat, _sca);
 }
+
+glm::vec3 Transform::Position()
+{
+    return _pos;
+}
+glm::vec3 Transform::Rotation()
+{
+    return _rot;
+}
+glm::vec3 Transform::Scale()
+{
+    return _sca;
+}

@@ -12,11 +12,13 @@ const std::string vertexshadercode01 = R"(
 
         out vec4 Color;
 
+        uniform mat4 view;
+        uniform mat4 projection;
         uniform mat4 transform;
 
         void main()
         {
-            gl_Position = transform * vec4(aPos, 1.0f);
+            gl_Position =  projection * view * transform * vec4(aPos, 1.0);
             Color = aCol;
         }
     )";

@@ -4,10 +4,7 @@
 
 MeshBuilder& MeshBuilder::GetInstance()
 {
-    std::cout << "TEST\n";
     static MeshBuilder instance;
-    std::cout << "TEST\n";
-
     return instance;
 }
 

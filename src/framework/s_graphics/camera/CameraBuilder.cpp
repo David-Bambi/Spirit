@@ -42,9 +42,3 @@ CameraBuilder& CameraBuilder::WithProjectionType(Projection_t type)
     _obj->_projectionType = type;
     return *this;
 }
-
-CameraBuilder& CameraBuilder::WithShader(unsigned int shaderid)
-{
-    _obj->_shaderId = shaderid;
-    return *this;
-}

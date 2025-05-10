@@ -24,7 +24,7 @@ void callPrint(const void* ptr) {
     // Ici DerB a été caster en DerivedB à partir du ptr 
     // void. Donc même si il a le type DerivedB l'objet à 
     // l'intérieur est un DerivedA. C'est ainsi parce qu'on 
-    // ne sait pas ce qu'on peut passer à fonction avant 
+    // ne sait pas ce qu'on peut passer à la fonction avant 
     // l'exécution.
 
     // bref, ici on fait une liaison dynamique parce que 

@@ -6,6 +6,8 @@
 #include <object/Object.hpp>
 #include <model/Model.hpp>
 #include <shader/ProgramShader.hpp>
+#include <camera/Camera.hpp>
+
 
 class Scene : public Object
 {
@@ -17,7 +19,7 @@ class Scene : public Object
   private:
     std::deque<std::shared_ptr<Model>> _models = {};
     std::shared_ptr<ProgramShader> _programShader = {};
-
+    std::shared_ptr<Camera> _camera = {};
     friend class SceneBuilder;
 };
 
