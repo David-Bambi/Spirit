@@ -3,6 +3,7 @@
 #include <component/Transform.hpp>
 #include <iostream>
 #include <glm/glm.hpp>
+
 Model::Model()
 {
     _components[std::type_index(typeid(Transform))] = std::make_shared<Transform>(Transform());
@@ -10,6 +11,9 @@ Model::Model()
 
 void Model::Init(unsigned int progshader)
 {
+    // Process transform component for the inital position.
+    get<Transform>()->Process();
+
     for (const auto& mesh : _meshes)
         mesh->Init(progshader);
 }
@@ -35,7 +39,6 @@ void Model::Render()
     if (_update)
     {
         _update(*this);
-        ProcessComponents();
     }
 
     for (const auto& Mesh : _meshes)

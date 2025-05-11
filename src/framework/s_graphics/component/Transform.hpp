@@ -17,7 +17,6 @@ class Transform : public Component
     void SetRotation(glm::vec3 rotation);
 
     glm::mat4 Mat();
-
     glm::vec3 Position();
     glm::vec3 Rotation();
     glm::vec3 Scale();

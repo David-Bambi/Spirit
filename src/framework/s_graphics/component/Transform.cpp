@@ -39,6 +39,7 @@ glm::vec3 Transform::Position()
 {
     return _pos;
 }
+
 glm::vec3 Transform::Rotation()
 {
     return _rot;

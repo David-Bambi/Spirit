@@ -4,7 +4,8 @@
 
 - Ajout de la primitive sphere.
 - Ajout de la primitive cercle.
-- Ajout de la caméra en mode orthogonal
+- Ajout de la caméra en mode orthogonal.
+- Mettre à jour mes diagrame de séquence.
 
 ## Problèmes
 
