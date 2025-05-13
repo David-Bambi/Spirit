@@ -9,11 +9,11 @@
 
 ## Problèmes
 
-- La matrice de transformation ne semble pas affecter mes formes.
-
 ## Optimisation
 
 - Ajout d'un profileur d'objet en mémoire.
-- Ajout d'un profileur GPU.
+  - J'aimerais voir les informations des objets que je sélectionne dans l'application.
+  - J'aimerais débugguer un objet que je ne pourrais pas voir dans l'application.
+  - J'aimerais que ce soit fait de façon unitaire,
 - Ajout d'un profileur pour frame et temps de réponse du gpu
 - Création de métriques
