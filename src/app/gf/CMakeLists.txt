@@ -8,7 +8,8 @@ set(GF_EXTERNAL_LIB
     stb_image_lib
     s_type
     s_platform
-    s_graphics)
+    s_graphics
+    spdlog::spdlog)
 
 set(GF_INC ${CMAKE_CURRENT_SOURCE_DIR})
 

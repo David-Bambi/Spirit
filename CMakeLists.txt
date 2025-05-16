@@ -4,9 +4,10 @@ set(Spirit spirit_project)
 
 set(MAJOR_VERSION 1)
 set(MINOR_VERSION 0)
-set(CMAKE_BUILD_TYPE Debug)
 
 project(${Spirit} VERSION ${MAJOR_VERSION}.${MINOR_VERSION})
+
+add_compile_definitions($<$<CONFIG:Debug>:DEBUG>)
 
 # Module cmake
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_src/")
@@ -48,12 +49,13 @@ include(docs)
 include(Tools)
 
 # Ajouter les libraries externes
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 include(CPM)
 cpmaddpackage("gh:catchorg/Catch2@3.8.1")
 cpmaddpackage("gh:gabime/spdlog@1.15.2")
 cpmaddpackage("gh:fmtlib/fmt#11.1.4")
 cpmaddpackage("gh:jarro2783/cxxopts@3.2.0")
-cpmaddpackage("gh:microsoft/gsl@4.2.0")
+cpmaddpackage("gh:tessil/robin-map@1.4.0")
 
 # Chemin d'accès importantes pour la compilation du projet
 set(EXTERNAL_LIB_DIR ${CMAKE_SOURCE_DIR}/external)

@@ -6,7 +6,10 @@
             "compilerPath": "/usr/bin/g++-13",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ]
         }
     ],
     "version": 4,
