@@ -3,6 +3,7 @@ set(S_PLATFORM_SRC
     builder/Builder.cpp
     builder/Builder.tpp
     debug/Profiler.cpp
+    debug/Tracer.cpp
     object/Object.cpp)
 
 set(S_PLATFORM_EXTERNAL_LIB tsl::robin_map spdlog::spdlog)

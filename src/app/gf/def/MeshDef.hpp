@@ -34,6 +34,12 @@ namespace MeshDef
                         Color::Cyan,
                         Color::Yellow})
             .BuildShared();
+
+    const std::shared_ptr<Mesh> Circle01Mesh =
+            MeshBuilder::GetInstance()
+                .WithVertices(std::move(VerticesDef::CircleV(10)))
+                .WithIndexs(std::move(VerticesDef::CircleI(10)))
+                .BuildShared();
 }
 
 #endif

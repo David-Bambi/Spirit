@@ -30,7 +30,9 @@ set(S_GRAPHICS_EXTERNAL_LIB
     glfw
     stb_image_lib
     s_type
-    s_platform)
+    s_platform
+    tsl::robin_map 
+    spdlog::spdlog)
 
 set(S_GRAPHICS_INC ${CMAKE_CURRENT_SOURCE_DIR})
 

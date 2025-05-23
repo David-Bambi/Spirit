@@ -15,9 +15,9 @@ class Vertices
     void SetPosition(const std::vector<glm::vec3>& position);
     void SetColor(std::vector<Color_t> color);
     void SetTexture(const std::vector<glm::vec2>& TexCoord);
-    std::vector<float> VerticesVec();
-    std::vector<unsigned int> Indexs();
-    void SetIndexs(std::vector<unsigned int>& indexs);
+    const std::vector<float> VerticesVec();
+    const std::vector<unsigned int> Indexs();
+    void SetIndexs(const std::vector<unsigned int>& indexs);
     unsigned int Count();
 
     void Build();

@@ -12,9 +12,8 @@
 class Camera : public Object
 {
   public:
-    void Init(unsigned int progshader);
     using UpdateFct = std::function<void(Camera&)>;
-    void Update();
+    void Update(unsigned int progshader);
 
     void MoveForward();
     void MoveBackward();

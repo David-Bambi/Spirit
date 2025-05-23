@@ -8,6 +8,7 @@
 #include <string>
 #include <texture/GLTexture.hpp>
 #include <ugl/ugl.hpp>
+#include <debug/Tracer.hpp>
 
 void Mesh::Clean()
 {
@@ -37,6 +38,8 @@ void Mesh::Render()
 
 void Mesh::Init(unsigned int progshader)
 {
+    Tracer::Trace(*this);
+
     glGenVertexArrays(1, &_vao);
     glGenBuffers(1, &_vbo);
     glGenBuffers(1, &_ebo);

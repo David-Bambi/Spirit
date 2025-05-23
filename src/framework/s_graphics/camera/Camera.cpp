@@ -6,14 +6,8 @@
 #include <uglfw/uglfw.hpp>
 #include <gapp/Gapp.hpp>
 
-void Camera::Init(unsigned int progshader)
+void Camera::Update(unsigned int progshader)
 {
-    _shaderId = progshader;
-}
-
-void Camera::Update()
-{
-    
     if (_update)
     {
         _update(*this);
@@ -28,8 +22,8 @@ void Camera::Update()
                                        _near, 
                                        _far);
 
-    glUniformMatrix4fv(glGetUniformLocation(_shaderId, "view"), 1, GL_FALSE, glm::value_ptr(_view));
-    glUniformMatrix4fv(glGetUniformLocation(_shaderId, "projection"), 1, GL_FALSE,
+    glUniformMatrix4fv(glGetUniformLocation(progshader, "view"), 1, GL_FALSE, glm::value_ptr(_view));
+    glUniformMatrix4fv(glGetUniformLocation(progshader, "projection"), 1, GL_FALSE,
                        glm::value_ptr(_projection));
 }
 

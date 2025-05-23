@@ -1,6 +1,9 @@
 #ifndef VERTICESDEF_HPP
 #define VERTICESDEF_HPP
 
+#include <glm/gtc/constants.hpp>
+#include <iostream>
+
 namespace VerticesDef
 {
 /** Vertices for a triangle
@@ -93,6 +96,71 @@ std::vector<unsigned int> CubeI = {
     5, 6, 7, // Back
     4, 5, 6, // Back
 };
+
+/**
+ * * Vertices for a circle
+ */
+std::vector<glm::vec3> CircleV (int n)
+{
+    // Radius = 1
+    // Angle = 2 PI Radius 
+    // i = nième angle  
+    // (2 PI R / n) * i 
+    //
+    // Separate the circle into n parts
+    // Multiply by i for the nth angle
+    // 
+    //        (cos angle, sin angle)
+    //         .__.
+    //         | /
+    //         |/
+    //         .
+    //         (0.0)
+    //
+    //
+
+    std::vector<glm::vec3> circleV;
+    circleV.push_back(glm::vec3(0.0f, 0.0f, 0.0f)); // Center of the circle
+
+    for (int i = 1; i < n; ++i)
+    {
+        float angle = 2.0f * glm::pi<float>() * i / n;
+        circleV.push_back(glm::vec3(cos(angle), sin(angle), 0.0f));
+    }
+    return circleV;
+}
+
+/**
+ * * Indexs for a circle
+ */
+std::vector<unsigned int> CircleI (int n)
+{
+    //     n   i   i+1
+    //      .__.__.
+    //       \ | /
+    //        \|/
+    //         .
+    //         0
+
+    // Separate the circle into n parts
+    std::vector<unsigned int> circleI;
+    for (int i = 1; i < n; ++i)
+    {
+        circleI.push_back(0);
+        circleI.push_back(i);
+        circleI.push_back(i + 1);
+        
+    }
+
+    // Last triangle
+    circleI.push_back(0);
+    circleI.push_back(n);
+    circleI.push_back(1);
+
+    return circleI;
+}
+
+
 
 }; // namespace VerticesDef
 

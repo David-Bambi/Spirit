@@ -1,6 +1,7 @@
 #include <mesh/MeshBuilder.hpp>
 
 #include <iostream>
+#include <debug/Tracer.hpp>
 
 MeshBuilder& MeshBuilder::GetInstance()
 {
@@ -32,7 +33,7 @@ MeshBuilder& MeshBuilder::WithTexture(const std::shared_ptr<Texture>& Tex)
     return *this;
 }
 
-MeshBuilder& MeshBuilder::WithIndexs(std::vector<unsigned int>& indexs)
+MeshBuilder& MeshBuilder::WithIndexs(const std::vector<unsigned int>& indexs)
 {
     _obj->MeshVertices.SetIndexs(indexs);
     return *this;

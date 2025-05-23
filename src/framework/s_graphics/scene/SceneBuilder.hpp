@@ -16,9 +16,9 @@ class SceneBuilder : public Builder<Scene>
   public:
     static SceneBuilder& GetInstance();
 
-    SceneBuilder& WithModel(const std::shared_ptr<Model>& model);
+    SceneBuilder& WithModel(const std::shared_ptr<Model>& model,
+                            const std::shared_ptr<ProgramShader>& programShader);
     SceneBuilder& WithCamera(const std::shared_ptr<Camera>& camera);
-    SceneBuilder& WithProgramShader(const std::shared_ptr<ProgramShader>& programShader);
 };
 
 #endif

@@ -1,8 +1,9 @@
 #ifndef OBJECT_HPP
 #define OBJECT_HPP
 
-#include <debug/Tracer.hpp>
-#include <unordered_map>
+#include <tsl/robin_map.h>
+#include <string>
+#include <deque>
 #include <typeindex>
 
 class Object
@@ -19,10 +20,16 @@ class Object
 
     std::type_index Type() const;
     long int SeqNo() const;
+    void ActivateTrace(const std::deque<std::string>& Tags);
+    
   private:
     long int _SeqNo = 0;
+    tsl::robin_map<std::string, bool> _traces;
 
-    friend Tracer;
+    virtual std::string TraceInfo() const;
+
+    friend class Tracer;
+    friend class Profiler;
 };
 
 

@@ -19,7 +19,7 @@ class MeshBuilder : public Builder<Mesh>
     MeshBuilder& WithColor(std::vector<Color_t> Color);
     MeshBuilder& WithTexture(const std::shared_ptr<Texture>& Tex);
     MeshBuilder& WithTextureCoord(const std::vector<glm::vec2>& TexCoord);
-    MeshBuilder& WithIndexs(std::vector<unsigned int>& indexs);
+    MeshBuilder& WithIndexs(const std::vector<unsigned int>& indexs);
     MeshBuilder& WithShader(unsigned int ShaderId);
 };
 

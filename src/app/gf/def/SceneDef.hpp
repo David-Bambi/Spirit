@@ -11,11 +11,11 @@
 namespace SceneDef
 {
 const std::shared_ptr<Scene> ShapeScene = SceneBuilder::GetInstance()
-                                              .WithModel(ModelDef::Triangle01Model)
-                                              .WithModel(ModelDef::Rectangle01Model)
-                                              .WithModel(ModelDef::Cube01Model)
+                                              .WithModel(ModelDef::Triangle01Model, ProgramShaderDef::Program01)
+                                              .WithModel(ModelDef::Rectangle01Model, ProgramShaderDef::Program01)
+                                              .WithModel(ModelDef::Cube01Model, ProgramShaderDef::Program01)
+                                              .WithModel(ModelDef::Circle01Model, ProgramShaderDef::Program02)
                                               .WithCamera(CameraDef::Cam01)
-                                              .WithProgramShader(ProgramShaderDef::Program01)
                                               .BuildShared();
 };
 

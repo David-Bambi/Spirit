@@ -7,6 +7,7 @@
 #include <model/Model.hpp>
 #include <shader/ProgramShader.hpp>
 #include <camera/Camera.hpp>
+#include <tsl/robin_map.h>
 
 
 class Scene : public Object
@@ -18,7 +19,7 @@ class Scene : public Object
 
   private:
     std::deque<std::shared_ptr<Model>> _models = {};
-    std::shared_ptr<ProgramShader> _programShader = {};
+    tsl::robin_map<std::shared_ptr<ProgramShader>, std::deque<std::shared_ptr<Model>>> _modelsByProgramShader = {};
     std::shared_ptr<Camera> _camera = {};
     friend class SceneBuilder;
 };

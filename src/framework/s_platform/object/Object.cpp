@@ -1,6 +1,7 @@
 #include <object/Object.hpp>
-
+#include <sstream>
 #include <debug/Profiler.hpp>
+#include <debug/Tracer.hpp>
 
 long int Object::NextSeqNo = 0;
 
@@ -9,7 +10,7 @@ Object::Object()
     _SeqNo = NextSeqNo++;
 
     #ifdef DEBUG
-        Profiler::RegisterObject(this, {false});
+        Profiler::RegisterObject(this);
     #endif
 }
 
@@ -21,7 +22,7 @@ Object::Object(const Object& obj)
     _SeqNo = NextSeqNo++;
 
     #ifdef DEBUG
-        Profiler::RegisterObject(this, {false});
+        Profiler::RegisterObject(this);
     #endif
 }
 
@@ -55,7 +56,7 @@ Object& Object::operator=(Object&& obj) noexcept
 Object::~Object()
 {
     #ifdef DEBUG
-        Profiler::UnregisterObject(this, {false});
+        Profiler::UnregisterObject(this);
     #endif
 
     _SeqNo = -1;
@@ -64,6 +65,22 @@ Object::~Object()
 long int Object::SeqNo() const
 {
     return _SeqNo;
+}
+
+void Object::ActivateTrace(const std::deque<std::string>& Tags)
+{
+    for (auto& tag : Tags)
+        _traces[tag] = true;;
+}
+
+
+std::string Object::TraceInfo() const
+{
+    std::ostringstream oss;
+    oss << "Object: " << static_cast<const void*>(this) <<
+           ", SeqNo: " << _SeqNo <<
+           ", Type: " <<  typeid(*this).name();
+    return oss.str();
 }
 
 std::type_index Object::Type() const

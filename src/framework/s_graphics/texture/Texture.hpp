@@ -3,8 +3,9 @@
 
 #include <glad/glad.h>
 #include <texture/ImgLoadSetting.hpp>
+#include <object/Object.hpp>
 
-class Texture
+class Texture : public Object
 {
   private:
     const char* _path = nullptr;

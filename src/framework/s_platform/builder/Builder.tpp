@@ -43,7 +43,7 @@ void Builder<T>::DeleteInstance()
 template <class T>
 T* Builder<T>::Build()
 {
-    T* obj = _obj.get();
+    T* obj = _obj.release();
     _obj = std::make_unique<T>();
     return obj;
 } 
@@ -70,6 +70,16 @@ std::shared_ptr<T> Builder<T>::BuildShared()
     std::shared_ptr<T> obj = std::make_shared<T>(std::move(*_obj));
     _obj = std::make_unique<T>();
     return obj;
+}
+
+/**
+ * @brief Trace object
+ */
+template <class T>
+Builder<T>& Builder<T>::WithTrace(std::deque<std::string> tags)
+{
+    _obj->ActivateTrace(tags);
+    return *this;
 }
 
 #endif

@@ -2,23 +2,23 @@
 
 void Scene::Init()
 {
-    _programShader->Init();
-
-    if (_camera)
-        _camera->Init(_programShader->Id());
-
-    for (const auto& model : _models)
-        model->Init(_programShader->Id());
+    for (const auto& [programShader, models] : _modelsByProgramShader)
+    {
+        programShader->Use();
+        for (const auto& model : models)
+            model->Init(programShader->Id());
+    }
 }
 
 void Scene::Render()
 {
-    _programShader->Use();
-    _camera->Update();
-    
-    for (const auto& model : _models)
+    for (const auto& [programShader, models] : _modelsByProgramShader)
     {
-        model->Render();
+        programShader->Use();
+        _camera->Update(programShader->Id());
+
+        for (const auto& model : models)
+            model->Render();
     }
 }
 

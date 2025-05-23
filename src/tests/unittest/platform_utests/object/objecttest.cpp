@@ -20,16 +20,19 @@ class Bidon : public Object
 
 TEST_CASE("Default constructor.", "[DefaultConstructor]") 
 {
+    Object::NextSeqNo = 0;
+
     Object* obj = new Object();
     REQUIRE(obj != nullptr);
     REQUIRE(obj->SeqNo() == 0);
 
     delete obj;
-    Object::NextSeqNo = 0;
 }
 
 TEST_CASE("Multiple Default constructor.", "[MultipleDefaultConstructor]") 
 {
+    Object::NextSeqNo = 0;
+    
     Object* obj1 = new Object();
     Object* obj2 = new Object();
 
@@ -41,11 +44,12 @@ TEST_CASE("Multiple Default constructor.", "[MultipleDefaultConstructor]")
 
     delete obj1;
     delete obj2;
-    Object::NextSeqNo = 0;
 }
 
 TEST_CASE("Copy constructor.", "[CopyConstructor]") 
 {
+    Object::NextSeqNo = 0;
+
     Object* obj1 = new Object();
     Object* obj2 = new Object(*obj1);
 
@@ -57,11 +61,12 @@ TEST_CASE("Copy constructor.", "[CopyConstructor]")
 
     delete obj1;
     delete obj2;
-    Object::NextSeqNo = 0;
 }
 
 TEST_CASE("Move constructor.", "[MoveConstructor]") 
 {
+    Object::NextSeqNo = 0;
+
     Object* obj1 = new Object();
     Object* obj2 = new Object(std::move(*obj1));
 
@@ -73,11 +78,12 @@ TEST_CASE("Move constructor.", "[MoveConstructor]")
 
     delete obj1;
     delete obj2;
-    Object::NextSeqNo = 0;
 }
 
 TEST_CASE("Assign object.", "[AssignObject]") 
 {
+    Object::NextSeqNo = 0;
+
     Object* obj1 = new Object();
     Object* obj2 = obj1;
 
@@ -90,11 +96,12 @@ TEST_CASE("Assign object.", "[AssignObject]")
     REQUIRE(obj2 == obj1);
 
     delete obj1;
-    Object::NextSeqNo = 0;
 }
 
 TEST_CASE("Move Assign object.", "[MoveAssignObject]") 
 {
+    Object::NextSeqNo = 0;
+
     Object* obj1 = new Object();
     Object obj2; 
     obj2 = std::move(*obj1);
@@ -107,11 +114,12 @@ TEST_CASE("Move Assign object.", "[MoveAssignObject]")
     REQUIRE(&obj2 != obj1);
 
     delete obj1;
-    Object::NextSeqNo = 0;
 }
 
 TEST_CASE("Test with child class.", "[ChildClassObject]") 
 {
+    Object::NextSeqNo = 0;
+
     Bidon* obj1 = new Bidon();
     REQUIRE(obj1 != nullptr);
     REQUIRE(obj1->SeqNo() == 0);
@@ -141,22 +149,25 @@ TEST_CASE("Test with child class.", "[ChildClassObject]")
     delete obj1;
     delete obj2;
     delete obj3;
-    Object::NextSeqNo = 0;
 }
 
 
 TEST_CASE("Object type", "[ObjectType]") 
 {
+    Object::NextSeqNo = 0;
+
     const Object* obj1 = new Object();
     REQUIRE(obj1 != nullptr);
 
     REQUIRE(obj1->Type() == typeid(Object));
     delete obj1;
-    Object::NextSeqNo = 0;
+
 }
 
 TEST_CASE("Object child type", "[ObjectChildType]") 
 {
+    Object::NextSeqNo = 0;
+
     const Object* obj1 = new Object();
     const Bidon* obj2 = new Bidon();
 
@@ -169,6 +180,5 @@ TEST_CASE("Object child type", "[ObjectChildType]")
     REQUIRE(obj1->Type() != typeid(Bidon));
     delete obj1;
     delete obj2;
-    Object::NextSeqNo = 0;
 }
 

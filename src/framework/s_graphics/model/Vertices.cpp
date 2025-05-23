@@ -38,17 +38,17 @@ void Vertices::SetTexture(const std::vector<glm::vec2>& TexCoord)
     _tex = TexCoord;
 }
 
-std::vector<float> Vertices::VerticesVec()
+const std::vector<float> Vertices::VerticesVec()
 {
     return _vertices_vec;
 }
 
-std::vector<unsigned int> Vertices::Indexs()
+const std::vector<unsigned int> Vertices::Indexs()
 {
     return _indexs;
 }
 
-void Vertices::SetIndexs(std::vector<unsigned int>& Indexs)
+void Vertices::SetIndexs(const std::vector<unsigned int>& Indexs)
 {
     _indexs = Indexs;
 }
