@@ -9,9 +9,9 @@ set(S_GRAPHICS_SRC
     input/Input.cpp
     mesh/Mesh.cpp
     mesh/MeshBuilder.cpp
+    mesh/Vertices.cpp
     model/Model.cpp
     model/ModelBuilder.cpp
-    model/Vertices.cpp
     scene/Scene.cpp
     scene/SceneBuilder.cpp
     shader/ProgramShader.cpp
@@ -31,7 +31,7 @@ set(S_GRAPHICS_EXTERNAL_LIB
     stb_image_lib
     s_type
     s_platform
-    tsl::robin_map 
+    tsl::robin_map
     spdlog::spdlog)
 
 set(S_GRAPHICS_INC ${CMAKE_CURRENT_SOURCE_DIR})

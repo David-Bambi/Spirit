@@ -1,0 +1,56 @@
+\doxysection{Traceable Class Reference}
+\hypertarget{classTraceable}{}\label{classTraceable}\index{Traceable@{Traceable}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTraceable_a892a5870fa6cdc8114ce0f802b5ee2f5}\label{classTraceable_a892a5870fa6cdc8114ce0f802b5ee2f5} 
+{\bfseries Traceable} (const \mbox{\hyperlink{classTraceable}{Traceable}} \&t)
+\item 
+\Hypertarget{classTraceable_a30ec3275604fb4a3a8912c88e16c08ed}\label{classTraceable_a30ec3275604fb4a3a8912c88e16c08ed} 
+{\bfseries Traceable} (\mbox{\hyperlink{classTraceable}{Traceable}} \&\&) noexcept=default
+\item 
+\Hypertarget{classTraceable_a6cb1eeee842366fb244c0f35f9c88e85}\label{classTraceable_a6cb1eeee842366fb244c0f35f9c88e85} 
+\mbox{\hyperlink{classTraceable}{Traceable}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTraceable}{Traceable}} \&)=default
+\item 
+\Hypertarget{classTraceable_a04b83013b06ea459e9dcdafd0750aa99}\label{classTraceable_a04b83013b06ea459e9dcdafd0750aa99} 
+\mbox{\hyperlink{classTraceable}{Traceable}} \& {\bfseries operator=} (\mbox{\hyperlink{classTraceable}{Traceable}} \&\&) noexcept=default
+\item 
+\Hypertarget{classTraceable_a53df40bf32e58bac8b24f6a6d673a8fa}\label{classTraceable_a53df40bf32e58bac8b24f6a6d673a8fa} 
+virtual std\+::string {\bfseries Trace\+Str} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTraceable_ab3879a0ea36340e431ff45274c30a949}\label{classTraceable_ab3879a0ea36340e431ff45274c30a949} 
+void {\bfseries Add\+Tag} (const std\+::string \&tag)
+\item 
+\Hypertarget{classTraceable_af323e282dc1476fd0314c74fb6284db1}\label{classTraceable_af323e282dc1476fd0314c74fb6284db1} 
+void {\bfseries Remove\+Tag} (const std\+::string \&tag)
+\item 
+\Hypertarget{classTraceable_aaae4ebd9d8df1c7f214f2e789cf1c4aa}\label{classTraceable_aaae4ebd9d8df1c7f214f2e789cf1c4aa} 
+bool {\bfseries Tag\+Exist} (const std\+::string \&tag) const
+\item 
+\Hypertarget{classTraceable_ab54ff1ca715b07b666ef4714c9ebcabc}\label{classTraceable_ab54ff1ca715b07b666ef4714c9ebcabc} 
+std\+::string {\bfseries Type} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTraceable_af4589b6037f08c618487206e75e79ab9}\label{classTraceable_af4589b6037f08c618487206e75e79ab9} 
+tsl\+::robin\+\_\+set$<$ std\+::string $>$ {\bfseries \+\_\+tags} = \{"{}ALLOC"{}, "{}BUILD"{}, "{}FREE"{}\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTraceable_ad73e5645d5b7b84a00d4a5d07b8d8078}\label{classTraceable_ad73e5645d5b7b84a00d4a5d07b8d8078} 
+class {\bfseries Profiler}
+\item 
+\Hypertarget{classTraceable_aa1cbab640697de99db0d582e2f31f276}\label{classTraceable_aa1cbab640697de99db0d582e2f31f276} 
+class {\bfseries Tracer}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/workspaces/spirit/src/framework/s\+\_\+platform/debug/Traceable.\+hpp\item 
+/workspaces/spirit/src/framework/s\+\_\+platform/debug/Traceable.\+cpp\end{DoxyCompactItemize}

@@ -1,16 +1,13 @@
 #include <debug/Tracer.hpp>
 
-#include <memory>
 #include <spdlog/spdlog.h>
-#include <iostream>
 
-void Tracer::Trace(const Object& obj) 
+void Tracer::Trace(const Traceable& t)
 {
-    spdlog::get("trace")->info(obj.TraceInfo());
+    spdlog::get("trace")->info(t.TraceStr());
 }
 
-void Tracer::Trace(const char* message) 
+void Tracer::Trace(const char* message)
 {
     spdlog::get("trace")->info(message);
 }
-

@@ -122,7 +122,7 @@ std::vector<glm::vec3> CircleV (int n)
     std::vector<glm::vec3> circleV;
     circleV.push_back(glm::vec3(0.0f, 0.0f, 0.0f)); // Center of the circle
 
-    for (int i = 1; i < n; ++i)
+    for (int i = 0; i < n; ++i)
     {
         float angle = 2.0f * glm::pi<float>() * i / n;
         circleV.push_back(glm::vec3(cos(angle), sin(angle), 0.0f));

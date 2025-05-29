@@ -1,15 +1,11 @@
 #include <catch2/catch_test_macros.hpp>
 
-#include <memory>
 #include <builder/Builder.hpp>
+#include <memory>
+#include <object/Object.hpp>
 
-class Bidon
-{
-    public:
-        Bidon()=default;
-    protected:
-        void BeforeBuild() {};
-};
+class Bidon : public Object
+{};
 
 TEST_CASE("Get a builder instance", "[GetInstance]") 
 {
@@ -26,6 +22,9 @@ TEST_CASE("Build raw ptr", "[Build_RawPtr]")
     REQUIRE(B1 != nullptr);
     REQUIRE(B2 != nullptr);
     REQUIRE(B1 != B2);
+
+    delete B1;
+    delete B2;
 }
 
 TEST_CASE("Build unique ptr", "[Build_UniquePtr]") 

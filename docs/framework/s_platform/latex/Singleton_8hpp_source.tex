@@ -1,0 +1,29 @@
+\doxysection{Singleton.\+hpp}
+\hypertarget{Singleton_8hpp_source}{}\label{Singleton_8hpp_source}\index{/workspaces/spirit/src/framework/s\_platform/singleton/Singleton.hpp@{/workspaces/spirit/src/framework/s\_platform/singleton/Singleton.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SINGLETON\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SINGLETON\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSingleton}{Singleton}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classSingleton}{Singleton}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSingleton}{Singleton}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classSingleton}{Singleton}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSingleton}{Singleton}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ T\&\ Instance();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<T>\ \_instance;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classSingleton}{Singleton}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSingleton}{\string~Singleton}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <singleton/Singleton.tpp>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Traceable.\+hpp}
+\hypertarget{Traceable_8hpp_source}{}\label{Traceable_8hpp_source}\index{/workspaces/spirit/src/framework/s\_platform/debug/Traceable.hpp@{/workspaces/spirit/src/framework/s\_platform/debug/Traceable.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRACEABLE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRACEABLE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <tsl/robin\_set.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTraceable}{Traceable}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ tsl::robin\_set<std::string>\ \_tags\ =\ \{\textcolor{stringliteral}{"{}ALLOC"{}},\ \textcolor{stringliteral}{"{}BUILD"{}},\ \textcolor{stringliteral}{"{}FREE"{}}\};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ AddTag(\textcolor{keyword}{const}\ std::string\&\ tag);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ RemoveTag(\textcolor{keyword}{const}\ std::string\&\ tag);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ TagExist(\textcolor{keyword}{const}\ std::string\&\ tag)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ Type()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classTraceable}{Traceable}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classTraceable}{Traceable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTraceable}{Traceable}}\&\ t);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classTraceable}{Traceable}}(\mbox{\hyperlink{classTraceable}{Traceable}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classTraceable}{Traceable}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTraceable}{Traceable}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classTraceable}{Traceable}}\&\ operator=(\mbox{\hyperlink{classTraceable}{Traceable}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classTraceable}{\string~Traceable}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ TraceStr()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProfiler}{Profiler}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTracer}{Tracer}};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

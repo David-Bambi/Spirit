@@ -1,0 +1,46 @@
+@startuml initialization
+(*) --> "initialization ..."
+    --> "Creation of objects"
+if "DEBUG ?" then 
+    --> [true] "Register to profiler"
+    --> "Initialize [PROFILE] to DEFAULT"
+    --> (*)
+else 
+    --> [false] "Do nothing"
+    --> (*)
+@enduml
+
+@startuml execution
+(*) --> "execution ..."
+    --> "Notify [PROFILE]"
+if "Obj is subscribed ?" then 
+    if "[PROFIL] object ?" then 
+        --> [true] "Trace object"
+        --> (*)
+else 
+    --> [false] "Do nothing"
+    --> (*)
+@enduml
+
+@startuml clean object
+(*) --> "Delete object ..."
+    --> "Unregister object from profiler"
+if "Obj is subscribed ?" then 
+    --> [true] "Remove object from profiler"
+    --> (*)
+else 
+    --> [false] "Do nothing"
+    --> (*)
+@enduml
+
+@startuml change subscription
+(*) --> "Change subscription..."
+    --> "Register object with [PROFILE]"
+if "Obj is subscribed ?" then 
+    --> [true] "Change [PROFILE] from object"
+    --> (*)
+else 
+    --> [false] "Register to profiler"
+    --> "Add [PROFILE] to profiler for this object"
+    --> (*)
+@enduml

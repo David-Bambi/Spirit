@@ -37,8 +37,8 @@ namespace MeshDef
 
     const std::shared_ptr<Mesh> Circle01Mesh =
             MeshBuilder::GetInstance()
-                .WithVertices(std::move(VerticesDef::CircleV(10)))
-                .WithIndexs(std::move(VerticesDef::CircleI(10)))
+                .WithVertices(std::move(VerticesDef::CircleV(20)))
+                .WithIndexs(std::move(VerticesDef::CircleI(20)))
                 .BuildShared();
 }
 

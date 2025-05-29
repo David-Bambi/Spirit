@@ -3,6 +3,9 @@
 #include <component/Transform.hpp>
 #include <iostream>
 #include <glm/glm.hpp>
+#include <debug/Profiler.hpp>
+#include <debug/Tracer.hpp>
+
 
 Model::Model()
 {
@@ -11,6 +14,10 @@ Model::Model()
 
 void Model::Init(unsigned int progshader)
 {
+    #ifdef DEBUG
+        Profiler::Trace("INIT", *this);
+    #endif
+
     // Process transform component for the inital position.
     get<Transform>()->Process();
 

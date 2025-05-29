@@ -21,7 +21,7 @@ const std::shared_ptr<Model> Cube01Model = ModelBuilder::GetInstance()
 
 const std::shared_ptr<Model> Circle01Model = ModelBuilder::GetInstance()
     .WithMesh(MeshDef::Circle01Mesh)
-    .WithPosition({40.0f, 0.0f, 0.0f}).BuildShared();
+    .WithPosition({30.0f, 0.0f, 0.0f}).BuildShared();
 };
 
 #endif

@@ -1,0 +1,34 @@
+@startuml Profile  
+
+title Profiler Sequence Diagram
+actor user
+participant Profiler
+participant Tracer
+participant Traceable
+entity spdlog
+
+== Initialization == 
+Traceable -> Profiler : Suscribe(tags)
+
+== Trace ==
+user ->  Profiler : Trace(tag, obj)
+alt is subscribed to tag
+    Profiler -> Tracer : Tracer(obj)
+    Tracer -> Traceable : TraceStr()
+    Traceable --> Tracer : Return trace string
+    Tracer --> spdlog : Log info string into a file
+end
+
+== Add tags ==
+user ->  Profiler : Subscribe(tag, traceable)
+alt is subscribed to tag
+    Profiler -> Profiler : Add tag to existing subscription
+else
+    Profiler -> Profiler : Add Traceable to profiler with tag
+end
+
+== Unsubscribed ==
+user ->  Profiler : Unsubscribed(traceable)
+Profiler -> Profiler : Remove from profiler
+
+@enduml

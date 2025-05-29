@@ -2,8 +2,6 @@
 #define BUILDER_HPP
 
 #include <memory>
-#include <iostream>
-#include <debug/Tracer.hpp>
 
 template <class T>
 class Builder
@@ -12,8 +10,6 @@ class Builder
     static Builder<T>& GetInstance();
     static void DeleteInstance();
     virtual T* Build();
-    Builder<T>& WithTrace(std::deque<std::string> tags);
-
     virtual std::unique_ptr<T> BuildUnique();
     virtual std::shared_ptr<T> BuildShared();
 

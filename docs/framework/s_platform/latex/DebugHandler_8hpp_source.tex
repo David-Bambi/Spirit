@@ -1,0 +1,58 @@
+\doxysection{Debug\+Handler.\+hpp}
+\hypertarget{DebugHandler_8hpp_source}{}\label{DebugHandler_8hpp_source}\index{/workspaces/spirit/src/framework/s\_platform/debug/DebugHandler.hpp@{/workspaces/spirit/src/framework/s\_platform/debug/DebugHandler.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEBUGHANDLER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEBUGHANDLER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <execinfo.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <signal.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <spdlog/spdlog.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }DebugHandler}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ CrashHandler(\textcolor{keywordtype}{int}\ sig)}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}*\ array[50];}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size\ =\ backtrace(array,\ 50);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}**\ messages\ =\ backtrace\_symbols(array,\ size);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::ofstream\ out(\textcolor{stringliteral}{"{}logs/crash\_log.txt"{}});}
+\DoxyCodeLine{00020\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}Application\ crashed\ with\ signal\ "{}}\ <<\ sig\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00021\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}Call\ stack:\(\backslash\)n"{}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ size;\ ++i)}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ out\ <<\ messages[i]\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{auto}\ profilerLogger\ =\ spdlog::get(\textcolor{stringliteral}{"{}profiler"{}});}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (profilerLogger)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ profilerLogger-\/>flush();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{auto}\ traceLogger\ =\ spdlog::get(\textcolor{stringliteral}{"{}trace"{}});}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (traceLogger)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ traceLogger-\/>flush();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ free(messages);}
+\DoxyCodeLine{00037\ \ \ \ \ out.close();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::exit(1);}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ SetupCrashHandler()}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ signal(SIGSEGV,\ CrashHandler);\ \textcolor{comment}{//\ Segmentation\ fault}}
+\DoxyCodeLine{00045\ \ \ \ \ signal(SIGABRT,\ CrashHandler);\ \textcolor{comment}{//\ Abort\ signal}}
+\DoxyCodeLine{00046\ \ \ \ \ signal(SIGFPE,\ CrashHandler);\ \textcolor{comment}{//\ Floating\ point\ exception}}
+\DoxyCodeLine{00047\ \ \ \ \ signal(SIGILL,\ CrashHandler);\ \textcolor{comment}{//\ Illegal\ instruction}}
+\DoxyCodeLine{00048\ \ \ \ \ signal(SIGBUS,\ CrashHandler);\ \textcolor{comment}{//\ Bus\ error}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ \};\ \textcolor{comment}{//\ namespace\ DebugHandler}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

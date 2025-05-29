@@ -2,7 +2,6 @@
 #define BUILDER_TPP
 
 #include <builder/Builder.hpp>
-#include <iostream>
 
 template <class T>
 Builder<T>* Builder<T>::_instance = nullptr;
@@ -70,16 +69,6 @@ std::shared_ptr<T> Builder<T>::BuildShared()
     std::shared_ptr<T> obj = std::make_shared<T>(std::move(*_obj));
     _obj = std::make_unique<T>();
     return obj;
-}
-
-/**
- * @brief Trace object
- */
-template <class T>
-Builder<T>& Builder<T>::WithTrace(std::deque<std::string> tags)
-{
-    _obj->ActivateTrace(tags);
-    return *this;
 }
 
 #endif

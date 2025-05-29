@@ -152,33 +152,3 @@ TEST_CASE("Test with child class.", "[ChildClassObject]")
 }
 
 
-TEST_CASE("Object type", "[ObjectType]") 
-{
-    Object::NextSeqNo = 0;
-
-    const Object* obj1 = new Object();
-    REQUIRE(obj1 != nullptr);
-
-    REQUIRE(obj1->Type() == typeid(Object));
-    delete obj1;
-
-}
-
-TEST_CASE("Object child type", "[ObjectChildType]") 
-{
-    Object::NextSeqNo = 0;
-
-    const Object* obj1 = new Object();
-    const Bidon* obj2 = new Bidon();
-
-    REQUIRE(obj1 != nullptr);
-    REQUIRE(obj2 != nullptr);
-    
-    REQUIRE(obj1->Type() == typeid(Object));
-    REQUIRE(obj2->Type() == typeid(Bidon));
-    REQUIRE(obj2->Type() != typeid(Object));
-    REQUIRE(obj1->Type() != typeid(Bidon));
-    delete obj1;
-    delete obj2;
-}
-

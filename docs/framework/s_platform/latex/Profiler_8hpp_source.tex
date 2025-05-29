@@ -1,0 +1,32 @@
+\doxysection{Profiler.\+hpp}
+\hypertarget{Profiler_8hpp_source}{}\label{Profiler_8hpp_source}\index{/workspaces/spirit/src/framework/s\_platform/debug/Profiler.hpp@{/workspaces/spirit/src/framework/s\_platform/debug/Profiler.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROFILER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROFILER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <tsl/robin\_map.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <tsl/robin\_set.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <typeindex>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <debug/Loggers.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <debug/Traceable.hpp>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProfiler}{Profiler}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ tsl::robin\_set<const\ Traceable*>\ Table;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Register(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTraceable}{Traceable}}*\ t);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Register(\mbox{\hyperlink{classTraceable}{Traceable}}*\ t,\ \textcolor{keyword}{const}\ std::deque<std::string>\&\ tags);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Unregister(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTraceable}{Traceable}}*\ t);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Unregister(\mbox{\hyperlink{classTraceable}{Traceable}}*\ t,\ \textcolor{keyword}{const}\ std::deque<std::string>\&\ tags);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Trace(\textcolor{keyword}{const}\ std::string\&\ tag,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classTraceable}{Traceable}}*\ t);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ TableDump();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SummaryTableDump();}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

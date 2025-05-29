@@ -6,9 +6,14 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/rotating_file_sink.h>
 #include <debug/Tracer.hpp>
+#include <debug/Profiler.hpp>
+#include <debug/DebugHandler.hpp>
 
 int main()
 {    
+    Profiler::ActivateAll = true;
+    DebugHandler::SetupCrashHandler();
+    
     std::cout << "Scenarios" << "\n"
               << "0. Exit\n"
               << "1. Empty Window\n"

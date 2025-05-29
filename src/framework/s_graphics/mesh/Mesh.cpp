@@ -9,6 +9,8 @@
 #include <texture/GLTexture.hpp>
 #include <ugl/ugl.hpp>
 #include <debug/Tracer.hpp>
+#include <debug/Profiler.hpp>
+#include <sstream>
 
 void Mesh::Clean()
 {
@@ -38,7 +40,9 @@ void Mesh::Render()
 
 void Mesh::Init(unsigned int progshader)
 {
-    Tracer::Trace(*this);
+    #ifdef DEBUG
+        Profiler::Trace("INIT", *this);
+    #endif
 
     glGenVertexArrays(1, &_vao);
     glGenBuffers(1, &_vbo);
@@ -95,5 +99,40 @@ void Mesh::Transform(glm::mat4 transform)
 void Mesh::ProcessTransform()
 {
     const unsigned int transformLoc = glGetUniformLocation(_shaderId, "transform");
+
+    std::ostringstream oss;
+    oss << "Shader: " << _shaderId << " Transform Loc : " << transformLoc;
+
+    Tracer::Trace(oss.str().c_str());
     glUniformMatrix4fv(UGL::SafeGlint(transformLoc), 1, GL_FALSE, glm::value_ptr(_transform));
+}
+
+std::string Mesh::TraceInfo() const
+{
+    std::ostringstream oss;
+
+    oss << Object::TraceInfo() << "\n";
+
+    oss << "[Position vertices]\n";
+    for (glm::vec3 pos : MeshVertices._pos )
+        oss << "x: " << pos.x << " y: " << pos.y << " z: " << pos.z << "\n";
+
+    oss << "[Result indexs]\n";
+    int del = 0;
+    for (unsigned int ind : MeshVertices._indexs )
+    {
+        oss << " " << ind;
+        del ++;   
+
+        if (del%3 == 0)
+            {
+                oss << "\n";
+                del=0;
+            }
+    }
+
+    oss << "[Shader id]\n";
+    oss << _shaderId;
+
+    return oss.str();
 }

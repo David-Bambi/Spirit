@@ -33,19 +33,27 @@ std\+::string {\bfseries Get\+Path} () const
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Object} (const \mbox{\hyperlink{classObject}{Object}} \&)=default
+{\bfseries Object} (const \mbox{\hyperlink{classObject}{Object}} \&)
 \item 
-{\bfseries Object} (\mbox{\hyperlink{classObject}{Object}} \&\&)=default
+{\bfseries Object} (\mbox{\hyperlink{classObject}{Object}} \&\&) noexcept
 \item 
-\mbox{\hyperlink{classObject}{Object}} \& {\bfseries operator=} (const \mbox{\hyperlink{classObject}{Object}} \&)=default
+\mbox{\hyperlink{classObject}{Object}} \& {\bfseries operator=} (const \mbox{\hyperlink{classObject}{Object}} \&)
 \item 
-\mbox{\hyperlink{classObject}{Object}} \& {\bfseries operator=} (\mbox{\hyperlink{classObject}{Object}} \&\&)=default
+\mbox{\hyperlink{classObject}{Object}} \& {\bfseries operator=} (\mbox{\hyperlink{classObject}{Object}} \&\&) noexcept
+\item 
+long int {\bfseries Seq\+No} () const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{classPath_a4aee8aa1840e8dd064867bdcc4837949}\label{classPath_a4aee8aa1840e8dd064867bdcc4837949} 
 std\+::string {\bfseries \+\_\+path} = STREMPTY
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static long int {\bfseries Next\+Seq\+No} = 0
 \end{DoxyCompactItemize}
 
 

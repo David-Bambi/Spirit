@@ -1,0 +1,26 @@
+@startuml Profiler environment
+
+class Profiler
+{   
+    _unordered_map<Traceable obj, deque<string> tags> _Traceables
+    +Suscribe(Traceable obj, deque<string> tags)
+    +Unsubscribe(Traceable obj)
+    +Trace(string tag, Traceable obj)
+}
+
+class Tracer
+{   
+    +Trace(Traceable obj)
+}
+
+class Traceable
+{
+    - set<string> _tags;
+    + void TraceStr()
+}
+
+Profiler *-- Traceable
+Profiler -- Tracer
+Tracer ..> Traceable : <<uses>>
+
+@enduml

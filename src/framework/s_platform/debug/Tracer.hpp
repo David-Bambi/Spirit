@@ -1,10 +1,8 @@
 #ifndef TRACER_HPP
 #define TRACER_HPP
 
-#include <object/Object.hpp>
-#include <spdlog/spdlog.h>
 #include <debug/Loggers.hpp>
-
+#include <debug/Traceable.hpp>
 
 class Tracer
 {
@@ -16,8 +14,8 @@ class Tracer
     Tracer& operator=(Tracer&&) = delete;
     ~Tracer() = default;
 
-    static void Trace(const Object& obj);
+    static void Trace(const Traceable& obj);
     static void Trace(const char* message);
 };
 
-#endif 
+#endif

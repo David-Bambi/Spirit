@@ -3,7 +3,7 @@
 
 #include <glm/glm.hpp>
 #include <memory>
-#include <model/Vertices.hpp>
+#include <mesh/Vertices.hpp>
 #include <object/Object.hpp>
 #include <texture/Texture.hpp>
 #include <vector>
@@ -16,6 +16,7 @@ class Mesh : public Object
     void Clean();
 
     void Transform(glm::mat4 transform);
+    virtual std::string TraceInfo() const;
 
   protected:
     void SetupTexture();

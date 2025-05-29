@@ -83,7 +83,8 @@
         "cfenv": "cpp",
         "ranges": "cpp",
         "pointers": "cpp",
-        "util": "cpp"
+        "util": "cpp",
+        "filesystem": "cpp"
     },
     "[cpp]": {
         "editor.defaultFormatter": null

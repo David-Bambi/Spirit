@@ -5,24 +5,22 @@
 #include <tsl/robin_set.h>
 #include <deque>
 #include <typeindex>
-#include <object/Object.hpp>
 #include <string>
 #include <debug/Loggers.hpp>
+#include <debug/Traceable.hpp>
 
-class Profiler 
+class Profiler
 {
-public:
+  public:
+    static tsl::robin_set<const Traceable*> Table;
 
-    static tsl::robin_set<const Object*> Table;
-    static bool ActivateAll;
-
-    static void RegisterObject(const Object* obj);
-    static void UnregisterObject(const Object* obj);
-    static void Profil(std::string Tag, const Object& obj);
-    static void Trace(std::string tag, const Object& obj);
+    static void Register(const Traceable* t);
+    static void Register(Traceable* t, const std::deque<std::string>& tags);
+    static void Unregister(const Traceable* t);
+    static void Unregister(Traceable* t, const std::deque<std::string>& tags);
+    static void Trace(const std::string& tag, const Traceable* t);
     static void TableDump();
     static void SummaryTableDump();
-
 };
 
 #endif
