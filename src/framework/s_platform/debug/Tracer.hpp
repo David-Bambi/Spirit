@@ -1,7 +1,6 @@
 #ifndef TRACER_HPP
 #define TRACER_HPP
 
-#include <debug/Loggers.hpp>
 #include <debug/Traceable.hpp>
 
 class Tracer

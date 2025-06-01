@@ -1,18 +1,27 @@
 #ifndef LOGGERS_HPP
 #define LOGGERS_HPP
 
-#include <spdlog/spdlog.h>
-#include <spdlog/sinks/basic_file_sink.h>
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include <memory>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/spdlog.h>
 
-class Loggers
+namespace Loggers
 {
-  public:
-    static std::shared_ptr<spdlog::logger> trace;
-    static std::shared_ptr<spdlog::logger> profile;
-    static std::shared_ptr<spdlog::logger> console;
+std::shared_ptr<spdlog::logger> Ltrace = spdlog::basic_logger_mt("trace", "logs/trace.log", true);
+std::shared_ptr<spdlog::logger> profile =
+    spdlog::basic_logger_mt("profiler", "logs/profile.log", true);
+std::shared_ptr<spdlog::logger> console = spdlog::stdout_color_mt("console");
 
-    static void Init(const char* name, const char* path);
+void Init(const char* name, const char* path)
+{
+    auto logger = spdlog::get(name);
+
+    if (logger)
+        spdlog::drop(name);
+
+    auto trace = spdlog::basic_logger_mt(name, path, true);
 };
+}; // namespace Loggers
 
 #endif

@@ -7,7 +7,7 @@
 class Traceable
 {
   private:
-    tsl::robin_set<std::string> _tags = {"ALLOC", "BUILD", "FREE"};
+    tsl::robin_set<std::string> _tags;
     void AddTag(const std::string& tag);
     void RemoveTag(const std::string& tag);
     bool TagExist(const std::string& tag) const;

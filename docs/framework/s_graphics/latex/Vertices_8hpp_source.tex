@@ -1,5 +1,5 @@
 \doxysection{Vertices.\+hpp}
-\hypertarget{Vertices_8hpp_source}{}\label{Vertices_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/model/Vertices.hpp@{/workspaces/spirit/src/framework/s\_graphics/model/Vertices.hpp}}
+\hypertarget{Vertices_8hpp_source}{}\label{Vertices_8hpp_source}\index{/workspaces/spirit/src/framework/s\_graphics/mesh/Vertices.hpp@{/workspaces/spirit/src/framework/s\_graphics/mesh/Vertices.hpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VERTICES\_HPP}}
@@ -7,7 +7,7 @@
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <bitset>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <model/Vertex.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <mesh/Vertex.hpp>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVertices}{Vertices}}}
@@ -16,9 +16,9 @@
 \DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertices_aa4aa94941424e06b57c8fd86289ab027}{SetPosition}}(\textcolor{keyword}{const}\ std::vector<glm::vec3>\&\ position);}
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertices_a6a7fa1b90d01e690104774ffe8b435aa}{SetColor}}(std::vector<Color\_t>\ color);}
 \DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertices_aa773016176d68e782bc6ded75cc22251}{SetTexture}}(\textcolor{keyword}{const}\ std::vector<glm::vec2>\&\ TexCoord);}
-\DoxyCodeLine{00018\ \ \ \ \ std::vector<float>\ VerticesVec();}
-\DoxyCodeLine{00019\ \ \ \ \ std::vector<unsigned\ int>\ Indexs();}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ SetIndexs(std::vector<unsigned\ int>\&\ indexs);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<float>\ VerticesVec();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\ Indexs();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ SetIndexs(\textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indexs);}
 \DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Count();}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertices_a3775a7b5ea09d08ee38ae2fca75d497d}{Build}}();}
@@ -46,8 +46,10 @@
 \DoxyCodeLine{00045\ \ \ \ \ std::vector<unsigned\ int>\ \_indexs\ =\ \{\};}
 \DoxyCodeLine{00046\ }
 \DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertices_a6da5258e56ad2c4b32b45097ec4660c2}{InitVertexInfo}}();}
-\DoxyCodeLine{00048\ \};}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMesh}{Mesh}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

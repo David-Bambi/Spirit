@@ -1,13 +1,12 @@
 #ifndef PROFILER_HPP
 #define PROFILER_HPP
 
-#include <tsl/robin_map.h>
 #include <tsl/robin_set.h>
 #include <deque>
 #include <typeindex>
 #include <string>
-#include <debug/Loggers.hpp>
 #include <debug/Traceable.hpp>
+#include <spdlog/spdlog.h>
 
 class Profiler
 {

@@ -1,6 +1,7 @@
 #include <catch2/catch_test_macros.hpp>
 #include <debug/Profiler.hpp>
 #include <debug/Traceable.hpp>
+#include <debug/Loggers.hpp>
 #include <filesystem>
 #include <string>
 #include <sys/stat.h>
@@ -95,7 +96,7 @@ TEST_CASE("Register with new tag", "[platform][profiler]")
     spdlog::get("profiler")->set_pattern("[%l] %v");
 
     Traceable* t1 = new Bidon();
-    Profiler::Register(t1, {"INIT", "TEST"});
+    Profiler::Register(t1, {"ALLOC", "INIT", "TEST"});
     REQUIRE(t1 != nullptr);
 
     Profiler::Trace("ALLOC", t1);
@@ -119,6 +120,7 @@ TEST_CASE("Unregister tag", "[platform][profiler]")
     spdlog::get("profiler")->set_pattern("[%l] %v");
 
     Traceable* t1 = new Bidon();
+    Profiler::Register(t1, {"ALLOC", "BUILD", "FREE"});
     Profiler::Unregister(t1, {"ALLOC", "BUILD"});
     REQUIRE(t1 != nullptr);
 

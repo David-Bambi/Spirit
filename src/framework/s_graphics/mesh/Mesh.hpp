@@ -16,7 +16,6 @@ class Mesh : public Object
     void Clean();
 
     void Transform(glm::mat4 transform);
-    virtual std::string TraceInfo() const;
 
   protected:
     void SetupTexture();

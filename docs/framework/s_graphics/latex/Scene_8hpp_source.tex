@@ -10,21 +10,24 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <object/Object.hpp>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <model/Model.hpp>}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <shader/ProgramShader.hpp>}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classScene}{Scene}}\ :\ \textcolor{keyword}{public}\ Object}
-\DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ Render();}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Clean();}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00018\ \ \ \ \ std::deque<std::shared\_ptr<Model>>\ \_models\ =\ \{\};}
-\DoxyCodeLine{00019\ \ \ \ \ std::shared\_ptr<ProgramShader>\ \_programShader\ =\ \{\};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSceneBuilder}{SceneBuilder}};}
-\DoxyCodeLine{00022\ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <camera/Camera.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <tsl/robin\_map.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classScene}{Scene}}\ :\ \textcolor{keyword}{public}\ Object}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ Render();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ Clean();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ std::deque<std::shared\_ptr<Model>>\ \_models\ =\ \{\};}
+\DoxyCodeLine{00021\ \ \ \ \ tsl::robin\_map<std::shared\_ptr<ProgramShader>,\ std::deque<std::shared\_ptr<Model>>>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \_modelsByProgramShader\ =\ \{\};}
+\DoxyCodeLine{00023\ \ \ \ \ std::shared\_ptr<Camera>\ \_camera\ =\ \{\};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSceneBuilder}{SceneBuilder}};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

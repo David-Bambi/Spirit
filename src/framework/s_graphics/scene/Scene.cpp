@@ -6,10 +6,6 @@
 
 void Scene::Init()
 {
-    #ifdef DEBUG
-        Profiler::Trace("INIT", *this);
-    #endif
-
     for (const auto& [programShader, models] : _modelsByProgramShader)
     {
         programShader->Init();
@@ -36,4 +32,3 @@ void Scene::Clean()
     for (const auto& model : _models)
         model->Clean();
 }
-

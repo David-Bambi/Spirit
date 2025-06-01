@@ -17,7 +17,7 @@ class Gapp : public Object
     static Gapp* CurrentGapp;
 
   private:
-    AppSetting _setting = {"Graphic application", 640, 480};
+    AppSetting _setting = {"Graphic application", 640, 480, false, true};
 
     GLFWwindow* _window = nullptr;
     std::shared_ptr<Scene> _scene = {};

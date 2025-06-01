@@ -4,19 +4,16 @@
 #include <string>
 #include <typeindex>
 
-#include <spdlog/spdlog.h>
-
-Traceable::Traceable()
+Traceable::Traceable() : _tags({})
 {
     Profiler::Register(this);
 }
 
-Traceable::Traceable(const Traceable& t)
+Traceable::Traceable(const Traceable& t) : _tags({})
 {
     if (this == &t)
         return;
 
-    _tags = t._tags;
     Profiler::Register(this);
 }
 

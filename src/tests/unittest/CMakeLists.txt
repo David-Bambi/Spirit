@@ -1,1 +1,2 @@
+add_subdirectory(graphics_utests)
 add_subdirectory(platform_utests)

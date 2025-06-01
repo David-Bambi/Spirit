@@ -2,7 +2,6 @@ set(S_PLATFORM_LIB s_platform)
 
 set(S_PLATFORM_SRC
     builder/Builder.tpp
-    debug/Loggers.cpp
     debug/Profiler.cpp
     debug/Traceable.cpp
     debug/Tracer.cpp
@@ -13,7 +12,7 @@ set(S_PLATFORM_EXTERNAL_LIB tsl::robin_map spdlog::spdlog)
 
 set(S_PLATFORM_INC ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_library(${S_PLATFORM_LIB} SHARED ${S_PLATFORM_SRC})
+add_library(${S_PLATFORM_LIB} STATIC ${S_PLATFORM_SRC})
 
 target_include_directories(${S_PLATFORM_LIB} PUBLIC ${S_PLATFORM_INC})
 target_link_libraries(${S_PLATFORM_LIB} PUBLIC ${S_PLATFORM_EXTERNAL_LIB})

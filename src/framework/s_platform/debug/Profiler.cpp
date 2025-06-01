@@ -1,6 +1,8 @@
 #include <debug/Profiler.hpp>
 
-tsl::robin_set<const Traceable*> Profiler::Table;
+#include <tsl/robin_map.h>
+
+tsl::robin_set<const Traceable*> Profiler::Table = {};
 
 void Profiler::Register(const Traceable* t)
 {

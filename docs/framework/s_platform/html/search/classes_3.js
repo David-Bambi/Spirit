@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['path_0',['Path',['../classPath.html',1,'']]],
-  ['profiler_1',['Profiler',['../classProfiler.html',1,'']]]
+  ['singleton_0',['Singleton',['../classSingleton.html',1,'']]]
 ];

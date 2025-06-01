@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['object_0',['Object',['../classObject.html',1,'']]]
+  ['path_0',['Path',['../classPath.html',1,'']]],
+  ['profiler_1',['Profiler',['../classProfiler.html',1,'']]]
 ];

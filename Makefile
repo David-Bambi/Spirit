@@ -42,13 +42,23 @@ rebuild :
 	rm -rf build
 	mkdir build
 
+cmks : 
+	cmake -S . -B $(BUILD_DIR) -G Ninja -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) -DSANITIZER_OPT=ON \
+	-DWARNINGS_OPT=${OPT_WARNINGS} -DLTO_OPT=ON -DDOCUMENTATION_OPT=${OTP_DOCUMENTATION} -DCLANGTIDY_OPT=${OTP_CLANGTIDY} \
+	-DCLANGFORMAT_OPT=${OTP_CLANGFORMAT} && cmake  --build $(BUILD_DIR) --target run_cmake_format
+
 cmk : 
 	cmake -S . -B $(BUILD_DIR) -G Ninja -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) -DSANITIZER_OPT=${OPT_SANITIZER} \
 	-DWARNINGS_OPT=${OPT_WARNINGS} -DLTO_OPT=${OPT_LTO} -DDOCUMENTATION_OPT=${OTP_DOCUMENTATION} -DCLANGTIDY_OPT=${OTP_CLANGTIDY} \
 	-DCLANGFORMAT_OPT=${OTP_CLANGFORMAT} && cmake  --build $(BUILD_DIR) --target run_cmake_format 
 
 graphics :
-	cmake --build $(BUILD_DIR) --config Debug --target s_graphics
+	cmake --build $(BUILD_DIR) --target s_graphics \
+	&& cmake --build $(BUILD_DIR) --target graphics_utests \
+	&& ctest --output-on-failure --test-dir ./$(BUILD_DIR)/src/tests/unittest/graphics_utests
+
+graphics_notest :
+	cmake --build $(BUILD_DIR) --target s_graphics
 	
 gfbuild :
 	cmake --build $(BUILD_DIR) --config Debug --target gf

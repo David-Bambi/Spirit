@@ -5,65 +5,124 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VERTICESDEF\_HPP}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VERTICESDEF\_HPP}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }VerticesDef}
-\DoxyCodeLine{00005\ \{}
-\DoxyCodeLine{00015\ std::vector<glm::vec3>\ TriangleV\ =\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ 0.0f),\ \textcolor{comment}{//\ 0}}
-\DoxyCodeLine{00017\ \ \ \ \ glm::vec3(0.0f,\ 1.0f,\ 0.0f),\ \textcolor{comment}{//\ 1}}
-\DoxyCodeLine{00018\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ 0.0f)\ \textcolor{comment}{//\ 2}}
-\DoxyCodeLine{00019\ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ std::vector<glm::vec2>\ TriangleT\ =\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ glm::vec2(0.0f,\ 0.0f),\ \textcolor{comment}{//\ 0}}
-\DoxyCodeLine{00023\ \ \ \ \ glm::vec2(0.5f,\ 1.0f),\ \textcolor{comment}{//\ 1}}
-\DoxyCodeLine{00024\ \ \ \ \ glm::vec2(1.0f,\ 0.0f)\ \textcolor{comment}{//\ 2}}
-\DoxyCodeLine{00025\ \};}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00039\ std::vector<glm::vec3>\ RectangleV\ =\ \{}
-\DoxyCodeLine{00040\ \ \ \ \ glm::vec3(-\/1.0f,\ 1.0f,\ 0.0f),\ \textcolor{comment}{//\ 0}}
-\DoxyCodeLine{00041\ \ \ \ \ glm::vec3(1.0f,\ 1.0f,\ 0.0f),\ \textcolor{comment}{//\ 1}}
-\DoxyCodeLine{00042\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ 0.0f),\ \textcolor{comment}{//\ 2}}
-\DoxyCodeLine{00043\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ 0.0f)\ \textcolor{comment}{//\ 3}}
-\DoxyCodeLine{00044\ \};}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00047\ std::vector<unsigned\ int>\ RectangleI\ =\ \{0,\ 1,\ 3,\ 0,\ 2,\ 3\};}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glm/gtc/constants.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }VerticesDef}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00018\ std::vector<glm::vec3>\ TriangleV\ =\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ 0.0f),\ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{00020\ \ \ \ \ glm::vec3(0.0f,\ 1.0f,\ 0.0f),\ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00021\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ 0.0f)\ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ std::vector<glm::vec2>\ TriangleT\ =\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ glm::vec2(0.0f,\ 0.0f),\ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{00026\ \ \ \ \ glm::vec2(0.5f,\ 1.0f),\ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00027\ \ \ \ \ glm::vec2(1.0f,\ 0.0f)\ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00042\ std::vector<glm::vec3>\ RectangleV\ =\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ glm::vec3(-\/1.0f,\ 1.0f,\ 0.0f),\ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{00044\ \ \ \ \ glm::vec3(1.0f,\ 1.0f,\ 0.0f),\ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00045\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ 0.0f),\ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00046\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ 0.0f)\ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{00047\ \};}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ std::vector<glm::vec2>\ RectangleT\ =\ \{}
-\DoxyCodeLine{00050\ \ \ \ \ glm::vec2(0.0f,\ 1.0f),\ \textcolor{comment}{//\ 0}}
-\DoxyCodeLine{00051\ \ \ \ \ glm::vec2(1.0f,\ 1.0f),\ \textcolor{comment}{//\ 1}}
-\DoxyCodeLine{00052\ \ \ \ \ glm::vec2(0.0f,\ 0.0f),\ \textcolor{comment}{//\ 2}}
-\DoxyCodeLine{00053\ \ \ \ \ glm::vec2(1.0f,\ 0.0f)\ \textcolor{comment}{//\ 3}}
-\DoxyCodeLine{00054\ \};}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00069\ std::vector<glm::vec3>\ CubeV\ =\ \{}
-\DoxyCodeLine{00070\ \ \ \ \ glm::vec3(1.0f,\ 1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 0}}
-\DoxyCodeLine{00071\ \ \ \ \ glm::vec3(-\/1.0f,\ 1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 1}}
-\DoxyCodeLine{00072\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 2}}
-\DoxyCodeLine{00073\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 3}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ glm::vec3(1.0f,\ 1.0f,\ 1.0),\ \textcolor{comment}{//\ 4}}
-\DoxyCodeLine{00076\ \ \ \ \ glm::vec3(-\/1.0f,\ 1.0f,\ 1.0),\ \textcolor{comment}{//\ 5}}
-\DoxyCodeLine{00077\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ 1.0),\ \textcolor{comment}{//\ 6}}
-\DoxyCodeLine{00078\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ 1.0),\ \textcolor{comment}{//\ 7}}
-\DoxyCodeLine{00079\ \};}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00082\ std::vector<unsigned\ int>\ CubeI\ =\ \{}
-\DoxyCodeLine{00083\ \ \ \ \ 0,\ 1,\ 2,\ \textcolor{comment}{//\ Front}}
-\DoxyCodeLine{00084\ \ \ \ \ 1,\ 3,\ 2,\ \textcolor{comment}{//\ Front}}
-\DoxyCodeLine{00085\ \ \ \ \ 1,\ 5,\ 0,\ \textcolor{comment}{//\ Top}}
-\DoxyCodeLine{00086\ \ \ \ \ 5,\ 4,\ 0,\ \textcolor{comment}{//\ Top}}
-\DoxyCodeLine{00087\ \ \ \ \ 3,\ 7,\ 2,\ \textcolor{comment}{//\ Bottom}}
-\DoxyCodeLine{00088\ \ \ \ \ 6,\ 7,\ 2,\ \textcolor{comment}{//\ Bottom}}
-\DoxyCodeLine{00089\ \ \ \ \ 1,\ 7,\ 3,\ \textcolor{comment}{//\ Left}}
-\DoxyCodeLine{00090\ \ \ \ \ 5,\ 1,\ 7,\ \textcolor{comment}{//\ Left}}
-\DoxyCodeLine{00091\ \ \ \ \ 0,\ 4,\ 2,\ \textcolor{comment}{//\ Right}}
-\DoxyCodeLine{00092\ \ \ \ \ 6,\ 4,\ 2,\ \textcolor{comment}{//\ Right}}
-\DoxyCodeLine{00093\ \ \ \ \ 5,\ 6,\ 7,\ \textcolor{comment}{//\ Back}}
-\DoxyCodeLine{00094\ \ \ \ \ 4,\ 5,\ 6,\ \textcolor{comment}{//\ Back}}
-\DoxyCodeLine{00095\ \};}
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \};\ \textcolor{comment}{//\ namespace\ VerticesDef}}
-\DoxyCodeLine{00098\ }
-\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00050\ std::vector<unsigned\ int>\ RectangleI\ =\ \{0,\ 1,\ 3,\ 0,\ 2,\ 3\};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ std::vector<glm::vec2>\ RectangleT\ =\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ glm::vec2(0.0f,\ 1.0f),\ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{00054\ \ \ \ \ glm::vec2(1.0f,\ 1.0f),\ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00055\ \ \ \ \ glm::vec2(0.0f,\ 0.0f),\ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00056\ \ \ \ \ glm::vec2(1.0f,\ 0.0f)\ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00072\ std::vector<glm::vec3>\ CubeV\ =\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ glm::vec3(1.0f,\ 1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{00074\ \ \ \ \ glm::vec3(-\/1.0f,\ 1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00075\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00076\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ -\/1.0),\ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ glm::vec3(1.0f,\ 1.0f,\ 1.0),\ \textcolor{comment}{//\ 4}}
+\DoxyCodeLine{00079\ \ \ \ \ glm::vec3(-\/1.0f,\ 1.0f,\ 1.0),\ \textcolor{comment}{//\ 5}}
+\DoxyCodeLine{00080\ \ \ \ \ glm::vec3(1.0f,\ -\/1.0f,\ 1.0),\ \textcolor{comment}{//\ 6}}
+\DoxyCodeLine{00081\ \ \ \ \ glm::vec3(-\/1.0f,\ -\/1.0f,\ 1.0),\ \textcolor{comment}{//\ 7}}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ std::vector<unsigned\ int>\ CubeI\ =\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ 0,\ 1,\ 2,\ \textcolor{comment}{//\ Front}}
+\DoxyCodeLine{00087\ \ \ \ \ 1,\ 3,\ 2,\ \textcolor{comment}{//\ Front}}
+\DoxyCodeLine{00088\ \ \ \ \ 1,\ 5,\ 0,\ \textcolor{comment}{//\ Top}}
+\DoxyCodeLine{00089\ \ \ \ \ 5,\ 4,\ 0,\ \textcolor{comment}{//\ Top}}
+\DoxyCodeLine{00090\ \ \ \ \ 3,\ 7,\ 2,\ \textcolor{comment}{//\ Bottom}}
+\DoxyCodeLine{00091\ \ \ \ \ 6,\ 7,\ 2,\ \textcolor{comment}{//\ Bottom}}
+\DoxyCodeLine{00092\ \ \ \ \ 1,\ 7,\ 3,\ \textcolor{comment}{//\ Left}}
+\DoxyCodeLine{00093\ \ \ \ \ 5,\ 1,\ 7,\ \textcolor{comment}{//\ Left}}
+\DoxyCodeLine{00094\ \ \ \ \ 0,\ 4,\ 2,\ \textcolor{comment}{//\ Right}}
+\DoxyCodeLine{00095\ \ \ \ \ 6,\ 4,\ 2,\ \textcolor{comment}{//\ Right}}
+\DoxyCodeLine{00096\ \ \ \ \ 5,\ 6,\ 7,\ \textcolor{comment}{//\ Back}}
+\DoxyCodeLine{00097\ \ \ \ \ 4,\ 5,\ 6,\ \textcolor{comment}{//\ Back}}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ std::vector<glm::vec3>\ CircleV(\textcolor{keywordtype}{int}\ n)}
+\DoxyCodeLine{00104\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ Radius\ =\ 1}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Angle\ =\ 2\ PI\ Radius}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ i\ =\ nième\ angle}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ (2\ PI\ R\ /\ n)\ *\ i}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ Separate\ the\ circle\ into\ n\ parts}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ Multiply\ by\ i\ for\ the\ nth\ angle}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ (cos\ angle,\ sin\ angle)}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ .\_\_.}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ |\ /}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ |/}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ .}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ (0.0)}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ std::vector<glm::vec3>\ circleV;}
+\DoxyCodeLine{00123\ \ \ \ \ circleV.push\_back(glm::vec3(0.0f,\ 0.0f,\ 0.0f));\ \textcolor{comment}{//\ Center\ of\ the\ circle}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)}
+\DoxyCodeLine{00126\ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ 2.0f\ *\ glm::pi<float>()\ *\ i\ /\ n;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ circleV.push\_back(glm::vec3(cos(angle),\ sin(angle),\ 0.0f));}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ circleV;}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ std::vector<unsigned\ int>\ CircleI(\textcolor{keywordtype}{int}\ n)}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ n\ \ \ i\ \ \ i+1}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ .\_\_.\_\_.}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \(\backslash\)\ |\ /}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \(\backslash\)|/}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ .}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ Separate\ the\ circle\ into\ n\ parts}}
+\DoxyCodeLine{00146\ \ \ \ \ std::vector<unsigned\ int>\ circleI;}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ n;\ ++i)}
+\DoxyCodeLine{00148\ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ circleI.push\_back(0);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ circleI.push\_back(i);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ circleI.push\_back(i\ +\ 1);}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//\ Last\ triangle}}
+\DoxyCodeLine{00155\ \ \ \ \ circleI.push\_back(0);}
+\DoxyCodeLine{00156\ \ \ \ \ circleI.push\_back(n);}
+\DoxyCodeLine{00157\ \ \ \ \ circleI.push\_back(1);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{return}\ circleI;}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \};\ \textcolor{comment}{//\ namespace\ VerticesDef}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

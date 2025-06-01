@@ -6,6 +6,7 @@ set(S_GRAPHICS_SRC
     component/Transform.cpp
     gapp/Gapp.cpp
     gapp/GappBuilder.cpp
+    #gobject/GraphicObject.cpp
     input/Input.cpp
     mesh/Mesh.cpp
     mesh/MeshBuilder.cpp
@@ -31,13 +32,12 @@ set(S_GRAPHICS_EXTERNAL_LIB
     stb_image_lib
     s_type
     s_platform
-    tsl::robin_map
-    spdlog::spdlog)
+    tsl::robin_map)
 
 set(S_GRAPHICS_INC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Create library target
-add_library(${S_GRAPHICS_LIB} SHARED ${S_GRAPHICS_SRC})
+add_library(${S_GRAPHICS_LIB} STATIC ${S_GRAPHICS_SRC})
 
 target_include_directories(${S_GRAPHICS_LIB} PUBLIC ${S_GRAPHICS_INC}
                                                     ${EXTERNAL_LIB_DIR})

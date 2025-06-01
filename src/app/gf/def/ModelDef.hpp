@@ -12,16 +12,19 @@ const std::shared_ptr<Model> Triangle01Model =
     ModelBuilder::GetInstance().WithMesh(MeshDef::Triangle01Mesh).BuildShared();
 
 const std::shared_ptr<Model> Rectangle01Model = ModelBuilder::GetInstance()
-    .WithMesh(MeshDef::Rectangle01Mesh)
-    .WithPosition({10.0f, 0.0f, 0.0f}).BuildShared();
+                                                    .WithMesh(MeshDef::Rectangle01Mesh)
+                                                    .WithPosition({10.0f, 0.0f, 0.0f})
+                                                    .BuildShared();
 
 const std::shared_ptr<Model> Cube01Model = ModelBuilder::GetInstance()
-    .WithMesh(MeshDef::Cube01Mesh)
-    .WithPosition({20.0f, 0.0f, 0.0f}).BuildShared();
+                                               .WithMesh(MeshDef::Cube01Mesh)
+                                               .WithPosition({20.0f, 0.0f, 0.0f})
+                                               .BuildShared();
 
 const std::shared_ptr<Model> Circle01Model = ModelBuilder::GetInstance()
-    .WithMesh(MeshDef::Circle01Mesh)
-    .WithPosition({30.0f, 0.0f, 0.0f}).BuildShared();
-};
+                                                 .WithMesh(MeshDef::Circle01Mesh)
+                                                 .WithPosition({30.0f, 0.0f, 0.0f})
+                                                 .BuildShared();
+}; // namespace ModelDef
 
 #endif

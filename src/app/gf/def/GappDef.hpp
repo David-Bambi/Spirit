@@ -15,6 +15,6 @@ const std::unique_ptr<Gapp> ShapeGapp = GappBuilder::GetInstance()
                                             .WithAppSetting({"Shape", 680, 400, false, true})
                                             .WithScene(SceneDef::ShapeScene)
                                             .BuildUnique();
-};
+}; // namespace GappDef
 
 #endif

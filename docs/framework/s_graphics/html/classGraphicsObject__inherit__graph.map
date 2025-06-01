@@ -1,0 +1,7 @@
+<map id="GraphicsObject" name="GraphicsObject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,119,135,184"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,61,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,82,68,117,63,120,49,84"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="86,5,162,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,84,94,120,89,117,104,82"/>
+</map>

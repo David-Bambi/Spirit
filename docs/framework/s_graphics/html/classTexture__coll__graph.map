@@ -1,5 +1,7 @@
 <map id="Texture" name="Texture">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,152,379"/>
-<area shape="rect" id="Node000002" href="$structImgLoadSetting.html" title=" " alt="" coords="21,5,137,71"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,71,81,117,76,117,76,71"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,133,161,259"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,61,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,83,69,132,64,134,46,85"/>
+<area shape="rect" id="Node000003" href="$structImgLoadSetting.html" title=" " alt="" coords="86,5,202,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,72,118,119,113,117,130,70"/>
 </map>

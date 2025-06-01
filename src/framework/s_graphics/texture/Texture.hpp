@@ -15,12 +15,6 @@ class Texture : public Object
     void ProcessILS();
 
   public:
-    Texture() = default;
-    Texture(const Texture& other) = default;
-    Texture(Texture&& other) noexcept = default;
-    Texture& operator=(const Texture& other) = default;
-    Texture& operator=(Texture&& other) noexcept = default;
-    ~Texture() = default;
     void GenerateTexture();
     unsigned int Id();
 

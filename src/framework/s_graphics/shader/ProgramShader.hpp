@@ -11,7 +11,7 @@ class ProgramShader : public Object
   public:
     void Init();
     void Use() const;
-    [[nodiscard]] unsigned int Id() const;
+    unsigned int Id() const;
 
   private:
     unsigned int _id = -1;

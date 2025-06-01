@@ -74,6 +74,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classVertices-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Vertices Class Reference</div></div>
 </div><!--header-->
@@ -110,15 +111,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa773016176d68e782bc6ded75cc22251" id="r_aa773016176d68e782bc6ded75cc22251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertices.html#aa773016176d68e782bc6ded75cc22251">SetTexture</a> (const std::vector&lt; glm::vec2 &gt; &amp;TexCoord)</td></tr>
 <tr class="memdesc:aa773016176d68e782bc6ded75cc22251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the texture coordinate for each certex of the mesh.  <br /></td></tr>
 <tr class="separator:aa773016176d68e782bc6ded75cc22251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa976919a20c7f9ea8fad2fb74ea62447" id="r_aa976919a20c7f9ea8fad2fb74ea62447"><td class="memItemLeft" align="right" valign="top"><a id="aa976919a20c7f9ea8fad2fb74ea62447" name="aa976919a20c7f9ea8fad2fb74ea62447"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>VerticesVec</b> ()</td></tr>
-<tr class="separator:aa976919a20c7f9ea8fad2fb74ea62447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78dd360c625615aeb706367686c27c4e" id="r_a78dd360c625615aeb706367686c27c4e"><td class="memItemLeft" align="right" valign="top"><a id="a78dd360c625615aeb706367686c27c4e" name="a78dd360c625615aeb706367686c27c4e"></a>
-std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Indexs</b> ()</td></tr>
-<tr class="separator:a78dd360c625615aeb706367686c27c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6882df83bb10dbbe6a879f70c96d0bb9" id="r_a6882df83bb10dbbe6a879f70c96d0bb9"><td class="memItemLeft" align="right" valign="top"><a id="a6882df83bb10dbbe6a879f70c96d0bb9" name="a6882df83bb10dbbe6a879f70c96d0bb9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetIndexs</b> (std::vector&lt; unsigned int &gt; &amp;indexs)</td></tr>
-<tr class="separator:a6882df83bb10dbbe6a879f70c96d0bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16fc0ba16c6c5be16b529375461c0437" id="r_a16fc0ba16c6c5be16b529375461c0437"><td class="memItemLeft" align="right" valign="top"><a id="a16fc0ba16c6c5be16b529375461c0437" name="a16fc0ba16c6c5be16b529375461c0437"></a>
+const std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>VerticesVec</b> ()</td></tr>
+<tr class="separator:a16fc0ba16c6c5be16b529375461c0437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3b20bfbcfad7c269d7d16708d70a6f" id="r_a7e3b20bfbcfad7c269d7d16708d70a6f"><td class="memItemLeft" align="right" valign="top"><a id="a7e3b20bfbcfad7c269d7d16708d70a6f" name="a7e3b20bfbcfad7c269d7d16708d70a6f"></a>
+const std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Indexs</b> ()</td></tr>
+<tr class="separator:a7e3b20bfbcfad7c269d7d16708d70a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c040a97089553d85c36c5c80f0cb11" id="r_af6c040a97089553d85c36c5c80f0cb11"><td class="memItemLeft" align="right" valign="top"><a id="af6c040a97089553d85c36c5c80f0cb11" name="af6c040a97089553d85c36c5c80f0cb11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetIndexs</b> (const std::vector&lt; unsigned int &gt; &amp;indexs)</td></tr>
+<tr class="separator:af6c040a97089553d85c36c5c80f0cb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54b1518b4bc1b1a6786f58b10aaa638" id="r_ad54b1518b4bc1b1a6786f58b10aaa638"><td class="memItemLeft" align="right" valign="top"><a id="ad54b1518b4bc1b1a6786f58b10aaa638" name="ad54b1518b4bc1b1a6786f58b10aaa638"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>Count</b> ()</td></tr>
 <tr class="separator:ad54b1518b4bc1b1a6786f58b10aaa638"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +168,12 @@ std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b
 <tr class="memitem:ad6499dd45dbd396665362e76b74a2e6e" id="r_ad6499dd45dbd396665362e76b74a2e6e"><td class="memItemLeft" align="right" valign="top"><a id="ad6499dd45dbd396665362e76b74a2e6e" name="ad6499dd45dbd396665362e76b74a2e6e"></a>
 std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_indexs</b> = {}</td></tr>
 <tr class="separator:ad6499dd45dbd396665362e76b74a2e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aa41a130f156b145bffb3f4b5172c4c93" id="r_aa41a130f156b145bffb3f4b5172c4c93"><td class="memItemLeft" align="right" valign="top"><a id="aa41a130f156b145bffb3f4b5172c4c93" name="aa41a130f156b145bffb3f4b5172c4c93"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Mesh</b></td></tr>
+<tr class="separator:aa41a130f156b145bffb3f4b5172c4c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to manage the vertices of a mesh object. </p>
@@ -250,8 +257,8 @@ std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bot
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/workspaces/spirit/src/framework/s_graphics/model/<a class="el" href="Vertices_8hpp_source.html">Vertices.hpp</a></li>
-<li>/workspaces/spirit/src/framework/s_graphics/model/<b>Vertices.cpp</b></li>
+<li>/workspaces/spirit/src/framework/s_graphics/mesh/<a class="el" href="Vertices_8hpp_source.html">Vertices.hpp</a></li>
+<li>/workspaces/spirit/src/framework/s_graphics/mesh/<b>Vertices.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

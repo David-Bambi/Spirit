@@ -1,7 +1,6 @@
 #include <mesh/MeshBuilder.hpp>
 
 #include <iostream>
-#include <debug/Tracer.hpp>
 
 MeshBuilder& MeshBuilder::GetInstance()
 {

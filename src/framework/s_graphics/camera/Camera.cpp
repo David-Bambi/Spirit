@@ -13,16 +13,14 @@ void Camera::Update(unsigned int progshader)
         _update(*this);
     }
     _view = glm::lookAt(_pos, _pos + _front, _up);
-    float screenWidth = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_WIDTH);
-    float screenHeight = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_HEIGHT);
+    const auto screenWidth = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_WIDTH);
+    const auto screenHeight = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_HEIGHT);
 
     if (_projectionType == Projection_t::PERSPECTIVE)
-        _projection = glm::perspective(glm::radians(_fov), 
-                                       screenWidth/screenHeight, 
-                                       _near, 
-                                       _far);
+        _projection = glm::perspective(glm::radians(_fov), screenWidth / screenHeight, _near, _far);
 
-    glUniformMatrix4fv(glGetUniformLocation(progshader, "view"), 1, GL_FALSE, glm::value_ptr(_view));
+    glUniformMatrix4fv(glGetUniformLocation(progshader, "view"), 1, GL_FALSE,
+                       glm::value_ptr(_view));
     glUniformMatrix4fv(glGetUniformLocation(progshader, "projection"), 1, GL_FALSE,
                        glm::value_ptr(_projection));
 }
@@ -100,4 +98,3 @@ glm::vec3 Camera::Up()
 {
     return glm::normalize(glm::cross(_right, _front));
 }
-

@@ -12,7 +12,7 @@
 class Shader : public Object
 {
   public:
-    [[nodiscard]] unsigned int Id() const;
+    unsigned int Id() const;
 
     void Compile();
 
