@@ -1,6 +1,7 @@
 MAKEFLAGS += --no-print-directory 
 
 BUILD_TYPE ?= debug
+FLAGS_DEBUG ?= ""
 
 OPT ?= none
 OPT_SANITIZER = OFF
@@ -21,6 +22,7 @@ endif
 
 ifeq ($(BUILD_TYPE), debug)
 	BUILD_DIR = build/debug
+	FLAGS_DEBUG = "-g -O0"
 else ifeq ($(BUILD_TYPE), release)
 	BUILD_DIR = build/release
 else
@@ -55,7 +57,8 @@ cmk :
 graphics :
 	cmake --build $(BUILD_DIR) --target s_graphics \
 	&& cmake --build $(BUILD_DIR) --target graphics_utests \
-	&& ctest --output-on-failure --test-dir ./$(BUILD_DIR)/src/tests/unittest/graphics_utests
+	&& cd ./$(BUILD_DIR)/src/tests/unittest/graphics_utests \
+	&& ctest --output-on-failure  .
 
 graphics_notest :
 	cmake --build $(BUILD_DIR) --target s_graphics

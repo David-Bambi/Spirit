@@ -9,7 +9,12 @@ Traceable::Traceable() : _tags({})
     Profiler::Register(this);
 }
 
-Traceable::Traceable(const Traceable& t) : _tags({})
+Traceable::Traceable(const tsl::robin_set<std::string>& tags) : _tags(tags)
+{
+    Profiler::Register(this);
+}
+
+Traceable::Traceable(const Traceable& t) : _tags(t._tags)
 {
     if (this == &t)
         return;

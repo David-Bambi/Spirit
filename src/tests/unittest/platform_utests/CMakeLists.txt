@@ -10,4 +10,5 @@ add_custom_target(
             profilertest
             singletontest
             traceabletest
+            traceableprofilertest
             tracertest)

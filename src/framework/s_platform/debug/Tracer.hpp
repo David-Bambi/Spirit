@@ -2,6 +2,7 @@
 #define TRACER_HPP
 
 #include <debug/Traceable.hpp>
+#include <string>
 
 class Tracer
 {
@@ -15,6 +16,7 @@ class Tracer
 
     static void Trace(const Traceable& obj);
     static void Trace(const char* message);
+    static void Trace(const std::string& message);
 };
 
 #endif

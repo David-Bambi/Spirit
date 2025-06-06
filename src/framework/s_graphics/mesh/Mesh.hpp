@@ -2,20 +2,24 @@
 #define MESH_HPP
 
 #include <glm/glm.hpp>
+#include <gobject/GraphicObject.hpp>
 #include <memory>
 #include <mesh/Vertices.hpp>
-#include <object/Object.hpp>
+#include <string>
 #include <texture/Texture.hpp>
 #include <vector>
 
-class Mesh : public Object
+class Mesh : public GraphicObject
 {
   public:
+    Mesh();
     void Init(unsigned int progshader);
     void Render();
     void Clean();
 
     void Transform(glm::mat4 transform);
+
+    virtual std::string TraceStr() const ;
 
   protected:
     void SetupTexture();

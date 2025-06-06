@@ -4,28 +4,53 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <gapp/AppSetting.hpp>
+#include <gapp/GAppSetting.hpp>
 #include <object/Object.hpp>
-#include <scene/Scene.hpp>
+#include <gobject/UGID.hpp>
+#include <tsl/robin_set.h>
 #include <memory>
 
+/**
+ * @brief Graphic application class
+ */
 class Gapp : public Object
 {
   public:
+    /** Run the graphics application. */
     void Run();
-    AppSetting& GetAppSetting();
-    static Gapp* CurrentGapp;
+
+    /** Getter */
+    GAppSetting& GetSetting();
+    GID_t GetDefaultScene() const;
+    const tsl::robin_set<GID_t>& GetScenes() const;
+
+    /** Current graphic application */
+    static std::unique_ptr<Gapp> CurrentGapp;
 
   private:
-    AppSetting _setting = {"Graphic application", 640, 480, false, true};
+    /** Default graphic application setting */
+    GAppSetting _setting = {"Graphic application", 640, 480, false, true};
 
+    /** Windows context */
     GLFWwindow* _window = nullptr;
-    std::shared_ptr<Scene> _scene = {};
 
-    void BeforeRenderPhase();
-    void RenderPhase();
-    void CleanUp();
+    /** Scene at start */
+    GID_t _default_scene = -1;
+
+    /** Scene for graphic application */
+    tsl::robin_set<GID_t> _scenes = {};
+
+    /** Set the window and the context for opengl */
     void InitContext();
+
+    /** Initialize the graphic application like scene */
+    void InitPhase();
+
+    /** Render the scene */
+    void RenderPhase();
+
+    /** Cela graphic application */
+    void CleanPhase();
 
     friend class GappBuilder;
 };

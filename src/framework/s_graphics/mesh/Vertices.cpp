@@ -1,9 +1,16 @@
 
 #include <mesh/Vertices.hpp>
 
+#include <debug/Profiler.hpp>
+#include <debug/Tracer.hpp>
 #include <color/Color_t.hpp>
 #include <glad/glad.h>
 #include <iostream>
+
+Vertices::Vertices() : GraphicObject()
+{}
+
+
 /**
  * @brief Set the position vertices for the mesh
  *
@@ -43,7 +50,7 @@ const std::vector<float> Vertices::VerticesVec()
     return _vertices_vec;
 }
 
-const std::vector<unsigned int> Vertices::Indexs()
+const std::vector<unsigned int> Vertices::Indexs() const
 {
     return _indexs;
 }
@@ -62,7 +69,7 @@ unsigned int Vertices::Count()
  * @brief Build the vertice vector to send on VBO
  *
  */
-void Vertices::Build()
+void Vertices::Init()
 {
     for (long unsigned int i = 0; i < _pos.size(); i++)
     {

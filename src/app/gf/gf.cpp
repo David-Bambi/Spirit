@@ -1,13 +1,12 @@
 #include <glad/glad.h>
-#include <def/GappDef.hpp>
-#include <gapp/Gapp.hpp>
-#include <iostream>
-#include <memory>
-#include <spdlog/spdlog.h>
-#include <spdlog/sinks/rotating_file_sink.h>
-#include <debug/Tracer.hpp>
-#include <debug/Profiler.hpp>
+
+#include <gimporter/GJsonImporter.hpp>
 #include <debug/DebugHandler.hpp>
+#include <iostream>
+#include <gapp/Gapp.hpp>
+#include <memory>
+
+void Execute(std::string name);
 
 int main()
 {
@@ -39,10 +38,7 @@ int main()
                 quit = true;
                 break;
             case 1:
-                GappDef::EmptyWindowGapp->Run();
-                break;
-            case 2:
-                GappDef::ShapeGapp->Run();
+                Execute("EmptyWindow");
                 break;
             default:
                 std::cout << "Invalid choice.\n";
@@ -51,4 +47,11 @@ int main()
     }
 
     return 0;
+}
+
+void Execute(std::string name)
+{
+    std::shared_ptr<Gapp> App = GJsonImporter::ImportGapp(name);
+    if (App != nullptr)
+        App->Run();
 }

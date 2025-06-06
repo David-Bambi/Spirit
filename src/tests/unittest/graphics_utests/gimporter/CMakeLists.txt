@@ -1,0 +1,12 @@
+set(GIMPORTER_TEST_EXE gimportertest)
+set(GIMPORTER_TEST_NAME graphics_gimportertest)
+set(GIMPORTER_TEST_SRC gappimportertest.cpp)
+
+add_executable(${GIMPORTER_TEST_EXE} ${GIMPORTER_TEST_SRC})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/res
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+target_link_libraries(${GIMPORTER_TEST_EXE}
+                      PRIVATE ${GRAPHICS_TEST_EXTERNAL_LIB})
+
+add_test(NAME ${GIMPORTER_TEST_NAME} COMMAND ${GIMPORTER_TEST_EXE})

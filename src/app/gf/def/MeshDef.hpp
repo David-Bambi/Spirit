@@ -11,27 +11,32 @@ namespace MeshDef
 const std::shared_ptr<Mesh> Triangle01Mesh = MeshBuilder::GetInstance()
                                                  .WithVertices(VerticesDef::TriangleV)
                                                  .WithColor({Color::Red, Color::Green, Color::Blue})
-                                                 .BuildShared();
-
-const std::shared_ptr<Mesh> Rectangle01Mesh =
-    MeshBuilder::GetInstance()
-        .WithVertices(VerticesDef::RectangleV)
-        .WithIndexs(VerticesDef::RectangleI)
-        .WithColor({Color::Red, Color::Green, Color::Blue, Color::Magenta})
-        .BuildShared();
-
-const std::shared_ptr<Mesh> Cube01Mesh =
-    MeshBuilder::GetInstance()
-        .WithVertices(VerticesDef::CubeV)
-        .WithIndexs(VerticesDef::CubeI)
-        .WithColor({Color::Red, Color::Green, Color::Black, Color::White, Color::Magenta,
-                    Color::Blue, Color::Cyan, Color::Yellow})
-        .BuildShared();
-
-const std::shared_ptr<Mesh> Circle01Mesh = MeshBuilder::GetInstance()
-                                               .WithVertices(std::move(VerticesDef::CircleV(20)))
-                                               .WithIndexs(std::move(VerticesDef::CircleI(20)))
                                                .BuildShared();
+
+// const std::shared_ptr<Mesh> Rectangle01Mesh =
+//     MeshBuilder::GetInstance()
+//         .WithVertices(VerticesDef::RectangleV)
+//         .WithIndexs(VerticesDef::RectangleI)
+//         .WithColor({Color::Red, Color::Green, Color::Blue, Color::Magenta})
+//         .BuildShared();
+
+// const std::shared_ptr<Mesh> Cube01Mesh =
+//     MeshBuilder::GetInstance()
+//         .WithVertices(VerticesDef::CubeV)
+//         .WithIndexs(VerticesDef::CubeI)
+//         .WithColor({Color::Red, Color::Green, Color::Black, Color::White, Color::Magenta,
+//                     Color::Blue, Color::Cyan, Color::Yellow})
+//         .BuildShared();
+
+// const std::shared_ptr<Mesh> Circle01Mesh = MeshBuilder::GetInstance()
+//                                                .WithVertices(std::move(VerticesDef::CircleV(20)))
+//                                                .WithIndexs(std::move(VerticesDef::CircleI(20)))
+//                                                .BuildShared();
+
+// const std::shared_ptr<Mesh> Sphere01Mesh = MeshBuilder::GetInstance()
+//                                                .WithVertices(std::move(VerticesDef::SphereV(10,10)))
+//                                                .WithIndexs(std::move(VerticesDef::SphereI(100,10)))
+//                                                .BuildShared();
 } // namespace MeshDef
 
 #endif

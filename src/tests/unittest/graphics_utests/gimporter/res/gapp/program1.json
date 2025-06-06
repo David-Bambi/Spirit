@@ -1,0 +1,12 @@
+{
+    "setting" :
+    {
+        "APP_NAME" : "Program 1",
+        "SCREEN_WIDTH" : 347,
+        "SCREEN_HEIGHT" : 200,
+        "ENABLE_CURSOR" : false,
+        "ENABLE_DEPTH_TEST" : true
+    },
+    "scenes" : ["scene1", "scene2"],
+    "default_scene" : "scene1"
+}

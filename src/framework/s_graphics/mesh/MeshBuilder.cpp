@@ -1,7 +1,5 @@
 #include <mesh/MeshBuilder.hpp>
 
-#include <iostream>
-
 MeshBuilder& MeshBuilder::GetInstance()
 {
     static MeshBuilder instance;

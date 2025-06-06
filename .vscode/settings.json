@@ -84,7 +84,9 @@
         "ranges": "cpp",
         "pointers": "cpp",
         "util": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "valarray": "cpp",
+        "src/tests/unittest/graphics_utests/gimporter/res/gapp/program3.json":"plaintext" 
     },
     "[cpp]": {
         "editor.defaultFormatter": null
@@ -96,5 +98,5 @@
     "editor.rulers": [
         100
     ],
-    "C_Cpp.default.compilerPath": "/usr/bin/g++-13"
+    "C_Cpp.default.compilerPath": "/usr/bin/g++-13",
 }

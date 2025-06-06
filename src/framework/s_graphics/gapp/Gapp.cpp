@@ -1,26 +1,42 @@
 #include <gapp/Gapp.hpp>
 
-#include <uglad/uglad.hpp>
-#include <uglfw/uglfw.hpp>
 #include <input/Input.hpp>
 #include <time/Time.hpp>
+#include <uglad/uglad.hpp>
+#include <uglfw/uglfw.hpp>
 
-Gapp* Gapp::CurrentGapp = nullptr;
+std::unique_ptr<Gapp> Gapp::CurrentGapp = nullptr;
 
 void Gapp::Run()
 {
-    CurrentGapp = this;
+    Gapp::CurrentGapp = std::make_unique<Gapp>(*this);
     InitContext();
-    BeforeRenderPhase();
+    InitPhase();
     RenderPhase();
-    CleanUp();
+    CleanPhase();
+}
+
+GAppSetting& Gapp::GetSetting()
+{
+    return _setting;
+}
+
+GID_t Gapp::GetDefaultScene() const
+{
+    return _default_scene;
+}
+
+const tsl::robin_set<GID_t>& Gapp::GetScenes() const
+{
+    return _scenes;
 }
 
 void Gapp::InitContext()
 {
     uglfw::InitializeGlfw();
-    _window =
-        uglfw::CreateWinContext(_setting.SCREEN_WIDTH, _setting.SCREEN_HEIGHT, _setting.APP_NAME);
+    _window = uglfw::CreateWinContext(_setting.SCREEN_WIDTH, 
+                                      _setting.SCREEN_HEIGHT, 
+                                      _setting.APP_NAME.c_str());
     uglad::GladInit();
 
     if (_setting.ENABLE_DEPTH_TEST)
@@ -36,15 +52,11 @@ void Gapp::InitContext()
     glfwSetScrollCallback(_window, Input::MouseScrollCallback);
 }
 
-AppSetting& Gapp::GetAppSetting()
+void Gapp::InitPhase()
 {
-    return _setting;
-}
-
-void Gapp::BeforeRenderPhase()
-{
-    if (_scene != nullptr)
-        _scene->Init();
+    if (_default_scene != -1)
+        return;
+        //_default_scene->Init();
 }
 
 void Gapp::RenderPhase()
@@ -59,18 +71,18 @@ void Gapp::RenderPhase()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        if (_scene != nullptr)
-            _scene->Render();
+        if (_default_scene != -1)
+            ;
 
         glfwPollEvents();
         glfwSwapBuffers(_window);
     }
 }
 
-void Gapp::CleanUp()
+void Gapp::CleanPhase()
 {
-    if (_scene != nullptr)
-        _scene->Clean();
+    if (_default_scene != -1)
+        return;
 
     glfwTerminate();
 }

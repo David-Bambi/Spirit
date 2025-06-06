@@ -15,7 +15,6 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_src/")
 # Built in cmakes options
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 
 include(CmkOptions)
 
@@ -56,6 +55,7 @@ cpmaddpackage("gh:gabime/spdlog@1.15.2")
 cpmaddpackage("gh:fmtlib/fmt#11.1.4")
 cpmaddpackage("gh:jarro2783/cxxopts@3.2.0")
 cpmaddpackage("gh:tessil/robin-map@1.4.0")
+cpmaddpackage("gh:nlohmann/json@3.12.0")
 
 # Chemin d'accès importantes pour la compilation du projet
 set(EXTERNAL_LIB_DIR ${CMAKE_SOURCE_DIR}/external)

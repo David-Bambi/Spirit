@@ -2,11 +2,10 @@
 
 ## Développement
 
-- Ajout de la primitive sphere.
-- [x] Ajout de la primitive cercle.
-- Ajout de la caméra en mode orthogonal.
-- Mettre à jour mes diagrame de séquence.
-- Ajouter une compoenent physic pour la gravité. Rigidbody ?
+- Implémenter ma graphics en ECS
+- Implémenter un un parser JSON pour graphics
+- Implémenter les unitests
+- Améliroer mes id avec une files d'attentes pour réutiliser les numéros
 
 ## Problèmes
 

@@ -1,0 +1,12 @@
+{
+    "setting" :
+    {
+        "APP_NAME" : "Empty window",
+        "SCREEN_WIDTH" : 640,
+        "SCREEN_HEIGHT" : 480,
+        "ENABLE_CURSOR" : false,
+        "ENABLE_DEPTH_TEST" : true
+    },
+    "scenes" : [],
+    "default_scene" : ""
+}

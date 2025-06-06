@@ -1,6 +1,10 @@
 #include <debug/Profiler.hpp>
 
+#include <debug/Loggers.hpp>
 #include <tsl/robin_map.h>
+
+#include <execinfo.h>
+#include <signal.h>
 
 tsl::robin_set<const Traceable*> Profiler::Table = {};
 
@@ -37,26 +41,26 @@ void Profiler::Trace(const std::string& tag, const Traceable* t)
 {
     const bool IsRegister = Profiler::Table.contains(t);
     const bool IsTagged = t->TagExist(tag);
-
+    
     if (IsRegister && IsTagged)
-        spdlog::get("profiler")->info("{} : {}", tag, t->TraceStr());
+        Loggers::profile->info("{} : {}", tag, t->TraceStr());
 }
 
 void Profiler::TableDump()
 {
-    spdlog::get("profiler")->set_pattern("[%l] %v");
+    Loggers::profile->set_pattern("[%l] %v");
 
     for (const auto& t : Profiler::Table)
     {
         const void* TAddressStr = static_cast<const void*>(t);
 
-        spdlog::get("profiler")->info("Adresse: {}, Type: {}", TAddressStr, t->Type());
+        Loggers::profile->info("Adresse: {}, Type: {}", TAddressStr, t->Type());
     }
 }
 
 void Profiler::SummaryTableDump()
 {
-    spdlog::get("profiler")->set_pattern("[%l] %v");
+    Loggers::profile->set_pattern("[%l] %v");
 
     tsl::robin_map<std::string, std::vector<const Traceable*>> ObjByType = {};
     for (const auto& t : Profiler::Table)
@@ -66,8 +70,7 @@ void Profiler::SummaryTableDump()
 
     for (const auto& [type, objs] : ObjByType)
     {
-        spdlog::get("profiler")
-            ->info("Type : {}, Count : {}, Memory {}", type, objs.size(),
-                   sizeof(*objs[0]) * objs.size());
+        Loggers::profile->info("Type : {}, Count : {}, Memory {}", type, objs.size(),
+                                                                    sizeof(*objs[0]) * objs.size());
     }
 }

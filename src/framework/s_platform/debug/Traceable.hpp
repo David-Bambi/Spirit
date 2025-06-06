@@ -2,6 +2,7 @@
 #define TRACEABLE_HPP
 
 #include <string>
+#include <deque>
 #include <tsl/robin_set.h>
 
 class Traceable
@@ -13,15 +14,17 @@ class Traceable
     bool TagExist(const std::string& tag) const;
     std::string Type() const;
 
-  public:
+  protected:
     Traceable();
+    Traceable(const tsl::robin_set<std::string>& tags);
     Traceable(const Traceable& t);
     Traceable(Traceable&&) noexcept = default;
     Traceable& operator=(const Traceable&) = default;
     Traceable& operator=(Traceable&&) noexcept = default;
-    virtual ~Traceable();
-
+  
+  public:
     virtual std::string TraceStr() const = 0;
+    virtual ~Traceable();
 
     friend class Profiler;
     friend class Tracer;

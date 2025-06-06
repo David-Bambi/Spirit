@@ -9,7 +9,7 @@
 #include <camera/Camera.hpp>
 #include <tsl/robin_map.h>
 
-class Scene : public Object
+class Scene : public GraphicObject
 {
   public:
     void Init();

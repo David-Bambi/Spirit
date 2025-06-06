@@ -4,6 +4,8 @@
 #include <builder/Builder.hpp>
 
 #include <gapp/Gapp.hpp>
+#include <gobject/UGID.hpp>
+#include <tsl/robin_set.h>
 
 /**
  * @brief Helper class to build graphics application
@@ -14,8 +16,9 @@ class GappBuilder : public Builder<Gapp>
   public:
     static GappBuilder& GetInstance();
 
-    GappBuilder& WithAppSetting(const AppSetting& setting);
-    GappBuilder& WithScene(const std::shared_ptr<Scene>& scene);
+    GappBuilder& WithSetting(const GAppSetting& setting);
+    GappBuilder& WithDefaultScene(const GID_t& default_scene);
+    GappBuilder& WithScenes(const tsl::robin_set<GID_t>& scenes);
 };
 
 #endif

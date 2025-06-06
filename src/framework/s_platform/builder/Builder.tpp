@@ -66,7 +66,7 @@ std::unique_ptr<T> Builder<T>::BuildUnique()
 template <class T>
 std::shared_ptr<T> Builder<T>::BuildShared()
 {
-    std::shared_ptr<T> obj = std::make_shared<T>(std::move(*_obj));
+    std::shared_ptr<T> obj = std::move(_obj);
     _obj = std::make_unique<T>();
     return obj;
 }

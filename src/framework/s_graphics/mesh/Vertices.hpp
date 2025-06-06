@@ -2,26 +2,31 @@
 #define VERTICES_HPP
 
 #include <bitset>
+#include <gobject/GraphicObject.hpp>
 #include <glm/glm.hpp>
 #include <mesh/Vertex.hpp>
+#include <string>
 #include <vector>
 
 /**
  * @brief Class to manage the vertices of a mesh object.
  */
-class Vertices
+class Vertices : public GraphicObject
 {
   public:
+    Vertices();
     void SetPosition(const std::vector<glm::vec3>& position);
     void SetColor(std::vector<Color_t> color);
     void SetTexture(const std::vector<glm::vec2>& TexCoord);
     const std::vector<float> VerticesVec();
-    const std::vector<unsigned int> Indexs();
+    const std::vector<unsigned int> Indexs() const;
     void SetIndexs(const std::vector<unsigned int>& indexs);
     unsigned int Count();
 
-    void Build();
+    void Init();
     void SetVertexAttrPtr();
+
+    virtual std::string TraceStr() const;
 
   private:
     struct Offset

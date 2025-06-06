@@ -2,11 +2,14 @@ set(S_PLATFORM_LIB s_platform)
 
 set(S_PLATFORM_SRC
     builder/Builder.tpp
+    debug/Loggers.cpp
     debug/Profiler.cpp
     debug/Traceable.cpp
     debug/Tracer.cpp
     object/Object.cpp
-    singleton/Singleton.tpp)
+    singleton/Singleton.tpp
+    string/ToStr.cpp
+)
 
 set(S_PLATFORM_EXTERNAL_LIB tsl::robin_map spdlog::spdlog)
 

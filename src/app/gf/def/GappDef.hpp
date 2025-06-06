@@ -8,13 +8,13 @@
 
 namespace GappDef
 {
-const std::unique_ptr<Gapp> EmptyWindowGapp =
-    GappBuilder::GetInstance().WithAppSetting({"Empty Window", 1280, 960}).BuildUnique();
+// const std::unique_ptr<Gapp> EmptyWindowGapp =
+//     GappBuilder::GetInstance().WithAppSetting({"Empty Window", 1280, 960}).BuildUnique();
 
-const std::unique_ptr<Gapp> ShapeGapp = GappBuilder::GetInstance()
-                                            .WithAppSetting({"Shape", 680, 400, false, true})
-                                            .WithScene(SceneDef::ShapeScene)
-                                            .BuildUnique();
+// const std::unique_ptr<Gapp> ShapeGapp = GappBuilder::GetInstance()
+//                                             .WithAppSetting({"Shape", 680, 400, false, true})
+//                                             .WithScene(SceneDef::ShapeScene)
+//                                             .BuildUnique();
 }; // namespace GappDef
 
 #endif

@@ -9,6 +9,11 @@
 #include <texture/GLTexture.hpp>
 #include <ugl/ugl.hpp>
 #include <sstream>
+#include <debug/Profiler.hpp>
+#include <gobject/GraphicObject.hpp>
+
+Mesh::Mesh() : GraphicObject ()
+{}
 
 void Mesh::Clean()
 {
@@ -43,7 +48,7 @@ void Mesh::Init(unsigned int progshader)
     glGenBuffers(1, &_ebo);
     _shaderId = progshader;
 
-    MeshVertices.Build();
+    MeshVertices.Init();
 
     glUseProgram(_shaderId);
     glBindVertexArray(_vao);

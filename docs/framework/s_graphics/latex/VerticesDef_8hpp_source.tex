@@ -93,7 +93,7 @@
 \DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ circleV.push\_back(glm::vec3(cos(angle),\ sin(angle),\ 0.0f));}
 \DoxyCodeLine{00129\ \ \ \ \ \}}
 \DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ circleV;}
-\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00131\ \};}
 \DoxyCodeLine{00132\ }
 \DoxyCodeLine{00136\ std::vector<unsigned\ int>\ CircleI(\textcolor{keywordtype}{int}\ n)}
 \DoxyCodeLine{00137\ \{}
@@ -119,10 +119,76 @@
 \DoxyCodeLine{00157\ \ \ \ \ circleI.push\_back(1);}
 \DoxyCodeLine{00158\ }
 \DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{return}\ circleI;}
-\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00160\ \};}
 \DoxyCodeLine{00161\ }
-\DoxyCodeLine{00162\ \};\ \textcolor{comment}{//\ namespace\ VerticesDef}}
-\DoxyCodeLine{00163\ }
-\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00165\ std::vector<glm::vec3>\ SphereV(\textcolor{keywordtype}{float}\ sector,\ \textcolor{keywordtype}{float}\ stack)}
+\DoxyCodeLine{00166\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ sectorStep\ =\ 2\ *\ glm::pi<float>()\ /\ sector;}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ stackStep\ =\ glm::pi<float>()\ /\ sector;}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{float}\ sectorAngle,\ stackAngle;}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ stackAngle\ =\ PI\ /\ 2\ -\/\ i\ *\ stackStep;}
+\DoxyCodeLine{00172\ \ \ \ \ xy\ =\ radius\ *\ cosf(stackAngle);}
+\DoxyCodeLine{00173\ \ \ \ \ z\ =\ radius\ *\ sinf(stackAngle);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ std::vector<glm::vec3>\ retvec\ =\ \{\}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ sectorCount;\ ++j)}
+\DoxyCodeLine{00178\ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ sectorAngle\ =\ j\ *\ sectorStep;}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ vertex\ position\ (x,\ y,\ z)}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ x\ =\ xy\ *\ cosf(sectorAngle);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ y\ =\ xy\ *\ sinf(sectorAngle);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ retvec.push\_back(glm::vec3(x,\ y,\ z));}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00191\ std::vector<glm::vec3>\ SphereI(\textcolor{keywordtype}{float}\ sector,\ \textcolor{keywordtype}{float}\ stack)}
+\DoxyCodeLine{00192\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ sectorStep\ =\ 2\ *\ glm::pi<float>()\ /\ sector;}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ stackStep\ =\ glm::pi<float>()\ /\ stack;}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ std::vector<int>\ indices;}
+\DoxyCodeLine{00197\ \ \ \ \ std::vector<int>\ lineIndices;}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{int}\ k1,\ k2;}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ stackCount;\ ++i)}
+\DoxyCodeLine{00200\ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ k1\ =\ i\ *\ (sectorCount\ +\ 1);\ \textcolor{comment}{//\ beginning\ of\ current\ stack}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ k2\ =\ k1\ +\ sectorCount\ +\ 1;\ \textcolor{comment}{//\ beginning\ of\ next\ stack}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ sectorCount;\ ++j,\ ++k1,\ ++k2)}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2\ triangles\ per\ sector\ excluding\ first\ and\ last\ stacks}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ k1\ =>\ k2\ =>\ k1+1}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ 0)}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indices.push\_back(k1);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indices.push\_back(k2);}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indices.push\_back(k1\ +\ 1);}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ k1+1\ =>\ k2\ =>\ k2+1}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ (stackCount\ -\/\ 1))}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indices.push\_back(k1\ +\ 1);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indices.push\_back(k2);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indices.push\_back(k2\ +\ 1);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ indices\ for\ lines}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ vertical\ lines\ for\ all\ stacks,\ k1\ =>\ k2}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ lineIndices.push\_back(k1);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ lineIndices.push\_back(k2);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ 0)\ \textcolor{comment}{//\ horizontal\ lines\ except\ 1st\ stack,\ k1\ =>\ k+1}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lineIndices.push\_back(k1);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lineIndices.push\_back(k1\ +\ 1);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \};\ \textcolor{comment}{//\ namespace\ VerticesDef}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -6,14 +6,20 @@ GappBuilder& GappBuilder::GetInstance()
     return instance;
 }
 
-GappBuilder& GappBuilder::WithAppSetting(const AppSetting& setting)
+GappBuilder& GappBuilder::WithSetting(const GAppSetting& setting)
 {
     _obj->_setting = setting;
     return *this;
 }
 
-GappBuilder& GappBuilder::WithScene(const std::shared_ptr<Scene>& scene)
+GappBuilder& GappBuilder::WithDefaultScene(const GID_t& default_scene)
 {
-    _obj->_scene = scene;
+    _obj->_default_scene = default_scene;
+    return *this;
+}
+
+GappBuilder& GappBuilder::WithScenes(const tsl::robin_set<GID_t>& scenes)
+{
+    _obj->_scenes = scenes;
     return *this;
 }

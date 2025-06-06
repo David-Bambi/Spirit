@@ -15,7 +15,7 @@ class Bidon : public Traceable
         };
 };
 
-TEST_CASE("Register and unregister object", "[platform][profiler]") 
+TEST_CASE("Register", "[platform][profiler]") 
 {
     Profiler::Table.clear();
 

@@ -11,3 +11,8 @@ void Tracer::Trace(const char* message)
 {
     spdlog::get("trace")->info(message);
 }
+
+void Tracer::Trace(const std::string& message)
+{
+    spdlog::get("trace")->info(message);
+}

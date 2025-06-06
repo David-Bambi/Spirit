@@ -1,0 +1,10 @@
+{
+    "setting" :
+    {
+        "APP_NAME" : "Program 2",
+        "SCREEN_WIDTH" : 347,
+        "SCREEN_HEIGHT" : 200,
+        "ENABLE_CURSOR" : false
+    },
+    "scenes" : []
+}

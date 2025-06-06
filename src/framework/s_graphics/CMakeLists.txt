@@ -6,11 +6,18 @@ set(S_GRAPHICS_SRC
     component/Transform.cpp
     gapp/Gapp.cpp
     gapp/GappBuilder.cpp
-    #gobject/GraphicObject.cpp
+    gimporter/GappJsonImporter.cpp
+    gimporter/SceneJsonImporter.cpp
+    gobject/GraphicObject.cpp
+    gobject/UGID.cpp
+    gres/RessourceManager.cpp
+    gres/RessourceManager.tpp
     input/Input.cpp
     mesh/Mesh.cpp
     mesh/MeshBuilder.cpp
+    mesh/MeshTrace.cpp
     mesh/Vertices.cpp
+    mesh/VerticesTrace.cpp
     model/Model.cpp
     model/ModelBuilder.cpp
     scene/Scene.cpp
@@ -24,7 +31,8 @@ set(S_GRAPHICS_SRC
     time/Time.cpp
     ugl/ugl.cpp
     uglad/uglad.cpp
-    uglfw/uglfw.cpp)
+    uglfw/uglfw.cpp
+)
 
 set(S_GRAPHICS_EXTERNAL_LIB
     glad
@@ -32,7 +40,8 @@ set(S_GRAPHICS_EXTERNAL_LIB
     stb_image_lib
     s_type
     s_platform
-    tsl::robin_map)
+    tsl::robin_map
+    nlohmann_json)
 
 set(S_GRAPHICS_INC ${CMAKE_CURRENT_SOURCE_DIR})
 

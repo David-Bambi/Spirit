@@ -13,8 +13,8 @@ void Camera::Update(unsigned int progshader)
         _update(*this);
     }
     _view = glm::lookAt(_pos, _pos + _front, _up);
-    const auto screenWidth = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_WIDTH);
-    const auto screenHeight = static_cast<float>(Gapp::CurrentGapp->GetAppSetting().SCREEN_HEIGHT);
+    const auto screenWidth = static_cast<float>(Gapp::CurrentGapp->GetSetting().SCREEN_WIDTH);
+    const auto screenHeight = static_cast<float>(Gapp::CurrentGapp->GetSetting().SCREEN_HEIGHT);
 
     if (_projectionType == Projection_t::PERSPECTIVE)
         _projection = glm::perspective(glm::radians(_fov), screenWidth / screenHeight, _near, _far);
